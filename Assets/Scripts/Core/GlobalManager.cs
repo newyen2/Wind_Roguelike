@@ -7,6 +7,7 @@ public class GlobalManager : MonoBehaviour
 {
     // Start is called before the first frame update
     public static GlobalManager Instance { get; private set; }
+    public int groundSize = 4;
 
     private void Awake()
     {

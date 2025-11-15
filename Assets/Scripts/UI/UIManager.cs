@@ -11,7 +11,7 @@ public class UIManager : MonoBehaviour
 
     // 展示分數用
     int now_score = 0;
-    TextMeshPro score_text;
+    public TMP_Text score_text;
 
     void Awake()
     {
@@ -29,8 +29,10 @@ public class UIManager : MonoBehaviour
         int tmp_score = now_score;
         while(now_score < target)
         {
-            now_score += math.min(1, (int)(target - tmp_score) / 10);
+            now_score += math.max(1, (int)(target - tmp_score) / 20);
             score_text.text = now_score.ToString();
+            yield return null;
+            yield return null;
             yield return null;
         }
         now_score = target;

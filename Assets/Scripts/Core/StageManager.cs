@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class StageManager : MonoBehaviour
 {
+    public static StageManager Instance { get; private set; }
+    
     // Start is called before the first frame update
     void Start()
     {

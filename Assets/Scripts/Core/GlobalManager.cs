@@ -7,7 +7,8 @@ public class GlobalManager : MonoBehaviour
 {
     // Start is called before the first frame update
     public static GlobalManager Instance { get; private set; }
-
+    public int groundSize = 4;
+    public GameObject[,] grid;
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -18,6 +19,7 @@ public class GlobalManager : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
+        grid = new GameObject[groundSize, groundSize];
     }
 
     // Update is called once per frame

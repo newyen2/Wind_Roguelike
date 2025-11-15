@@ -19,6 +19,11 @@ public class InteractionManager : MonoBehaviour
             BuildManager.Instance.SelectBuilding(id);
             lastChoiceBuild = gameObject;
         }
+        if(gameObject.CompareTag("Wind"))
+        {
+            BuildWindManager.Instance.SelectBuilding(id);
+            lastChoiceBuild = gameObject;
+        }
         Debug.Log($"Sender 已紀錄: {id}");
     }
 
@@ -31,6 +36,11 @@ public class InteractionManager : MonoBehaviour
             if(gameObject.CompareTag("Tile"))
             {
                 BuildManager.Instance.TryBuild(gameObject.GetComponent<Tile>().tilePos, gameObject.transform);
+                Destroy(lastChoiceBuild);
+            }
+            if(gameObject.CompareTag("WindTile"))
+            {
+                BuildWindManager.Instance.TryBuild(gameObject.GetComponent<WindTile>().tilePos, gameObject.transform);
                 Destroy(lastChoiceBuild);
             }
             return true;

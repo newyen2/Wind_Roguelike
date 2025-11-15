@@ -106,7 +106,7 @@ public class StageManager : MonoBehaviour
     [Button]
     public void LoadStage()
     {
-        // 實際上這邊是要讀Script或JSON的
+        // 嚙踝蕭琱W嚙緻嚙踝蕭O嚙緯讀Script嚙踝蕭JSON嚙踝蕭
         round = 1;
         roundMax = 3;
         score = 0;
@@ -138,7 +138,7 @@ public class StageManager : MonoBehaviour
     }
 
     [Button]
-    void AddWind(int x, int y, Direction dir, Wind wind = null)
+    public void AddWind(int x, int y, Direction dir = Direction.N, Wind wind = null)
     {
         Direction direction = dir;
         if (x == 0)

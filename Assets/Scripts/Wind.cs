@@ -36,11 +36,13 @@ public class Wind
         {
             return;
         }
-        
-        if (GlobalManager.Instance.grid[x, y] != null)
+
+        var building = GlobalManager.Instance.grid[x, y]?.GetComponent<BuildingBase>();
+        if (building != null)
         {
-            int score = power * GlobalManager.Instance.grid[x, y].GetComponent<BuildingBase>().multiplier * GlobalManager.Instance.grid[x, y].GetComponent<BuildingBase>().adder;
+            int score = power * building.multiplier * building.adder;
             StageManager.Instance.score += score;
+            UIManager.Instance.DisplayScoreText(StageManager.Instance.score);
         }
         Debug.Log($"Wind Execute: {x}, {y}");
     }

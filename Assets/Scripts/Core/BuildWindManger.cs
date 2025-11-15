@@ -25,7 +25,7 @@ public class BuildWindManager : MonoBehaviour
             {
                 GameObject newBuilding = Instantiate(
                     tmp,
-                    tile.transform.position,
+                    tile.transform.localPosition,
                     Quaternion.identity,
                     buildParent
                 );
@@ -71,22 +71,7 @@ public class BuildWindManager : MonoBehaviour
 
         // 記錄到陣列
         StageManager.Instance.AddWind(tilePos.x, tilePos.y);
-        if (tilePos.x == 0)
-        {
-            newBuilding.transform.localEulerAngles = new Vector3(0, 0, 0);
-        }
-        if (tilePos.x == GlobalManager.Instance.groundSize + 1)
-        {
-            newBuilding.transform.localEulerAngles = new Vector3(0, 0, 180);
-        }
-        if (tilePos.y == 0)
-        {
-            newBuilding.transform.localEulerAngles = new Vector3(0, 0, 90);
-        }
-        if (tilePos.y == GlobalManager.Instance.groundSize + 1)
-        {
-            newBuilding.transform.localEulerAngles = new Vector3(0, 0, 270);
-        }
+        GlobalManager.Instance.grid[tilePos.x, tilePos.y] = gameObject;
 
         Debug.Log($"建築生成於 ({tilePos.x}, {tilePos.y})");
 

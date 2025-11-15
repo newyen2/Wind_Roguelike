@@ -30,11 +30,22 @@ public class StageManager : MonoBehaviour
 
     public static StageManager Instance { get; private set; }
 
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
 
+        Instance = this;
+    }
     // Start is called before the first frame update
     void Start()
     {
         windPosition = new WindSlot[GlobalManager.Instance.groundSize + 2, GlobalManager.Instance.groundSize + 2];
+        nextWindPosition = new WindSlot[GlobalManager.Instance.groundSize + 2, GlobalManager.Instance.groundSize + 2];
+
         for (int i = 0; i < GlobalManager.Instance.groundSize + 2; i++)
         {
             for (int j = 0; j < GlobalManager.Instance.groundSize + 2; j++)
@@ -55,7 +66,8 @@ public class StageManager : MonoBehaviour
                 {
                     inputDirection = (int)Direction.W;
                 }
-                windPosition[i, j] = new WindSlot(i, j, 1, inputDirection);
+                windPosition[i, j] = new WindSlot(i, j, 100, inputDirection);
+                nextWindPosition[i, j] = new WindSlot(i, j, 100, inputDirection);
             }
         }
 
@@ -114,16 +126,70 @@ public class StageManager : MonoBehaviour
 
     void CalcScore()
     {
-        foreach (WindSlot windslot in windPosition)
+        for (int i = 0; i < 10; i++)
         {
-            windslot.Execute();
+            foreach (WindSlot windslot in windPosition)
+            {
+                windslot.Execute();
+            }
+            ApplyMove();
         }
 
     }
 
     [Button]
-    void AddWind(int x, int y, Wind wind = null)
+    void AddWind(int x, int y, Direction dir, Wind wind = null)
     {
+        Direction direction = dir;
+        if (x == 0)
+        {
+            direction = Direction.N;
+        }
+        if (x == GlobalManager.Instance.groundSize + 1)
+        {
+            direction = Direction.S;
+        }
+        if (y == 0)
+        {
+            direction = Direction.E;
+        }
+        if (y == GlobalManager.Instance.groundSize + 1)
+        {
+            direction = Direction.W;
+        }
+        wind = new Wind(direction);
         windPosition[x, y].windSlot.Add(wind);
+        Debug.Log($"Add Wind at ({x}, {y}) Direction: {direction}");
+    }
+
+    public void ApplyMove()
+    {
+
+        windPosition = nextWindPosition;
+        nextWindPosition = new WindSlot[GlobalManager.Instance.groundSize + 2, GlobalManager.Instance.groundSize + 2];
+        for (int i = 0; i < GlobalManager.Instance.groundSize + 2; i++)
+        {
+            for (int j = 0; j < GlobalManager.Instance.groundSize + 2; j++)
+            {
+                int inputDirection = -1;
+                if (i == 0)
+                {
+                    inputDirection = (int)Direction.N;
+                }
+                if (i == GlobalManager.Instance.groundSize + 1)
+                {
+                    inputDirection = (int)Direction.S;
+                }
+                if (j == 0)
+                {
+                    inputDirection = (int)Direction.E;
+                }
+                if (j == GlobalManager.Instance.groundSize + 1)
+                {
+                    inputDirection = (int)Direction.W;
+                }
+                nextWindPosition[i, j] = new WindSlot(i, j, 100, inputDirection);
+            }
+        }
     }
 }

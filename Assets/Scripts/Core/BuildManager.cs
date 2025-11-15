@@ -88,6 +88,6 @@ public class BuildManager : MonoBehaviour
 
     public void GoToStage()
     {
-        GameManager.Instance.SwitchScene("Stage");
+        GameManager.Instance.SwitchScene("Stage_test");
     }
 }

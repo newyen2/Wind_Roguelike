@@ -8,7 +8,7 @@ public class BuildWindManager : MonoBehaviour
 
     public GameObject[] buildingWindPrefabs;  
     GameObject selectedPrefab = null;
-    public Transform buildParent, nowBuilding;
+    public Transform buildParent, buildParentWind, nowBuilding;
 
     void Awake()
     {
@@ -66,7 +66,7 @@ public class BuildWindManager : MonoBehaviour
             selectedPrefab,
             tileTransform.position,
             Quaternion.identity,
-            buildParent
+            buildParentWind
         );
 
         // 記錄到陣列

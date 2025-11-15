@@ -34,5 +34,10 @@ namespace Core
         {
             SceneManager.LoadScene(s);
         }
+
+        public void StartGame()
+        {
+            SceneManager.LoadScene("Map");
+        }
     }
 }

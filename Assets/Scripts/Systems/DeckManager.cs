@@ -47,6 +47,7 @@ public class DeckManager : MonoBehaviour
         // 清空手牌，抽起始手牌
         HandManager.Instance.ClearHand();
         DrawCards(startingHandSize);
+        Debug.Log($"Have {startingHandSize} cards.");
     }
 
     /// <summary>

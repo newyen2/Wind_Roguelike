@@ -10,6 +10,15 @@ public class WindSlot
     public int slotSize = 100;
     public int inputDirection; // -1: none, 0: E, 1: W, 2: S, 3: N
 
+    // Constructor
+    public WindSlot(int x, int y, int slotSize = 100, int inputDirection = -1)
+    {
+        this.x = x;
+        this.y = y;
+        this.slotSize = slotSize;
+        this.inputDirection = inputDirection;
+    }
+
     public void Clear()
     {
         windSlot.Clear();
@@ -17,7 +26,6 @@ public class WindSlot
 
     public void Execute()
     {
-
         for (int i = 0; i < GlobalManager.Instance.groundSize; i++)
         {
             foreach (Wind wind in windSlot)
@@ -30,8 +38,5 @@ public class WindSlot
                 wind.Move(x, y);
             }
         }
-
     }
-
-
 }

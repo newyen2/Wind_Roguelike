@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7804152215095033804}
   - component: {fileID: 6004655354803559995}
+  - component: {fileID: 6902741122583038563}
   m_Layer: 0
   m_Name: GlobalManager
   m_TagString: Untagged
@@ -46,3 +47,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundSize: 4
   rewardBuild: []
+  resultGrid: []
+--- !u!114 &6902741122583038563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 20071664562555424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beacafb5e999f3645b4da55659517fb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingDeck: []
+  startingHandSize: 5

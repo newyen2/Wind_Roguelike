@@ -336,7 +336,7 @@ MonoBehaviour:
   buildingPrefabs:
   - {fileID: 5576443935031654418, guid: 755a718a12d406b40a9311441f75d337, type: 3}
   - {fileID: 7535119665598955858, guid: 9513c9af983028c4591552ac7eb31ee5, type: 3}
-  - {fileID: 7968303529898035956, guid: 682da18010ea835419f2af31166cf726, type: 3}
+  - {fileID: 4752477190949869519, guid: 445921adb1806bf4b9b7d549d8088581, type: 3}
   - {fileID: 9033238249457311930, guid: 7433a4b57c32d1148b55e6593324db18, type: 3}
   buildParent: {fileID: 2062851132}
   nowBuilding: {fileID: 802970824}

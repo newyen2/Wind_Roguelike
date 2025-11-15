@@ -417,7 +417,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5071b8bf988997c4d9ca4063addadbab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reward: {fileID: 7968303529898035956, guid: 682da18010ea835419f2af31166cf726, type: 3}
+  reward: {fileID: 4752477190949869519, guid: 445921adb1806bf4b9b7d549d8088581, type: 3}
 --- !u!1 &725890165
 GameObject:
   m_ObjectHideFlags: 0

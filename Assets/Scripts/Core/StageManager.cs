@@ -149,7 +149,7 @@ public class StageManager : MonoBehaviour
     }
 
     [Button]
-    public void AddWind(int x, int y, Direction dir = Direction.N, Wind wind = null)
+    public void AddWind(int x, int y, Direction dir = Direction.N, int power = 3, Wind wind = null)
     {
         Direction direction = dir;
         if (x == 0)
@@ -168,7 +168,7 @@ public class StageManager : MonoBehaviour
         {
             direction = Direction.S;
         }
-        wind = new Wind(direction);
+        wind = new Wind(direction, power);
         windPosition[x, y].windSlot.Add(wind);
         Debug.Log($"Add Wind at ({x}, {y}) Direction: {direction}");
     }

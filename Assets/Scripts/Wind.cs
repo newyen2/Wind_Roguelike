@@ -6,12 +6,14 @@ using UnityEngine;
 public class Wind
 {
     public Direction direction; // Changed type from int to Direction  
+    public int power;
     public bool isEnable;
 
-    public Wind(Direction direction)
+    public Wind(Direction direction, int power)
     {
 
         this.direction = direction;
+        this.power = power;
         this.isEnable = true;
     }
 
@@ -34,6 +36,11 @@ public class Wind
         {
             return;
         }
+        
+        if (GlobalManager.Instance.grid[x, y] != null)
+        {
+            StageManager.Instance.score += power * GlobalManager.Instance.grid[x, y].GetComponent<BuildingBase>().multiplier * GlobalManager.Instance.grid[x, y].GetComponent<BuildingBase>().adder;
+        }
         Debug.Log($"Wind Execute: {x}, {y}");
     }
 
@@ -51,7 +58,7 @@ public class Wind
                 return;
             }
             Debug.Log($"Wind Move: ({x}, {y}) -> ({x+1}, {y})");
-            StageManager.Instance.nextWindPosition[x + 1, y].windSlot.Add(new Wind(direction));
+            StageManager.Instance.nextWindPosition[x + 1, y].windSlot.Add(new Wind(direction, power));
         }
         else if (direction == Direction.W)
         {
@@ -61,7 +68,7 @@ public class Wind
                 return;
             }
             Debug.Log($"Wind Move: ({x}, {y}) -> ({x - 1}, {y})");
-            StageManager.Instance.nextWindPosition[x - 1, y].windSlot.Add(new Wind(direction));
+            StageManager.Instance.nextWindPosition[x - 1, y].windSlot.Add(new Wind(direction, power));
         }
         else if (direction == Direction.S)
         {
@@ -71,7 +78,7 @@ public class Wind
                 return;
             }
             Debug.Log($"Wind Move: ({x}, {y}) -> ({x}, {y - 1})");
-            StageManager.Instance.nextWindPosition[x, y - 1].windSlot.Add(new Wind(direction));
+            StageManager.Instance.nextWindPosition[x, y - 1].windSlot.Add(new Wind(direction, power));
         }
         else if (direction == Direction.N)
         {
@@ -81,7 +88,7 @@ public class Wind
                 return;
             }
             Debug.Log($"Wind Move: ({x}, {y}) -> ({x}, {y + 1})");
-            StageManager.Instance.nextWindPosition[x, y + 1].windSlot.Add(new Wind(direction));
+            StageManager.Instance.nextWindPosition[x, y + 1].windSlot.Add(new Wind(direction, power));
         }
     }
 

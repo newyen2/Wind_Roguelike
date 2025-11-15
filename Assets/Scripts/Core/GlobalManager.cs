@@ -1,7 +1,10 @@
 using Core;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Sirenix.OdinInspector;
+
 
 public class GlobalManager : MonoBehaviour
 {
@@ -32,5 +35,19 @@ public class GlobalManager : MonoBehaviour
     void InitializeStage()
     {
         StageManager.Instance.LoadStage();
+    }
+
+    [SerializeField]
+    private GameObject[] resultGrid;
+    [Button]
+    public GameObject[] GetGrid(int x)
+    {
+        int height = grid.GetLength(1);
+        GameObject[] result = new GameObject[height];
+
+        for (int y = 0; y < height; y++)
+            result[y] = grid[x, y];
+
+        return result;
     }
 }

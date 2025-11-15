@@ -44,3 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dd44457121bef2429080b6b743e0279, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  groundSize: 4
+  rewardBuild: []

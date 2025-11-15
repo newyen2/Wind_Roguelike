@@ -9,11 +9,14 @@ namespace Core
 
         private void Awake()
         {
-            if (Instance == null)
+            if (Instance != null && Instance != this)
             {
-                Instance = this;
-                DontDestroyOnLoad(this);
+                Destroy(gameObject);
+                return;
             }
+
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
         }
 
 
@@ -26,12 +29,6 @@ namespace Core
         {
 
         }
-
-        void StartGame()
-        {
-            //SceneManager.LoadScene("");
-        }
-
 
     }
 }

@@ -746,6 +746,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 022535d529f095d43be087f65c2f86c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TextScoreParticle: {fileID: 5713955570475159135, guid: 364a4d9702abcea47a006f8166d16447, type: 3}
+  Particle: {fileID: 385271491}
   score_text: {fileID: 28982034}
 --- !u!114 &417745473 stripped
 MonoBehaviour:
@@ -1490,6 +1492,7 @@ MonoBehaviour:
   buildingWindPrefabs:
   - {fileID: 3636466530189272521, guid: 2f7b4833521371f48901eb5e90f877d4, type: 3}
   buildParent: {fileID: 668737978}
+  buildParentWind: {fileID: 0}
   nowBuilding: {fileID: 35692894}
 --- !u!114 &643567317
 MonoBehaviour:

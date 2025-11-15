@@ -25,7 +25,7 @@ public class BuildWindManager : MonoBehaviour
             {
                 GameObject newBuilding = Instantiate(
                     tmp,
-                    tile.transform.localPosition,
+                    tile.transform.position,
                     Quaternion.identity,
                     buildParent
                 );

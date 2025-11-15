@@ -30,7 +30,7 @@ public class BuildManager : MonoBehaviour
                     buildParent
                 );
                 newBuilding.GetComponent<Sender>().is_set = true;
-                Debug.Log($"[{tile.tilePos.x}, {tile.tilePos.y}] has building {newBuilding.GetComponent<Sender>().senderId}");
+                Debug.Log($"[{tile.tilePos.x}, {tile.tilePos.y}] has building {newBuilding.GetComponent<Sender>().senderId} at {tile.transform.position}");
             }
         }
 

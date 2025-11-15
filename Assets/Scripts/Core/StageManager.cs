@@ -44,6 +44,8 @@ public class StageManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        int stage = GlobalManager.Instance.recordsCount;
+        LoadStage(GlobalManager.Instance.records[stage].roundMax, GlobalManager.Instance.records[stage].targetScore, GlobalManager.Instance.records[stage].maxPowerPoint);
         windPosition = new WindSlot[GlobalManager.Instance.groundSize + 2, GlobalManager.Instance.groundSize + 2];
         nextWindPosition = new WindSlot[GlobalManager.Instance.groundSize + 2, GlobalManager.Instance.groundSize + 2];
 
@@ -110,14 +112,13 @@ public class StageManager : MonoBehaviour
     }
 
     [Button]
-    public void LoadStage()
+    public void LoadStage(int r, int t, int m)
     {
-        // ��ڤW�o��O�nŪScript��JSON��
         round = 1;
-        roundMax = 3;
+        roundMax = r;
         score = 0;
-        targetScore = 100;
-        maxPowerPoint = 3;
+        targetScore = t;
+        maxPowerPoint = m;
         powerPoint = maxPowerPoint;
     }
 

@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 1000
-  displayName: Dummy
-  description: This is a dummy building.
+  displayName: "\u98A8\u529B\u767C\u96FB\u6A5F"
+  description: "\u57FA\u790E\u7684\u767C\u96FB\u8A2D\u65BD"
   multiplier: 2
   adder: 5

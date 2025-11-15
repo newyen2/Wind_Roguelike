@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class TextScorePartice : MonoBehaviour
+public class TextScoreParticle : MonoBehaviour
 {
     TMP_Text text;
     float exist_time = 2, now_time = 0;

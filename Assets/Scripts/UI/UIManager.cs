@@ -35,7 +35,7 @@ public class UIManager : MonoBehaviour
     public void DisplayTextScoreParticle(int x, int y, int score)
     {
         GameObject gameObject = Instantiate(TextScoreParticle, pos_to_tile[x, y].position, Quaternion.identity, Particle);
-        gameObject.GetComponent<TextScorePartice>().setValue(score);
+        gameObject.GetComponent<TextScoreParticle>().setValue(score);
     }
 
     IEnumerator ScoreText(int target)

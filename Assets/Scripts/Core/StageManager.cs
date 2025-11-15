@@ -25,7 +25,7 @@ public class StageManager : MonoBehaviour
     public WindSlot[,] windPosition;
     public WindSlot[,] nextWindPosition;
 
-
+    public bool is_round_going = false;
     public int powerPoint;
     public int maxPowerPoint;
 
@@ -85,12 +85,32 @@ public class StageManager : MonoBehaviour
     [Button]
     public void ExecuteRound()
     {
+        if(is_round_going) return;
+        is_round_going = true;
         StartCoroutine(NextRound());
     }
 
     public IEnumerator NextRound()
     {
         yield return StartCoroutine(CalcScore());
+        foreach (Transform child in BuildWindManager.Instance.buildParentWind.transform)
+        {
+            Destroy(child.gameObject);
+        }
+
+        is_round_going = false;
+        
+        for (int i = 0; i < GlobalManager.Instance.grid.GetLength(0); i++)
+        {
+            for (int j = 0; j < GlobalManager.Instance.grid.GetLength(1); j++)
+            {
+                if (i == 0 || i == GlobalManager.Instance.grid.GetLength(0) - 1 || j == 0 || j == GlobalManager.Instance.grid.GetLength(1) - 1)
+                {
+                    GlobalManager.Instance.grid[i, j] = null;
+                }
+            }
+        }
+
 
         if (score >= targetScore)
         {

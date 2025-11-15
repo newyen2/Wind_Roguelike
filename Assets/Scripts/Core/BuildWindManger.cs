@@ -72,6 +72,7 @@ public class BuildWindManager : MonoBehaviour
         // 記錄到陣列
         StageManager.Instance.AddWind(tilePos.x, tilePos.y);
         GlobalManager.Instance.grid[tilePos.x, tilePos.y] = gameObject;
+        buildParent.GetComponent<SortUILayer>().StartCoroutine(buildParent.GetComponent<SortUILayer>().SortChildrenByY());
 
         Debug.Log($"建築生成於 ({tilePos.x}, {tilePos.y})");
 

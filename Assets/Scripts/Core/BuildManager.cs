@@ -69,6 +69,7 @@ public class BuildManager : MonoBehaviour
             buildParent
         );
         newBuilding.GetComponent<Sender>().is_set = true;
+        buildParent.GetComponent<SortUILayer>().StartCoroutine(buildParent.GetComponent<SortUILayer>().SortChildrenByY());
 
         // 記錄到陣列
         GlobalManager.Instance.grid[tilePos.x, tilePos.y] = selectedPrefab;

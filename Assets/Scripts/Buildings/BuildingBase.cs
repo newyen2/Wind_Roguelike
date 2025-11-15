@@ -7,7 +7,7 @@ public abstract class BuildingBase : ScriptableObject
     public string id;
     public string displayName;
     [TextArea] public string description;
-
+    public int multiplier;//乘法器
     // 將來會 override 的 Hook
     //public virtual void OnBattleStart(BattleContext ctx) {}
     //public virtual void OnTurnStart(BattleContext ctx) {}

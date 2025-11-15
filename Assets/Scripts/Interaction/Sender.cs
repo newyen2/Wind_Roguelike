@@ -57,8 +57,8 @@ public class Sender : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, ID
         }
         else {
             transform.SetParent(BuildWindManager.Instance.nowBuilding);
-            BuildWindManager.Instance.nowBuilding.GetComponent<VerticalLayoutGroup>().spacing += 1;
-            BuildWindManager.Instance.nowBuilding.GetComponent<VerticalLayoutGroup>().spacing -= 1;
+            BuildWindManager.Instance.nowBuilding.GetComponent<HorizontalLayoutGroup>().spacing += 1;
+            BuildWindManager.Instance.nowBuilding.GetComponent<HorizontalLayoutGroup>().spacing -= 1;
         }
     }
 }

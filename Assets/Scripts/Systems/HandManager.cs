@@ -96,4 +96,5 @@ public class HandManager : MonoBehaviour
         if (index < 0 || index >= cardViews.Count) return null;
         return cardViews[index];
     }
+    
 }

@@ -29,4 +29,24 @@ public class Wind : MonoBehaviour
 
     }
 
+    public void Move(int x, int y)
+    {
+        if (direction == Direction.E)
+        {
+            StageManager.Instance.nextWindPosition[x + 1, y].windSlot.Add(this);
+        }
+        else if (direction == Direction.W)
+        {
+            StageManager.Instance.nextWindPosition[x - 1, y].windSlot.Add(this);
+        }
+        else if (direction == Direction.S)
+        {
+            StageManager.Instance.nextWindPosition[x, y - 1].windSlot.Add(this);
+        }
+        else if (direction == Direction.N)
+        {
+            StageManager.Instance.nextWindPosition[x, y + 1].windSlot.Add(this);
+        }
+    }
+
 }

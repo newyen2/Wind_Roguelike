@@ -4,6 +4,8 @@ using Unity.VisualScripting;
 using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Sirenix.OdinInspector;
+using System.Drawing;
 
 public enum Direction
 {
@@ -21,7 +23,6 @@ public class StageManager : MonoBehaviour
     public int targetScore;
     public WindSlot[,] windPosition;
     public WindSlot[,] nextWindPosition;
-    public GameObject[,] A;
 
 
     public int powerPoint;
@@ -33,8 +34,32 @@ public class StageManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        round = 1;
         windPosition = new WindSlot[GlobalManager.Instance.groundSize + 2, GlobalManager.Instance.groundSize + 2];
+        for (int i = 0; i < GlobalManager.Instance.groundSize + 2; i++)
+        {
+            for (int j = 0; j < GlobalManager.Instance.groundSize + 2; j++)
+            {
+                int inputDirection = -1;
+                if (i == 0) {
+                    inputDirection = (int)Direction.N;
+                }
+                if (i == GlobalManager.Instance.groundSize + 1)
+                {
+                    inputDirection = (int)Direction.S;
+                }
+                if (j == 0)
+                {
+                    inputDirection = (int)Direction.E;
+                }
+                if (j == GlobalManager.Instance.groundSize + 1)
+                {
+                    inputDirection = (int)Direction.W;
+                }
+                windPosition[i, j] = new WindSlot(i, j, 1, inputDirection);
+            }
+        }
+
+
 
     }
 
@@ -44,11 +69,10 @@ public class StageManager : MonoBehaviour
         
     }
 
+    [Button]
     void NextRound()
     {
         CalcScore();
-        windPosition = nextWindPosition;
-        nextWindPosition = new WindSlot[GlobalManager.Instance.groundSize + 2, GlobalManager.Instance.groundSize + 2];
 
         if (score >= targetScore)
         {
@@ -67,19 +91,25 @@ public class StageManager : MonoBehaviour
         powerPoint = maxPowerPoint;
     }
 
-    void LoadStage()
+    [Button]
+    public void LoadStage()
     {
-        // roundMax = 3;
-        // targetScore = 1000;
+        // 實際上這邊是要讀Script或JSON的
+        round = 1;
+        roundMax = 3;
+        score = 0;
+        targetScore = 100;
+        maxPowerPoint = 3;
+        powerPoint = maxPowerPoint;
     }
 
     void Clear()
     {
-
+        Debug.Log("Clear");
     }
     void Fail()
     {
-        
+        Debug.Log("Fail");
     }
 
     void CalcScore()

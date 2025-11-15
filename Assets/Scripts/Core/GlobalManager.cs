@@ -29,4 +29,9 @@ public class GlobalManager : MonoBehaviour
     {
         
     }
+
+    void InitializeStage()
+    {
+        StageManager.Instance.LoadStage();
+    }
 }

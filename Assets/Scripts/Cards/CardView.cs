@@ -6,23 +6,40 @@ public class CardView : MonoBehaviour
 {
     [Header("UI 元件")]
     public Image artworkImage;
-    public TMP_Text nameText;
-    public TMP_Text descriptionText;
-    public TMP_Text costText;
-    public TMP_Text windPowerText;
+    public Text nameText;
+    public Text descriptionText;
+    public Text costText;
+    //public Text windPowerText;
 
     [HideInInspector] public CardInstance instance;
 
     public void Setup(CardInstance instance)
     {
-        this.instance = instance;
+        if (instance == null)
+        {
+            instance = CreateDummyInstance();
+        }
+        Apply(instance);
+    }
+    private CardInstance CreateDummyInstance()
+    {
+        CardData fake = ScriptableObject.CreateInstance<CardData>();
+        fake.displayName = "Test Card";
+        fake.description = "Test Description";
+        fake.baseCost = 3;
 
+        return new CardInstance(fake);
+    }
+
+    private void Apply(CardInstance instance)
+    {
+        this.instance = instance;
         var data = instance.data;
-        if (artworkImage != null) artworkImage.sprite = data.Image;
-        if (nameText != null)     nameText.text = data.displayName;
-        if (descriptionText != null) descriptionText.text = data.description;
-        if (costText != null)     costText.text = instance.currentCost.ToString();
-        if (windPowerText != null) windPowerText.text = instance.currentWindPower.ToString();
+
+        artworkImage.sprite = data.Image;
+        nameText.text = data.displayName;
+        descriptionText.text = data.description;
+        costText.text = instance.currentCost.ToString();
     }
 
     // 例：點擊時打出 / 丟棄
@@ -33,5 +50,12 @@ public class CardView : MonoBehaviour
 
         // 之後可改成：
         // GameManager.Instance.TryPlayCard(instance);
+    }
+    void Start()
+    {
+    #if UNITY_EDITOR
+        if (instance == null)
+            Setup(null);    // 自動建假卡
+    #endif
     }
 }

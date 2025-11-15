@@ -31,18 +31,34 @@ public class Sender : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, ID
 
         var hitObj = ColliderDetect.Instance?.GetTileUnderMouse();
 
-        if (hitObj != null && hitObj.TryGetComponent<Tile>(out var tile))
+        if (hitObj != null && hitObj.TryGetComponent<Tile>(out var tile) && this.CompareTag("Building"))
         {
             Debug.Log("放在 Tile：" + tile.tilePos);
             BuildManager.Instance.TryBuild(tile.tilePos, tile.transform);
             is_set = true;
+            Destroy(this.gameObject);
+            return;
         }
-        else
+
+        if (hitObj != null && hitObj.TryGetComponent<WindTile>(out var windTile) && this.CompareTag("Wind"))
         {
-            Debug.Log("沒放在 Tile 上");
+            Debug.Log("放在 Tile：" + windTile.tilePos);
+            BuildWindManager.Instance.TryBuild(windTile.tilePos, windTile.transform);
+            is_set = true;
+            Destroy(this.gameObject);
+            return;
+        }
+
+        Debug.Log("沒放在 Tile 上");
+        if(this.CompareTag("Building")){
             transform.SetParent(BuildManager.Instance.nowBuilding);
             BuildManager.Instance.nowBuilding.GetComponent<VerticalLayoutGroup>().spacing += 1;
             BuildManager.Instance.nowBuilding.GetComponent<VerticalLayoutGroup>().spacing -= 1;
+        }
+        else {
+            transform.SetParent(BuildWindManager.Instance.nowBuilding);
+            BuildWindManager.Instance.nowBuilding.GetComponent<VerticalLayoutGroup>().spacing += 1;
+            BuildWindManager.Instance.nowBuilding.GetComponent<VerticalLayoutGroup>().spacing -= 1;
         }
     }
 }

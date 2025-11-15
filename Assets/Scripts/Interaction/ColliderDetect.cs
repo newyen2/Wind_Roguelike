@@ -6,13 +6,18 @@ using System.Collections.Generic;
 public class ColliderDetect : MonoBehaviour
 {
     // 這個有空再搞
-    public static ColliderDetect Instance { get; private set; }
+    public static ColliderDetect Instance;
     public GraphicRaycaster raycaster;
     public EventSystem eventSystem;
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     public GameObject GetTileUnderMouse()
     {
-        PointerEventData data = new PointerEventData(eventSystem)
+        Debug.Log("hi");
+        PointerEventData data = new(eventSystem)
         {
             position = Input.mousePosition
         };
@@ -22,6 +27,7 @@ public class ColliderDetect : MonoBehaviour
 
         foreach (var r in results)
         {
+            Debug.Log(r.gameObject.name);
             if (r.gameObject.TryGetComponent<Tile>(out var tile))
                 return r.gameObject;
             if (r.gameObject.TryGetComponent<WindTile>(out var windTile))

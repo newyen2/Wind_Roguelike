@@ -82,14 +82,19 @@ public class StageManager : MonoBehaviour
     }
 
     [Button]
-    void NextRound()
+    public void ExecuteRound()
     {
-        CalcScore();
+        StartCoroutine(NextRound());
+    }
+
+    public IEnumerator NextRound()
+    {
+        yield return StartCoroutine(CalcScore());
 
         if (score >= targetScore)
         {
             Clear();
-            return;
+            yield break;
         }
 
         round++;
@@ -97,7 +102,7 @@ public class StageManager : MonoBehaviour
         if (round > roundMax)
         {
             Fail();
-            return;
+            yield break;
         }
 
         powerPoint = maxPowerPoint;
@@ -124,7 +129,7 @@ public class StageManager : MonoBehaviour
         Debug.Log("Fail");
     }
 
-    void CalcScore()
+    IEnumerator CalcScore()
     {
         for (int i = 0; i < 10; i++)
         {
@@ -133,6 +138,8 @@ public class StageManager : MonoBehaviour
                 windslot.Execute();
             }
             ApplyMove();
+
+            yield return new WaitForSeconds(0.5f);
         }
 
     }

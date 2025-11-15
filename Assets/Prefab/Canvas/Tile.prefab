@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 8801846314582122956}
   - component: {fileID: 1988936937758980438}
   - component: {fileID: 3327482791492674096}
+  - component: {fileID: -7822266524127246298}
   - component: {fileID: 6631763241369636630}
-  - component: {fileID: 1897492673493072934}
   m_Layer: 5
-  m_Name: WindPrefab
-  m_TagString: WindTile
+  m_Name: Tile
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -61,7 +61,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4062442, g: 0.87169814, b: 0.8389971, a: 1}
+  m_Color: {r: 0.6679245, g: 0.50841856, b: 0.34152362, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -91,6 +91,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   receiverValue: 0
+--- !u!114 &-7822266524127246298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7080655454068293991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b136c095a3099549ab95b887207daf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tilePos: {x: 0, y: 0}
 --- !u!61 &6631763241369636630
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -136,16 +149,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1897492673493072934
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7080655454068293991}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9099efec9587c2a458604d00aa422054, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tilePos: {x: 0, y: 0}

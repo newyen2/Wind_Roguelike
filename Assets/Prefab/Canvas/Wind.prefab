@@ -149,7 +149,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7080655454068293991, guid: 337b10d95b19c544db4605bce3c2ac91, type: 3}
       propertyPath: m_Name
-      value: WindPrefab (7)
+      value: '[5,4]'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -259,7 +259,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7080655454068293991, guid: 337b10d95b19c544db4605bce3c2ac91, type: 3}
       propertyPath: m_Name
-      value: WindPrefab (13)
+      value: '[2,0]'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -369,7 +369,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7080655454068293991, guid: 337b10d95b19c544db4605bce3c2ac91, type: 3}
       propertyPath: m_Name
-      value: WindPrefab (15)
+      value: '[4,0]'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -479,7 +479,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7080655454068293991, guid: 337b10d95b19c544db4605bce3c2ac91, type: 3}
       propertyPath: m_Name
-      value: WindPrefab (4)
+      value: '[5,1]'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -589,7 +589,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7080655454068293991, guid: 337b10d95b19c544db4605bce3c2ac91, type: 3}
       propertyPath: m_Name
-      value: WindPrefab (11)
+      value: '[4,5]'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -699,7 +699,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7080655454068293991, guid: 337b10d95b19c544db4605bce3c2ac91, type: 3}
       propertyPath: m_Name
-      value: WindPrefab (6)
+      value: '[5,3]'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -805,7 +805,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7080655454068293991, guid: 337b10d95b19c544db4605bce3c2ac91, type: 3}
       propertyPath: m_Name
-      value: WindPrefab (2)
+      value: '[0,3]'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -915,7 +915,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7080655454068293991, guid: 337b10d95b19c544db4605bce3c2ac91, type: 3}
       propertyPath: m_Name
-      value: WindPrefab (10)
+      value: '[3,5]'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1025,7 +1025,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7080655454068293991, guid: 337b10d95b19c544db4605bce3c2ac91, type: 3}
       propertyPath: m_Name
-      value: WindPrefab (14)
+      value: '[3,0]'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1135,7 +1135,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7080655454068293991, guid: 337b10d95b19c544db4605bce3c2ac91, type: 3}
       propertyPath: m_Name
-      value: WindPrefab (12)
+      value: '[1,0]'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1241,7 +1241,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7080655454068293991, guid: 337b10d95b19c544db4605bce3c2ac91, type: 3}
       propertyPath: m_Name
-      value: WindPrefab
+      value: '[0,1]'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1351,7 +1351,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7080655454068293991, guid: 337b10d95b19c544db4605bce3c2ac91, type: 3}
       propertyPath: m_Name
-      value: WindPrefab (9)
+      value: '[2,5]'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1457,7 +1457,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7080655454068293991, guid: 337b10d95b19c544db4605bce3c2ac91, type: 3}
       propertyPath: m_Name
-      value: WindPrefab (3)
+      value: '[0,4]'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1567,7 +1567,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7080655454068293991, guid: 337b10d95b19c544db4605bce3c2ac91, type: 3}
       propertyPath: m_Name
-      value: WindPrefab (5)
+      value: '[5,2]'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1677,7 +1677,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7080655454068293991, guid: 337b10d95b19c544db4605bce3c2ac91, type: 3}
       propertyPath: m_Name
-      value: WindPrefab (8)
+      value: '[1,5]'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1783,7 +1783,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7080655454068293991, guid: 337b10d95b19c544db4605bce3c2ac91, type: 3}
       propertyPath: m_Name
-      value: WindPrefab (1)
+      value: '[0,2]'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

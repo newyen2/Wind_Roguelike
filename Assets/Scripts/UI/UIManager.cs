@@ -8,6 +8,9 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     public static UIManager Instance;
+    public GameObject TextScoreParticle;
+    public Transform Particle;
+    Transform[,] pos_to_tile = new Transform[6, 6];
 
     // 展示分數用
     int now_score = 0;
@@ -16,12 +19,23 @@ public class UIManager : MonoBehaviour
     void Awake()
     {
         Instance = this;
+        Tile[] tiles = FindObjectsOfType<Tile>();
+        foreach(var tile in tiles)
+        {
+            pos_to_tile[tile.tilePos.x, tile.tilePos.y] = tile.transform;
+        }
     }
 
     public void DisplayScoreText(int target)
     {
         StopCoroutine(ScoreText(target));
         StartCoroutine(ScoreText(target));
+    }
+
+    public void DisplayTextScoreParticle(int x, int y, int score)
+    {
+        GameObject gameObject = Instantiate(TextScoreParticle, pos_to_tile[x, y].position, Quaternion.identity, Particle);
+        gameObject.GetComponent<TextScorePartice>().setValue(score);
     }
 
     IEnumerator ScoreText(int target)

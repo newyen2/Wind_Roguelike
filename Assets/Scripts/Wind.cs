@@ -43,6 +43,7 @@ public class Wind
             int score = power * building.multiplier * building.adder;
             StageManager.Instance.score += score;
             UIManager.Instance.DisplayScoreText(StageManager.Instance.score);
+            UIManager.Instance.DisplayTextScoreParticle(x, y, score);
         }
         Debug.Log($"Wind Execute: {x}, {y}");
     }

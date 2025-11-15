@@ -1,18 +1,35 @@
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
-
+using System.Collections.Generic;
+[System.Serializable]
+public struct DirectionSpritePair
+{
+    public CardDirection direction;
+    public Sprite sprite;
+}
 public class CardView : MonoBehaviour
 {
     [Header("UI 元件")]
     public Image artworkImage;
+    public Image directionImage;
     public Text nameText;
     public Text descriptionText;
     public Text costText;
+    public List<DirectionSpritePair> directionSprites;
+    private Dictionary<CardDirection, Sprite> directionMap;
+    
     //public Text windPowerText;
 
     [HideInInspector] public CardInstance instance;
-
+    private void Awake()
+    {
+        // List → Dictionary
+        directionMap = new Dictionary<CardDirection, Sprite>();
+        foreach (var pair in directionSprites)
+        {
+            directionMap[pair.direction] = pair.sprite;
+        }
+    }
     public void Setup(CardInstance instance)
     {
         if (instance == null)
@@ -40,6 +57,7 @@ public class CardView : MonoBehaviour
         nameText.text = data.displayName;
         descriptionText.text = data.description;
         costText.text = instance.currentCost.ToString();
+        
     }
 
     // 例：點擊時打出 / 丟棄
@@ -57,5 +75,19 @@ public class CardView : MonoBehaviour
         if (instance == null)
             Setup(null);    // 自動建假卡
     #endif
+    }
+    private void UpdateDirectionIcon(CardDirection dir)
+    {
+        if (directionImage == null) return;
+
+        if (directionMap.TryGetValue(dir, out Sprite sprite))
+        {
+            directionImage.sprite = sprite;
+            directionImage.enabled = true;
+        }
+        else
+        {
+            directionImage.enabled = false; // 無方向就關閉
+        }
     }
 }

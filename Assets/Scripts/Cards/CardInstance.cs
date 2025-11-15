@@ -9,6 +9,7 @@ public class CardInstance
 
     public int currentCost;
     public int currentWindPower;
+    public CardDirection direction;
     public bool isExhausted;     // 用過就移出本局？
     public bool isTemporary;     // 戰鬥結束消失？
     public bool isUpgraded;      // 升級版？
@@ -18,5 +19,6 @@ public class CardInstance
         this.data = data;
         currentCost = data.baseCost;
         currentWindPower = data.baseWindPower;
+        direction = data.direction;
     }
 }

@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Sirenix.OdinInspector;
 using System.Drawing;
+using Core;
 
 public enum Direction
 {
@@ -123,10 +124,13 @@ public class StageManager : MonoBehaviour
     void Clear()
     {
         Debug.Log("Clear");
+        GameManager.Instance.SwitchScene("Result");
     }
     void Fail()
     {
         Debug.Log("Fail");
+        GameManager.Instance.SwitchScene("GameOver");
+
     }
 
     IEnumerator CalcScore()

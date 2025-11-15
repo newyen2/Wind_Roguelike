@@ -29,17 +29,6 @@ namespace Core
             DontDestroyOnLoad(gameObject);
         }
 
-
-        void Start()
-        {
-            
-        }
-
-        void Update()
-        {
-
-        }
-
         [Button]
         public void SwitchScene(string s)
         {

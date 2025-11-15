@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Tile
   - Building
+  - WindTile
+  - Wind
   layers:
   - Default
   - TransparentFX

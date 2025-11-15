@@ -120,4 +120,10 @@ public class StageManager : MonoBehaviour
         }
 
     }
+
+    [Button]
+    void AddWind(int x, int y, Wind wind = null)
+    {
+        windPosition[x, y].windSlot.Add(wind);
+    }
 }

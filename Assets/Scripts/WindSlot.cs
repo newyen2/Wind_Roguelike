@@ -17,31 +17,17 @@ public class WindSlot
 
     public void Execute()
     {
-        foreach(Wind wind in windSlot)
-        {
-            wind.Execute();
-        }
 
         for (int i = 0; i < GlobalManager.Instance.groundSize; i++)
         {
             foreach (Wind wind in windSlot)
             {
-                if (wind.direction == Direction.E)
-                {
-                    StageManager.Instance.nextWindPosition[x + 1, y].windSlot.Add(wind);
-                }
-                else if (wind.direction == Direction.W)
-                {
-                    StageManager.Instance.nextWindPosition[x - 1, y].windSlot.Add(wind);
-                }
-                else if (wind.direction == Direction.S)
-                {
-                    StageManager.Instance.nextWindPosition[x, y - 1].windSlot.Add(wind);
-                }
-                else if (wind.direction == Direction.N)
-                {
-                    StageManager.Instance.nextWindPosition[x, y + 1].windSlot.Add(wind);
-                }
+                wind.Execute();
+            }
+
+            foreach (Wind wind in windSlot)
+            {
+                wind.Move(x, y);
             }
         }
 

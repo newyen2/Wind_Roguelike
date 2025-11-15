@@ -21,7 +21,6 @@ public class StageManager : MonoBehaviour
     public int targetScore;
     public WindSlot[,] windPosition;
     public WindSlot[,] nextWindPosition;
-    public GameObject[,] A;
 
 
     public int powerPoint;
@@ -47,8 +46,6 @@ public class StageManager : MonoBehaviour
     void NextRound()
     {
         CalcScore();
-        windPosition = nextWindPosition;
-        nextWindPosition = new WindSlot[GlobalManager.Instance.groundSize + 2, GlobalManager.Instance.groundSize + 2];
 
         if (score >= targetScore)
         {
@@ -67,19 +64,19 @@ public class StageManager : MonoBehaviour
         powerPoint = maxPowerPoint;
     }
 
-    void LoadStage()
+    public void LoadStage()
     {
-        // roundMax = 3;
-        // targetScore = 1000;
+         roundMax = 3;
+         targetScore = 100;
     }
 
     void Clear()
     {
-
+        Debug.Log("Clear");
     }
     void Fail()
     {
-        
+        Debug.Log("Fail");
     }
 
     void CalcScore()

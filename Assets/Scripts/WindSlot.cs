@@ -26,17 +26,14 @@ public class WindSlot
 
     public void Execute()
     {
-        for (int i = 0; i < GlobalManager.Instance.groundSize; i++)
+        foreach (Wind wind in windSlot)
         {
-            foreach (Wind wind in windSlot)
-            {
-                wind.Execute();
-            }
+            wind.Execute(x, y);
+        }
 
-            foreach (Wind wind in windSlot)
-            {
-                wind.Move(x, y);
-            }
+        foreach (Wind wind in windSlot)
+        {
+            wind.Move(x, y);
         }
     }
 }

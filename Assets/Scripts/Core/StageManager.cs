@@ -53,19 +53,19 @@ public class StageManager : MonoBehaviour
             {
                 int inputDirection = -1;
                 if (i == 0) {
-                    inputDirection = (int)Direction.N;
+                    inputDirection = (int)Direction.E;
                 }
                 if (i == GlobalManager.Instance.groundSize + 1)
                 {
-                    inputDirection = (int)Direction.S;
+                    inputDirection = (int)Direction.W;
                 }
                 if (j == 0)
                 {
-                    inputDirection = (int)Direction.E;
+                    inputDirection = (int)Direction.N;
                 }
                 if (j == GlobalManager.Instance.groundSize + 1)
                 {
-                    inputDirection = (int)Direction.W;
+                    inputDirection = (int)Direction.S;
                 }
                 windPosition[i, j] = new WindSlot(i, j, 100, inputDirection);
                 nextWindPosition[i, j] = new WindSlot(i, j, 100, inputDirection);
@@ -154,19 +154,19 @@ public class StageManager : MonoBehaviour
         Direction direction = dir;
         if (x == 0)
         {
-            direction = Direction.N;
+            direction = Direction.E;
         }
         if (x == GlobalManager.Instance.groundSize + 1)
         {
-            direction = Direction.S;
+            direction = Direction.W;
         }
         if (y == 0)
         {
-            direction = Direction.E;
+            direction = Direction.N;
         }
         if (y == GlobalManager.Instance.groundSize + 1)
         {
-            direction = Direction.W;
+            direction = Direction.S;
         }
         wind = new Wind(direction);
         windPosition[x, y].windSlot.Add(wind);
@@ -185,19 +185,19 @@ public class StageManager : MonoBehaviour
                 int inputDirection = -1;
                 if (i == 0)
                 {
-                    inputDirection = (int)Direction.N;
+                    inputDirection = (int)Direction.E;
                 }
                 if (i == GlobalManager.Instance.groundSize + 1)
                 {
-                    inputDirection = (int)Direction.S;
+                    inputDirection = (int)Direction.W;
                 }
                 if (j == 0)
                 {
-                    inputDirection = (int)Direction.E;
+                    inputDirection = (int)Direction.N;
                 }
                 if (j == GlobalManager.Instance.groundSize + 1)
                 {
-                    inputDirection = (int)Direction.W;
+                    inputDirection = (int)Direction.S;
                 }
                 nextWindPosition[i, j] = new WindSlot(i, j, 100, inputDirection);
             }

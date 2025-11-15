@@ -4,6 +4,7 @@ public class InteractionManager : MonoBehaviour
 {
     public static InteractionManager Instance;
     int? currentSenderId = null;
+    GameObject lastChoiceBuild;
 
     void Awake()
     {
@@ -13,7 +14,11 @@ public class InteractionManager : MonoBehaviour
     public void SelectSender(int id, GameObject gameObject)
     {
         currentSenderId = id;
-        if(gameObject.CompareTag("Building")) BuildManager.Instance.SelectBuilding(id);
+        if(gameObject.CompareTag("Building"))
+        {
+            BuildManager.Instance.SelectBuilding(id);
+            lastChoiceBuild = gameObject;
+        }
         Debug.Log($"Sender 已紀錄: {id}");
     }
 
@@ -23,7 +28,11 @@ public class InteractionManager : MonoBehaviour
         {
             senderId = currentSenderId.Value;
             currentSenderId = null; // 用完清空（可依需求調整）
-            if(gameObject.CompareTag("Tile")) BuildManager.Instance.TryBuild(gameObject.GetComponent<Tile>().tilePos, gameObject.transform);
+            if(gameObject.CompareTag("Tile"))
+            {
+                BuildManager.Instance.TryBuild(gameObject.GetComponent<Tile>().tilePos, gameObject.transform);
+                Destroy(lastChoiceBuild);
+            }
             return true;
         }
         senderId = -1;

@@ -30,5 +30,9 @@ namespace Core
 
         }
 
+        public void SwitchScene(string s)
+        {
+            SceneManager.LoadScene(s);
+        }
     }
 }

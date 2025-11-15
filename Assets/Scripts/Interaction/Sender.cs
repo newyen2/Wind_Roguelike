@@ -7,6 +7,6 @@ public class Sender : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        InteractionManager.Instance.SelectSender(senderId, gameObject);
+        if(transform.parent.name == "NowBuilding") InteractionManager.Instance.SelectSender(senderId, gameObject);
     }
 }

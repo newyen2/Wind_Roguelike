@@ -1,4 +1,6 @@
+using Core;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BuildManager : MonoBehaviour
 {
@@ -6,11 +8,35 @@ public class BuildManager : MonoBehaviour
 
     public GameObject[] buildingPrefabs;  // 4 種建築 Prefab
     GameObject selectedPrefab = null;
-    public Transform buildParent;
+    public Transform buildParent, nowBuilding;
 
     void Awake()
     {
         Instance = this;
+    }
+
+    void Start()
+    {
+        Tile[] tiles = FindObjectsByType<Tile>(FindObjectsSortMode.None);
+        foreach(var tile in tiles)
+        {
+            GameObject tmp = GlobalManager.Instance.grid[tile.tilePos.x, tile.tilePos.y];
+            if(tmp != null)
+            {
+                GameObject newBuilding = Instantiate(
+                    tmp,
+                    tile.transform.position,
+                    Quaternion.identity,
+                    buildParent
+                );
+                Debug.Log($"[{tile.tilePos.x}, {tile.tilePos.y}] has building {newBuilding.GetComponent<Sender>().senderId}");
+            }
+        }
+
+        foreach(var build in GlobalManager.Instance.rewardBuild)
+        {
+            Instantiate(build, nowBuilding);
+        }
     }
 
     public void SelectBuilding(int id)
@@ -43,11 +69,17 @@ public class BuildManager : MonoBehaviour
         );
 
         // 記錄到陣列
-        GlobalManager.Instance.grid[tilePos.x, tilePos.y] = newBuilding;
+        GlobalManager.Instance.grid[tilePos.x, tilePos.y] = selectedPrefab;
 
         Debug.Log($"建築生成於 ({tilePos.x}, {tilePos.y})");
 
         // 放好後重置選取（看需求）
         selectedPrefab = null;
+    }
+
+    // 這個是測試用的，之後幫我刪掉
+    public void GoToReward()
+    {
+        GameManager.Instance.SwitchScene("Result");
     }
 }

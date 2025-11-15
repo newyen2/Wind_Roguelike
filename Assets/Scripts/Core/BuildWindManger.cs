@@ -2,11 +2,11 @@ using Core;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class BuildManager : MonoBehaviour
+public class BuildWindManager : MonoBehaviour
 {
-    public static BuildManager Instance;
+    public static BuildWindManager Instance;
 
-    public GameObject[] buildingPrefabs;  // 4 種建築 Prefab
+    public GameObject[] buildingWindPrefabs;  
     GameObject selectedPrefab = null;
     public Transform buildParent, nowBuilding;
 
@@ -36,13 +36,13 @@ public class BuildManager : MonoBehaviour
 
         foreach(var build in GlobalManager.Instance.rewardBuild)
         {
-            Instantiate(build, nowBuilding);
+            //Instantiate(build, nowBuilding);
         }
     }
 
     public void SelectBuilding(int id)
     {
-        selectedPrefab = buildingPrefabs[id];
+        selectedPrefab = buildingWindPrefabs[id];
         Debug.Log("選擇建築 ID = " + id);
     }
 
@@ -68,26 +68,29 @@ public class BuildManager : MonoBehaviour
             Quaternion.identity,
             buildParent
         );
-        newBuilding.GetComponent<Sender>().is_set = true;
 
         // 記錄到陣列
-        GlobalManager.Instance.grid[tilePos.x, tilePos.y] = selectedPrefab;
+        StageManager.Instance.AddWind(tilePos.x, tilePos.y);
+        if (tilePos.x == 0)
+        {
+            newBuilding.transform.localEulerAngles = new Vector3(0, 0, 0);
+        }
+        if (tilePos.x == GlobalManager.Instance.groundSize + 1)
+        {
+            newBuilding.transform.localEulerAngles = new Vector3(0, 0, 180);
+        }
+        if (tilePos.y == 0)
+        {
+            newBuilding.transform.localEulerAngles = new Vector3(0, 0, 90);
+        }
+        if (tilePos.y == GlobalManager.Instance.groundSize + 1)
+        {
+            newBuilding.transform.localEulerAngles = new Vector3(0, 0, 270);
+        }
 
         Debug.Log($"建築生成於 ({tilePos.x}, {tilePos.y})");
 
         // 放好後重置選取（看需求）
         selectedPrefab = null;
-        GameManager.Instance.SwitchScene("Map");
-    }
-
-    // 這個是測試用的，之後幫我刪掉
-    public void GoToReward()
-    {
-        GameManager.Instance.SwitchScene("Result");
-    }
-
-    public void GoToStage()
-    {
-        GameManager.Instance.SwitchScene("Stage");
     }
 }

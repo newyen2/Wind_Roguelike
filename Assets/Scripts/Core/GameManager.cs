@@ -1,5 +1,15 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Sirenix.OdinInspector;
+public enum SceneType
+{
+    Menu,
+    Map,
+    Stage,
+    GameOver,
+    Result,
+    Building,
+}
 
 namespace Core
 {
@@ -19,17 +29,7 @@ namespace Core
             DontDestroyOnLoad(gameObject);
         }
 
-
-        void Start()
-        {
-            
-        }
-
-        void Update()
-        {
-
-        }
-
+        [Button]
         public void SwitchScene(string s)
         {
             SceneManager.LoadScene(s);

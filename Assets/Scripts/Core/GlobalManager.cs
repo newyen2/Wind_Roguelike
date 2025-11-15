@@ -21,10 +21,9 @@ public class GlobalManager : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
-        grid = new GameObject[groundSize, groundSize];
+        grid = new GameObject[groundSize + 2, groundSize + 2];
     }
 
-    // Update is called once per frame
     void Update()
     {
         

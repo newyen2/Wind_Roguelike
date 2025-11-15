@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Sirenix.OdinInspector;
 using System.Drawing;
+using Core;
 
 public enum Direction
 {
@@ -111,7 +112,7 @@ public class StageManager : MonoBehaviour
     [Button]
     public void LoadStage()
     {
-        // ¹ê»Ú¤W³oÃä¬O­nÅªScript©ÎJSONªº
+        // ï¿½ï¿½Ú¤Wï¿½oï¿½ï¿½Oï¿½nÅªScriptï¿½ï¿½JSONï¿½ï¿½
         round = 1;
         roundMax = 3;
         score = 0;
@@ -123,10 +124,13 @@ public class StageManager : MonoBehaviour
     void Clear()
     {
         Debug.Log("Clear");
+        GameManager.Instance.SwitchScene("Result");
     }
     void Fail()
     {
         Debug.Log("Fail");
+        GameManager.Instance.SwitchScene("GameOver");
+
     }
 
     IEnumerator CalcScore()
@@ -145,7 +149,7 @@ public class StageManager : MonoBehaviour
     }
 
     [Button]
-    void AddWind(int x, int y, Direction dir, Wind wind = null)
+    public void AddWind(int x, int y, Direction dir = Direction.N, Wind wind = null)
     {
         Direction direction = dir;
         if (x == 0)

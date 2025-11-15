@@ -703,17 +703,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &500403971 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6004655354803559995, guid: 46c2b011831807b40b0eb29a4f4ce4bf, type: 3}
-  m_PrefabInstance: {fileID: 87534610}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8dd44457121bef2429080b6b743e0279, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &663050094
 GameObject:
   m_ObjectHideFlags: 0
@@ -726,6 +715,7 @@ GameObject:
   - component: {fileID: 663050098}
   - component: {fileID: 663050097}
   - component: {fileID: 663050096}
+  - component: {fileID: 663050099}
   m_Layer: 5
   m_Name: TMP(stage)
   m_TagString: Untagged
@@ -797,9 +787,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 500403971}
-        m_TargetAssemblyTypeName: GlobalManager, Assembly-CSharp
-        m_MethodName: StartStage
+      - m_Target: {fileID: 663050099}
+        m_TargetAssemblyTypeName: GoToMap, Assembly-CSharp
+        m_MethodName: Go2Stage
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -847,6 +837,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 663050094}
   m_CullTransparentMesh: 1
+--- !u!114 &663050099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 663050094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9229dbe35f88074db4bcc8a80461c94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1778081321
 GameObject:
   m_ObjectHideFlags: 0

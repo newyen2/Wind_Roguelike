@@ -37,7 +37,7 @@ namespace Core
 
         public void StartGame()
         {
-            SceneManager.LoadScene("Map");
+            SceneManager.LoadScene("InitialReward");
         }
     }
 }

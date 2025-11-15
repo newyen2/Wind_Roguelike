@@ -74,7 +74,6 @@ public class StageManager : MonoBehaviour
             }
         }
 
-        LoadStage(); // TMP
     }
 
     // Update is called once per frame

@@ -150,7 +150,14 @@ public class DeckManager : MonoBehaviour
     {
         discardPile.Add(card);
     }
-
-    
+    public void DiscardAllFromHand()
+    {
+        // 戰鬥規則：把現在所有手牌視為「要丟棄的牌」
+        var snapshot = new List<CardInstance>(HandManager.Instance.CardsInHand);
+        foreach (var card in snapshot)
+        {
+            DiscardFromHand(card);   // 這裡會順便叫 HandManager.RemoveCardFromHand + 丟到棄牌堆
+        }
+    }
 
 }

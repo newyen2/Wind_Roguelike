@@ -136,6 +136,11 @@ public class StageManager : MonoBehaviour
             return false;
         }
 
+        foreach (CardEffectBase c in card.data.effects)
+        {
+            c.OnPlay(card , null);
+        }
+
         // 扣能量
         powerPoint -= card.currentCost;
         
@@ -231,7 +236,8 @@ public class StageManager : MonoBehaviour
     {
         Debug.Log("Clear");
         GlobalManager.Instance.recordsCount += 1;
-        GameManager.Instance.SwitchScene("Result");
+        if (GlobalManager.Instance.recordsCount == 11) GameManager.Instance.SwitchScene("GameWin");
+        else GameManager.Instance.SwitchScene("Result");
     }
     void Fail()
     {
@@ -242,7 +248,7 @@ public class StageManager : MonoBehaviour
 
     IEnumerator CalcScore()
     {
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 5; i++)
         {
             foreach (WindSlot windslot in windPosition)
             {

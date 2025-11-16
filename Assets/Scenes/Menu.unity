@@ -1085,7 +1085,7 @@ MonoBehaviour:
   m_text: "\u4E2D\u592E\u5275\u904AGamJam 11th\n\n\u4F01\u5283\uFF1A\u96DE\u86CB\n\u7F8E\u8853\uFF1AHuan\n\u7A0B\u5F0F\uFF1AYen\n         
     \u51A0\u4F51\n          \u904A\u6232\u4EA1"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8bb9f4ce5f0896c4fa2a24f4e7217307, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4862a01d7c289ad4f8d62256977b84a9, type: 2}
   m_sharedMaterial: {fileID: 4977824707398362940, guid: 8bb9f4ce5f0896c4fa2a24f4e7217307, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1149,7 +1149,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1797949839

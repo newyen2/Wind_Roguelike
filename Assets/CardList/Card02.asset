@@ -18,4 +18,5 @@ MonoBehaviour:
   Image: {fileID: 0}
   baseCost: 1
   baseWindPower: 10
-  direction: 1
+  direction: 2
+  effects: []

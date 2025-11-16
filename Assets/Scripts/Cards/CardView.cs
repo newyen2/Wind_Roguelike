@@ -10,7 +10,6 @@ public struct DirectionSpritePair
 public class CardView : MonoBehaviour
 {
     [Header("UI 元件")]
-    public Image artworkImage;
     public Image directionImage;
     public Text nameText;
     public Text descriptionText;
@@ -53,7 +52,6 @@ public class CardView : MonoBehaviour
         this.instance = instance;
         var data = instance.data;
 
-        artworkImage.sprite = data.Image;
         nameText.text = data.displayName;
         descriptionText.text = data.description;
         costText.text = instance.currentCost.ToString();

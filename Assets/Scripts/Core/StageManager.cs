@@ -197,7 +197,9 @@ public class StageManager : MonoBehaviour
                 }
                 else if(GlobalManager.Instance.grid[i, j] != null)
                 {
-                    score += GlobalManager.Instance.grid[i, j].GetComponent<BuildingBase>().EndScore(i, j);
+                    int s = GlobalManager.Instance.grid[i, j].GetComponent<BuildingBase>().EndScore(i, j);
+                    score += s;
+                    UIManager.Instance.DisplayTextScoreParticle(i, j, s);
                 }
             }
         }
@@ -239,7 +241,7 @@ public class StageManager : MonoBehaviour
     {
         Debug.Log("Clear");
         GlobalManager.Instance.recordsCount += 1;
-        if (GlobalManager.Instance.recordsCount == 11) GameManager.Instance.SwitchScene("GameWin");
+        if (GlobalManager.Instance.recordsCount == 10) GameManager.Instance.SwitchScene("GameWin");
         else GameManager.Instance.SwitchScene("Result");
     }
     void Fail()

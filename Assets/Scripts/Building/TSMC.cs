@@ -32,7 +32,7 @@ public class TSMC : BuildingBase
                 if (go != null)
                 {
                     var bb = go.GetComponent<BuildingBase>();
-                    if (bb != null) pts += bb.total_point;
+                    pts += bb.total_point;
                 }
             }
         }
@@ -42,7 +42,7 @@ public class TSMC : BuildingBase
         AddIfValid(x, y - 1); // down
         AddIfValid(x, y + 1); // up
 
-        if(pts > 80)
+        if(pts >= 80)
         {
             total_point += 30;
             return 30;

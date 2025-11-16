@@ -172,14 +172,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3283019, g: 0.3283019, b: 0.3283019, a: 0.5411765}
+  m_Color: {r: 0.78867924, g: 0.78421503, b: 0.78421503, a: 0.5529412}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 685aa12b57c7b2d499c70447170b8455, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2be941ccbd8d3ac44af407c022f4d180, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -197,6 +197,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 295299413}
   m_CullTransparentMesh: 1
+--- !u!114 &413315735 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1310322916986422065, guid: ecbf7bddd868a8b47a2d65e8891d8d5e, type: 3}
+  m_PrefabInstance: {fileID: 919849275}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b27d5c4f2c447c43ad38800b50b7f2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &449557045
 GameObject:
   m_ObjectHideFlags: 0
@@ -231,7 +242,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 125}
+  m_AnchoredPosition: {x: 0, y: 12.5}
   m_SizeDelta: {x: 800, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &449557047
@@ -287,7 +298,7 @@ MonoBehaviour:
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 999
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -457,8 +468,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 300}
-  m_SizeDelta: {x: 800, y: 200}
+  m_AnchoredPosition: {x: 0, y: 175}
+  m_SizeDelta: {x: 800, y: 220.62}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &906695060
 MonoBehaviour:
@@ -507,13 +518,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 150.35
+  m_fontSize: 165.85
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 999
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -649,7 +660,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -150}
+  m_AnchoredPosition: {x: 0, y: -190}
   m_SizeDelta: {x: 285, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1004392780
@@ -695,7 +706,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1004392781}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 413315735}
+        m_TargetAssemblyTypeName: Core.GameManager, Assembly-CSharp
+        m_MethodName: SwitchScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Menu
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1004392781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -867,6 +890,63 @@ MonoBehaviour:
   Title: {fileID: 906695059}
   Lore: {fileID: 449557046}
   ReturnButton: {fileID: 1004392779}
+--- !u!1001 &1430865861
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1558149716119913932, guid: 3564d74a775d70d47ba0b8429fae2104, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.0534406
+      objectReference: {fileID: 0}
+    - target: {fileID: 1558149716119913932, guid: 3564d74a775d70d47ba0b8429fae2104, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.4734677
+      objectReference: {fileID: 0}
+    - target: {fileID: 1558149716119913932, guid: 3564d74a775d70d47ba0b8429fae2104, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.016583223
+      objectReference: {fileID: 0}
+    - target: {fileID: 1558149716119913932, guid: 3564d74a775d70d47ba0b8429fae2104, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1558149716119913932, guid: 3564d74a775d70d47ba0b8429fae2104, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1558149716119913932, guid: 3564d74a775d70d47ba0b8429fae2104, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1558149716119913932, guid: 3564d74a775d70d47ba0b8429fae2104, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1558149716119913932, guid: 3564d74a775d70d47ba0b8429fae2104, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1558149716119913932, guid: 3564d74a775d70d47ba0b8429fae2104, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1558149716119913932, guid: 3564d74a775d70d47ba0b8429fae2104, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4275708591596910745, guid: 3564d74a775d70d47ba0b8429fae2104, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3564d74a775d70d47ba0b8429fae2104, type: 3}
 --- !u!1 &1964959304
 GameObject:
   m_ObjectHideFlags: 0
@@ -982,3 +1062,4 @@ SceneRoots:
   - {fileID: 919849275}
   - {fileID: 1268117189}
   - {fileID: 2125149152}
+  - {fileID: 1430865861}

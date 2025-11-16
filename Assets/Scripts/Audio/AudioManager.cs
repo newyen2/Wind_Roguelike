@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    // 撥放一次性音效（SFX）AudioManager.Instance.Play("key");
+    // Play SFX : AudioManager.Instance.Play("key");
 
-    // 播放 BGM（loop = true）AudioManager.Instance.Play("key"); AudioData set to loop
-    // 停止某個 loop 音樂 AudioManager.Instance.Stop("key");
+    // AudioManager.Instance.Play(loop = true, AudioManager.Instance.Play("key")); AudioData set to loop
+    // AudioManager.Instance.Stop("key");
 
     public static AudioManager Instance { get; private set; }
 
@@ -18,6 +18,8 @@ public class AudioManager : MonoBehaviour
 
     private Dictionary<string, AudioSource> activeSources = new();
     private Queue<AudioSource> sfxPool = new();
+
+    public float BGM_volume = 1, SFX_volume = 1;
 
     private void Awake()
     {
@@ -62,6 +64,8 @@ public class AudioManager : MonoBehaviour
             var loopSource = gameObject.AddComponent<AudioSource>();
             loopSource.clip = data.clip;
             loopSource.volume = data.volume;
+            loopSource.volume *= BGM_volume;
+
             loopSource.loop = true;
             loopSource.spatialBlend = 0f;
             loopSource.Play();
@@ -73,6 +77,7 @@ public class AudioManager : MonoBehaviour
             var source = GetSFXSource();
             source.clip = data.clip;
             source.volume = data.volume;
+            source.volume *= SFX_volume;
             source.loop = false;
             source.spatialBlend = 0f;
             source.Play();
@@ -108,7 +113,7 @@ public class AudioManager : MonoBehaviour
 
     private IEnumerator ReturnToPoolAfterPlay(AudioSource source)
     {
-        yield return new WaitUntil(() => source.isPlaying); // 等到真的播起來
+        yield return new WaitUntil(() => source.isPlaying); // 嚙踝蕭嚙踝蕭u嚙踝蕭嚙踝蕭嚙稻嚙踝蕭
 
         float duration = source.clip != null ? source.clip.length : 0.1f;
         yield return new WaitForSeconds(duration);

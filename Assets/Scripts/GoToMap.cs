@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class GoToMap : MonoBehaviour
 {
+    public GameObject globalManagerPrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +29,6 @@ public class GoToMap : MonoBehaviour
     
     public void Go2Menu()
     {
-        
         AudioManager.Instance.Stop("bgm_main");
         AudioManager.Instance.Play("bgm_cover");
         GameManager.Instance.SwitchScene("Menu");
@@ -36,10 +36,16 @@ public class GoToMap : MonoBehaviour
 
     public void Go2Initial()
     {
+        // 重新開始遊戲
+        // 寫法很暴力，就是把 GlobalManger 打掉重用
+        Destroy(GlobalManager.Instance.gameObject);
+        Instantiate(globalManagerPrefab);
+
         AudioManager.Instance.Play("click");
         AudioManager.Instance.Stop("bgm_cover");
         AudioManager.Instance.Play("bgm_main");
         GameManager.Instance.SwitchScene("InitialReward");
+        GameManager.Instance.total_score = 0;
     }
 
 }

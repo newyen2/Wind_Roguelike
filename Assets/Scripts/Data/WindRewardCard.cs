@@ -21,7 +21,6 @@ public class WindRewardCard : MonoBehaviour, IPointerClickHandler
             directionMap[pair.direction] = pair.sprite;
         }
         
-        GlobalManager.Instance.rewardBuild = new();
         RenewReward(Random());
     }
     CardData Random()
@@ -35,8 +34,8 @@ public class WindRewardCard : MonoBehaviour, IPointerClickHandler
 
             if (gb.max_round >= GlobalManager.Instance.recordsCount)
             if (gb.min_round <= GlobalManager.Instance.recordsCount)
-            if (gb != otherRewardCard[0])
-            if (gb != otherRewardCard[1])
+            if (gb != otherRewardCard[0].reward)
+            if (gb != otherRewardCard[1].reward)
             {
                 available.Add(gb);
             }
@@ -70,7 +69,6 @@ public class WindRewardCard : MonoBehaviour, IPointerClickHandler
     {
         reward = gameObject;
         if(this.name == "IgnoreButton") return;
-        print( transform.GetComponent<Image>());
         transform.GetComponent<Image>().sprite = reward.Image;
         transform.GetChild(1).GetComponent<Text>().text = reward.displayName;
         transform.GetChild(2).GetComponent<Text>().text = reward.description;

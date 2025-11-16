@@ -638,6 +638,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TextScoreParticle: {fileID: 5713955570475159135, guid: 364a4d9702abcea47a006f8166d16447, type: 3}
+  WindParticle: {fileID: 5713955570475159135, guid: edda75cce4875a645957c5fce725cef0, type: 3}
   Particle: {fileID: 385271491}
   score_text: {fileID: 28982034}
   max_score_text: {fileID: 1390439634}
@@ -3141,9 +3142,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2533810581953106018, guid: 240c08c75cf335847b2ab1155c004193, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 4862a01d7c289ad4f8d62256977b84a9, type: 2}
+    - target: {fileID: 2533810581953106018, guid: 240c08c75cf335847b2ab1155c004193, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -3085224411443621520, guid: 4862a01d7c289ad4f8d62256977b84a9, type: 2}
+    - target: {fileID: 2533810581953106018, guid: 240c08c75cf335847b2ab1155c004193, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7375725805500460082, guid: 240c08c75cf335847b2ab1155c004193, type: 3}
       propertyPath: m_Name
       value: Scoreboard
+      objectReference: {fileID: 0}
+    - target: {fileID: 8662614532813747480, guid: 240c08c75cf335847b2ab1155c004193, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 4862a01d7c289ad4f8d62256977b84a9, type: 2}
+    - target: {fileID: 8662614532813747480, guid: 240c08c75cf335847b2ab1155c004193, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -3085224411443621520, guid: 4862a01d7c289ad4f8d62256977b84a9, type: 2}
+    - target: {fileID: 8662614532813747480, guid: 240c08c75cf335847b2ab1155c004193, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8826484620489474850, guid: 240c08c75cf335847b2ab1155c004193, type: 3}
       propertyPath: m_fontSize
@@ -3156,7 +3181,7 @@ PrefabInstance:
     - target: {fileID: 8826484620489474850, guid: 240c08c75cf335847b2ab1155c004193, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 2849478393931850239, guid: 4862a01d7c289ad4f8d62256977b84a9, type: 2}
+      objectReference: {fileID: -3085224411443621520, guid: 4862a01d7c289ad4f8d62256977b84a9, type: 2}
     - target: {fileID: 8826484620489474850, guid: 240c08c75cf335847b2ab1155c004193, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0

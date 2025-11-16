@@ -20,5 +20,10 @@ public class KongMing : BuildingBase
 
         return -999; // 阻擋改成 -999;
     }
+
+    public override int Score(int windPower, Direction windDirection, int x, int y,Wind wind)
+    {
+        return 0;
+    }
 }
 

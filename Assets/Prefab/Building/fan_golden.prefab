@@ -155,7 +155,7 @@ MonoBehaviour:
   multiplier: 0
   adder: 6
   total_point: 0
-  now_round: 1
+  now_round: 2
   min_round: 5
   max_round: 9
   weight: 1

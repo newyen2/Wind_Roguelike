@@ -47,6 +47,7 @@ public class CardView : MonoBehaviour
         nameText.text = data.displayName;
         descriptionText.text = data.description;
         costText.text = instance.currentCost.ToString();
+        GetComponent<Sender>().senderId = instance.currentCost - 1;
         if (ArtImage != null && data.Image != null)
         {
             ArtImage.sprite = data.Image;

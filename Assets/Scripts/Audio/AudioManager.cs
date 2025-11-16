@@ -33,6 +33,21 @@ public class AudioManager : MonoBehaviour
         InitSFXPool();
     }
 
+    public void RefreshVolume()
+    {
+        // 更新所有 BGM（因為只有 BGM 用 activeSources）
+        foreach (var kvp in activeSources)
+        {
+            var key = kvp.Key;
+            var src = kvp.Value;
+            var data = table.GetAudio(key);
+
+            if (data == null) continue;
+
+            src.volume = data.volume * BGM_volume;
+        }
+    }
+
     private void InitSFXPool()
     {
         for (int i = 0; i < sfxPoolSize; i++)
@@ -63,8 +78,7 @@ public class AudioManager : MonoBehaviour
 
             var loopSource = gameObject.AddComponent<AudioSource>();
             loopSource.clip = data.clip;
-            loopSource.volume = data.volume;
-            loopSource.volume *= BGM_volume;
+            loopSource.volume = data.volume *= BGM_volume;
 
             loopSource.loop = true;
             loopSource.spatialBlend = 0f;

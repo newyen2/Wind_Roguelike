@@ -20,9 +20,9 @@ public class TextScoreParticle : MonoBehaviour
         if(value == -999)
         {
             text.text = "Blocked!";
-            text.color = Color.red;
         }
         if(value == 0) Destroy(this.gameObject);
+        if(value < 0) text.color = Color.red;
     }
 
     IEnumerator FloatUp()

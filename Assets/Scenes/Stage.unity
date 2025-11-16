@@ -713,7 +713,7 @@ MonoBehaviour:
   m_text: 3
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4862a01d7c289ad4f8d62256977b84a9, type: 2}
-  m_sharedMaterial: {fileID: 2849478393931850239, guid: 4862a01d7c289ad4f8d62256977b84a9, type: 2}
+  m_sharedMaterial: {fileID: -3085224411443621520, guid: 4862a01d7c289ad4f8d62256977b84a9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -847,7 +847,7 @@ MonoBehaviour:
   m_text: 4
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4862a01d7c289ad4f8d62256977b84a9, type: 2}
-  m_sharedMaterial: {fileID: 2849478393931850239, guid: 4862a01d7c289ad4f8d62256977b84a9, type: 2}
+  m_sharedMaterial: {fileID: -3085224411443621520, guid: 4862a01d7c289ad4f8d62256977b84a9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1113,6 +1113,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingWindPrefabs:
   - {fileID: 3636466530189272521, guid: 2f7b4833521371f48901eb5e90f877d4, type: 3}
+  - {fileID: 3636466530189272521, guid: a2736586ed26f1043b120a360041289d, type: 3}
+  - {fileID: 3636466530189272521, guid: 09515f4dc102ca848a06b53bce789c60, type: 3}
   buildParent: {fileID: 668737978}
   buildParentWind: {fileID: 1223655920}
   nowBuilding: {fileID: 35692894}
@@ -1700,7 +1702,7 @@ MonoBehaviour:
   m_text: 4
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4862a01d7c289ad4f8d62256977b84a9, type: 2}
-  m_sharedMaterial: {fileID: 2849478393931850239, guid: 4862a01d7c289ad4f8d62256977b84a9, type: 2}
+  m_sharedMaterial: {fileID: -3085224411443621520, guid: 4862a01d7c289ad4f8d62256977b84a9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

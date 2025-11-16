@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a21bfc593f0f5bf4a804414198dc070d, type: 3}
   m_Name: kongming
   m_EditorClassIdentifier: 
-  key: 
-  clip: {fileID: 0}
-  volume: 1
+  key: kongming
+  clip: {fileID: 8300000, guid: 085aa7893a51f0b4883bb494975b241e, type: 3}
+  volume: 0.5
   loop: 0

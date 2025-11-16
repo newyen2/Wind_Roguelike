@@ -158,5 +158,5 @@ MonoBehaviour:
   now_round: 1
   min_round: 3
   max_round: 9
-  weight: 1
+  weight: 3
   addddd: 3

@@ -254,16 +254,33 @@ public class StageManager : MonoBehaviour
 
     IEnumerator CalcScore()
     {
-        for (int i = 0; i < 5; i++)
+        bool able_wind = false;
+        for (int i = 0; i < 10; i++)
         {
+            able_wind = false;
             foreach (WindSlot windslot in windPosition)
             {
                 windslot.Execute();
             }
             ApplyMove();
             yield return new WaitForSeconds(0.5f);
-        }
 
+            // 當沒有 wind 可以跑的時候提早結束 CalcScore
+            foreach (WindSlot windslot in windPosition)
+            {
+                foreach(Wind wind in windslot.windSlot)
+                {
+                    if (wind.isEnable)
+                    {
+                        able_wind = true;
+                        break;
+                    }
+                }
+                if(able_wind) break;
+            }
+
+            if(!able_wind) break;
+        }
         
         newround();
     }

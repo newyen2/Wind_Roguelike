@@ -20,7 +20,7 @@ public class CardView : MonoBehaviour
     
     //public Text windPowerText;
 
-    [HideInInspector] public CardInstance instance;
+    public CardInstance instance;
     private void Awake()
     {
         // List → Dictionary

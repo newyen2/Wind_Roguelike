@@ -35,6 +35,12 @@ public class BuildingBase : MonoBehaviour
         return 0;
     }
 
+    public virtual int StartScore(int windPower, Direction windDirection, int x, int y, Wind wind)
+    {
+        // 基本建築預設的計分方式
+        return 0;
+    }
+
     public virtual void Renew(int round)
     {
         now_round = round;

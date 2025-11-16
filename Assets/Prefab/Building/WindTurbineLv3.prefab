@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 5472311257150223424}
   - component: {fileID: 4453188263921553182}
   - component: {fileID: 809902291010015620}
-  - component: {fileID: 2714351790231627530}
+  - component: {fileID: 3591864457236573477}
   m_Layer: 5
-  m_Name: cirno
+  m_Name: WindTurbineLv3
   m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -68,7 +68,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 253c42067d830994abfaa530f1adbd66, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f40176132ccb47149a168e8f90924ef0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a15adad92b04e640986fff05753181c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  senderId: 7
+  senderId: 9
   is_set: 0
 --- !u!61 &809902291010015620
 BoxCollider2D:
@@ -137,7 +137,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 100, y: 100}
   m_EdgeRadius: 0
---- !u!114 &2714351790231627530
+--- !u!114 &3591864457236573477
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -146,16 +146,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 4752477190949869519}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 785168fc1c6813244abd82baf541e854, type: 3}
+  m_Script: {fileID: 11500000, guid: 3b741c46f96675e4c927939544c18e64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 7
-  displayName: ( 9 )
-  description: "baka\n\n\u82E5\u98A8\u529B=9 \u7372\u5F9799\u5206"
-  multiplier: 0
+  id: 9
+  displayName: "\u98A8\u529B\u767C\u96FB\u6A5F Lv3"
+  description: "\u63A5\u6536\u5230\u98A8\u5F8C\n\u7372\u5F97 \u98A8\u529B*5 \u7684\u5206\u6578 "
+  multiplier: 5
   adder: 0
   total_point: 0
   now_round: 0
-  min_round: 0
+  min_round: 4
   max_round: 9
-  weight: 3
+  weight: 5

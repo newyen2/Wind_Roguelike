@@ -9,6 +9,8 @@ public class BuildingBase : MonoBehaviour
     [TextArea] public string description;
     public int multiplier; //乘法器
     public int adder; //加法器
+    public int total_point = 0;
+    public int now_round = 0;
 
     public int getMultiplier()
     {
@@ -21,7 +23,18 @@ public class BuildingBase : MonoBehaviour
     public virtual int Score(int windPower, Direction windDirection, int x, int y)
     {
         // 基本建築預設的計分方式
-        return windPower * multiplier + adder;
+        return 0;
     }
 
+    public virtual int EndScore(int x, int y)
+    {
+        // 基本建築預設的計分方式
+        return 0;
+    }
+
+    public virtual void Renew(int round)
+    {
+        now_round = round;
+        total_point = 0;
+    }
 }

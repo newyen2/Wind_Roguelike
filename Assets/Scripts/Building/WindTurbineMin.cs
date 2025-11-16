@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WindTurbine : BuildingBase
+public class WindTurbineMin : BuildingBase
 {
     public override int Score(int windPower, Direction windDirection, int x, int y)
     {
@@ -11,7 +11,8 @@ public class WindTurbine : BuildingBase
             Renew(StageManager.Instance.round);
         }
 
-        return windPower * multiplier;
+        if(windPower <= 2) return windPower * multiplier;
+        return 0;
     }
 }
 

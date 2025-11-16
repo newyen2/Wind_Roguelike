@@ -1,0 +1,53 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class TSMC : BuildingBase
+{
+    int now_pts = 0;
+    public override int EndScore(int x, int y)
+    {
+        if (StageManager.Instance.round != now_round)
+        {
+            Renew(StageManager.Instance.round);
+        }
+
+        var grid = GlobalManager.Instance.grid;
+        if (grid == null)
+        {
+            now_pts = 0;
+            return now_pts;
+        }
+
+        int pts = 0;
+        int w = grid.GetLength(0);
+        int h = grid.GetLength(1);
+
+        // helper to safely add neighbor's total_point
+        void AddIfValid(int ix, int iy)
+        {
+            if (ix >= 0 && ix < w && iy >= 0 && iy < h)
+            {
+                var go = grid[ix, iy];
+                if (go != null)
+                {
+                    var bb = go.GetComponent<BuildingBase>();
+                    if (bb != null) pts += bb.total_point;
+                }
+            }
+        }
+
+        AddIfValid(x - 1, y); // left
+        AddIfValid(x + 1, y); // right
+        AddIfValid(x, y - 1); // down
+        AddIfValid(x, y + 1); // up
+
+        if(pts > 80)
+        {
+            total_point += 30;
+            return 30;
+        }
+        return 0;
+    }
+}
+

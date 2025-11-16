@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WindTurbineMin : BuildingBase
 {
-    public override int Score(int windPower, Direction windDirection, int x, int y)
+    public override int Score(int windPower, Direction windDirection, int x, int y,Wind wind)
     {
         if(StageManager.Instance.round != now_round)
         {

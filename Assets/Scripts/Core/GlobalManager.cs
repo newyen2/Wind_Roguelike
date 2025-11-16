@@ -17,6 +17,7 @@ public class GlobalManager : MonoBehaviour
     public GameObject[,] grid;
     public GameObject[,] gridobj;
     public GameObject[] buildingPrefabs;
+    public CardData[] windPrefabs;
     public List<GameObject> rewardBuild;
 
     public List<StageRecord> records = new List<StageRecord>()

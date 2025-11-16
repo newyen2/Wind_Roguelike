@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Typhoon : BuildingBase
+public class TyphoonLv2 : BuildingBase
 {
     List<int> windRecord = new();
-    int wind_dir = 2;
+    int wind_dir = 3;
     public override int Score(int windPower, Direction windDirection, int x, int y, Wind wind)
     {
         if(StageManager.Instance.round != now_round)
@@ -21,7 +21,7 @@ public class Typhoon : BuildingBase
 
         if(wind_dir == 0){
             
-            if(windRecord[0] == windRecord[1])
+            if(windRecord[0] == windRecord[1] && windRecord[1] == windRecord[2] && windRecord[2] == windRecord[3])
             {
                 total_point += windPower * multiplier; 
                 return windPower * multiplier;
@@ -34,7 +34,7 @@ public class Typhoon : BuildingBase
     {
         now_round = round;
         total_point = 0;
-        wind_dir = 2;
+        wind_dir = 3;
         windRecord = new();
     }
 }

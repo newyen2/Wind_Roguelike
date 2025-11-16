@@ -16,6 +16,7 @@ public class GlobalManager : MonoBehaviour
     public int groundSize = 4;
     public GameObject[,] grid;
     public GameObject[,] gridobj;
+    public GameObject[] buildingPrefabs;
     public List<GameObject> rewardBuild;
 
     public List<StageRecord> records = new List<StageRecord>()
@@ -39,7 +40,6 @@ public class GlobalManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-
         Instance = this;
         DontDestroyOnLoad(gameObject);
         grid = new GameObject[groundSize + 2, groundSize + 2];

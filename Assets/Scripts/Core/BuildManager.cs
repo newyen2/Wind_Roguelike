@@ -5,8 +5,6 @@ using UnityEngine.SceneManagement;
 public class BuildManager : MonoBehaviour
 {
     public static BuildManager Instance;
-
-    public GameObject[] buildingPrefabs;  // 4 種建築 Prefab
     GameObject selectedPrefab = null;
     public Transform buildParent, nowBuilding;
 
@@ -43,8 +41,25 @@ public class BuildManager : MonoBehaviour
 
     public void SelectBuilding(int id)
     {
-        selectedPrefab = buildingPrefabs[id];
+        selectedPrefab = GlobalManager.Instance.buildingPrefabs[id];
         Debug.Log("選擇建築 ID = " + id);
+    }
+
+    public bool canbuild(Vector2Int tilePos, Transform tileTransform)
+    {
+        if (selectedPrefab == null)
+        {
+            Debug.Log("尚未選擇建築");
+            return false;
+        }
+
+        // 如果該位置已經有建築
+        if (GlobalManager.Instance.grid[tilePos.x, tilePos.y] != null)
+        {
+            Debug.Log("這格已經有建築");
+            return false;
+        }
+        return true;
     }
 
     public void TryBuild(Vector2Int tilePos, Transform tileTransform)
@@ -61,7 +76,7 @@ public class BuildManager : MonoBehaviour
             Debug.Log("這格已經有建築");
             return;
         }
-
+        AudioManager.Instance.Play("build");
         // 在 tile 上生成建築
         GameObject newBuilding = Instantiate(
             selectedPrefab,

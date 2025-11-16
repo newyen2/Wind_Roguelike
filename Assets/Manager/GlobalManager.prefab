@@ -46,6 +46,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundSize: 4
+  buildingPrefabs:
+  - {fileID: 4752477190949869519, guid: 445921adb1806bf4b9b7d549d8088581, type: 3}
+  - {fileID: 4752477190949869519, guid: dfac36898ad01f74688f2a46a168ce5c, type: 3}
+  - {fileID: 4752477190949869519, guid: a7f0b8687e9809e4e97caebc560a5372, type: 3}
+  - {fileID: 4752477190949869519, guid: 5a203973dcf60824599526d0061c6243, type: 3}
+  - {fileID: 4752477190949869519, guid: c96598eace540dd44ba1585368649482, type: 3}
+  - {fileID: 4752477190949869519, guid: 0924522be807ae74ea252ad585305bae, type: 3}
+  - {fileID: 4752477190949869519, guid: 855b85933c5e6ab4cbe48be4a32b9b68, type: 3}
   rewardBuild: []
   recordsCount: 0
   resultGrid: []

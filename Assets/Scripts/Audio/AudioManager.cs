@@ -113,7 +113,7 @@ public class AudioManager : MonoBehaviour
 
     private IEnumerator ReturnToPoolAfterPlay(AudioSource source)
     {
-        yield return new WaitUntil(() => source.isPlaying); // ����u�����_��
+        yield return new WaitUntil(() => source.isPlaying);
 
         float duration = source.clip != null ? source.clip.length : 0.1f;
         yield return new WaitForSeconds(duration);

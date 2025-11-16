@@ -26,7 +26,8 @@ namespace Core
                 Destroy(gameObject);
                 return;
             }
-
+            AudioManager.Instance.Stop("bgm_main");
+            AudioManager.Instance.Play("bgm_cover");
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }

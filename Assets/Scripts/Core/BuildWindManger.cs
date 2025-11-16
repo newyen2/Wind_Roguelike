@@ -84,7 +84,7 @@ public class BuildWindManager : MonoBehaviour
             buildParentWind
         );
 
-        Debug.Log("XX");
+        Debug.Log(newBuilding);
 
         // 記錄到陣列
         StageManager.Instance.AddWind(tilePos.x, tilePos.y);

@@ -15,7 +15,7 @@ public class testAudio : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            AudioManager.Instance.Play("build");
+            AudioManager.Instance.Play("bgm_main");
         }
         if (Input.GetKeyDown(KeyCode.A))
         {

@@ -8,11 +8,11 @@ public class WindTurbineHorizon : BuildingBase
     {
         if(windDirection == Direction.S)
         {
-            return -1;
+            return -999;
         }
         if(windDirection == Direction.N){
 
-            return -1;
+            return -999;
         }
         return 0;
     }

@@ -13,11 +13,12 @@ public class KongMing : BuildingBase
         
         if(windDirection == Direction.E)
         {
+            AudioManager.Instance.Play("kongming");
             wind.power *= 2;
             return 0;
         }
 
-        return -1;
+        return -999; // 阻擋改成 -999;
     }
 }
 

@@ -5,7 +5,7 @@ using UnityEngine;
 public class TyphoonLv2 : BuildingBase
 {
     List<int> windRecord = new();
-    int wind_dir = 3;
+    int wind_dir = 4;
     public override int Score(int windPower, Direction windDirection, int x, int y, Wind wind)
     {
         if(StageManager.Instance.round != now_round)

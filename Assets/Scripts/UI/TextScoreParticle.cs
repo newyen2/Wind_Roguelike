@@ -17,7 +17,7 @@ public class TextScoreParticle : MonoBehaviour
     public void setValue(int value)
     {
         text.text = value.ToString();
-        if(value == -1)
+        if(value == -999)
         {
             text.text = "Blocked!";
             text.color = Color.red;

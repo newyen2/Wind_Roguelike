@@ -9,7 +9,7 @@ public class CardView : MonoBehaviour
     public Image downIcon;
     public Image leftIcon;
     public Image rightIcon;
-    public Image directionImage;
+    
     public Image ArtImage;
     public Text nameText;
     public Text descriptionText;

@@ -78,7 +78,7 @@ public class BuildManager : MonoBehaviour
             Debug.Log("這格已經有建築");
             return;
         }
-
+        AudioManager.Instance.Play("build");
         // 在 tile 上生成建築
         GameObject newBuilding = Instantiate(
             selectedPrefab,

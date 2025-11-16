@@ -28,11 +28,17 @@ public class GoToMap : MonoBehaviour
     
     public void Go2Menu()
     {
+        
+        AudioManager.Instance.Stop("bgm_main");
+        AudioManager.Instance.Play("bgm_cover");
         GameManager.Instance.SwitchScene("Menu");
     }
 
     public void Go2Initial()
     {
+        AudioManager.Instance.Play("click");
+        AudioManager.Instance.Stop("bgm_cover");
+        AudioManager.Instance.Play("bgm_main");
         GameManager.Instance.SwitchScene("InitialReward");
     }
 

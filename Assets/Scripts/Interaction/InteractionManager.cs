@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InteractionManager : MonoBehaviour
 {
@@ -35,16 +36,34 @@ public class InteractionManager : MonoBehaviour
         if (currentSenderId.HasValue)
         {
             senderId = currentSenderId.Value;
-            currentSenderId = null; // 用完清空（可依需求調整）
-            if(gameObject.CompareTag("Tile") && isBuilding)
+            if (gameObject.CompareTag("Tile") && isBuilding)
             {
-                BuildManager.Instance.TryBuild(gameObject.GetComponent<Tile>().tilePos, gameObject.transform);
-                Destroy(lastChoiceBuild);
+                if (BuildManager.Instance.canbuild(gameObject.GetComponent<Tile>().tilePos, gameObject.transform))
+                {
+                    BuildManager.Instance.TryBuild(gameObject.GetComponent<Tile>().tilePos, gameObject.transform);
+                    Destroy(lastChoiceBuild);
+                    currentSenderId = null; // 用完清空（可依需求調整）
+                }
             }
-            if(gameObject.CompareTag("WindTile") && !isBuilding)
+            if (gameObject.CompareTag("WindTile") && !isBuilding)
             {
-                BuildWindManager.Instance.TryBuild(gameObject.GetComponent<WindTile>().tilePos, gameObject.transform);
-                Destroy(lastChoiceBuild);
+                if (StageManager.Instance.canPlay(lastChoiceBuild.GetComponent<CardView>().instance,gameObject.GetComponent<WindTile>().tilePos))
+                {
+                    WindTile windtile_tmp = gameObject.GetComponent<WindTile>();
+                    if (BuildWindManager.Instance.canBuild(windtile_tmp.tilePos, windtile_tmp.transform))
+                    {
+                        StageManager.Instance.TryPlayCard(lastChoiceBuild.GetComponent<CardView>().instance);
+                        BuildWindManager.Instance.TryBuild(windtile_tmp.tilePos, windtile_tmp.transform);
+                        Destroy(lastChoiceBuild); 
+                        currentSenderId = null; // 用完清空（可依需求調整）
+                    }
+                    Debug.Log("沒放在 Tile 上");
+
+                }
+                else
+                {
+                    print("no cost");
+                }
             }
             return true;
         }

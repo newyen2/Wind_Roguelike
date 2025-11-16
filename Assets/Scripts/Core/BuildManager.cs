@@ -5,8 +5,6 @@ using UnityEngine.SceneManagement;
 public class BuildManager : MonoBehaviour
 {
     public static BuildManager Instance;
-
-    public GameObject[] buildingPrefabs;  // 4 種建築 Prefab
     GameObject selectedPrefab = null;
     public Transform buildParent, nowBuilding;
 
@@ -43,7 +41,7 @@ public class BuildManager : MonoBehaviour
 
     public void SelectBuilding(int id)
     {
-        selectedPrefab = buildingPrefabs[id];
+        selectedPrefab = GlobalManager.Instance.buildingPrefabs[id];
         Debug.Log("選擇建築 ID = " + id);
     }
 

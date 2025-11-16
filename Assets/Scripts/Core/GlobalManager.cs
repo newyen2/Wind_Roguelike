@@ -16,6 +16,7 @@ public class GlobalManager : MonoBehaviour
     public int groundSize = 4;
     public GameObject[,] grid;
     public GameObject[,] gridobj;
+    public GameObject[] buildingPrefabs;
     public List<GameObject> rewardBuild;
 
     public List<StageRecord> records = new List<StageRecord>()

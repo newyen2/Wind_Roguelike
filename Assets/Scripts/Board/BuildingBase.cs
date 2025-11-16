@@ -12,6 +12,9 @@ public class BuildingBase : MonoBehaviour
     public int total_point = 0;
     public int now_round = 0;
 
+    [Header("UI 元件")]
+    public int min_round = 0, max_round = 9, weight = 1;
+
     public int getMultiplier()
     {
         return multiplier;

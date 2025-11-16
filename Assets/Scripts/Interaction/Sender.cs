@@ -59,11 +59,15 @@ public class Sender : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, ID
                     return;
 
                 }
+                Debug.Log("沒放在 Tile 上");
 
+            }
+            else
+            {
+                print("no cost");
             }
         }
 
-        Debug.Log("沒放在 Tile 上");
         if(this.CompareTag("Building")){
             transform.SetParent(BuildManager.Instance.nowBuilding);
             BuildManager.Instance.nowBuilding.GetComponent<VerticalLayoutGroup>().spacing += 1;

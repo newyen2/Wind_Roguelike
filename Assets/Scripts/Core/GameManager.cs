@@ -26,11 +26,15 @@ namespace Core
                 Destroy(gameObject);
                 return;
             }
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+
+        private void Start()
+        {
             
             AudioManager.Instance.Stop("bgm_main");
             AudioManager.Instance.Play("bgm_cover");
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
         }
 
         [Button]

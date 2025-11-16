@@ -9,6 +9,7 @@ public class RewardCard : MonoBehaviour, IPointerClickHandler
 {
     public GameObject reward = null;
     public RewardCard[] otherRewardCard;
+    public bool is_random = true;
 
     void Start()
     {
@@ -22,6 +23,8 @@ public class RewardCard : MonoBehaviour, IPointerClickHandler
         List<GameObject> available = new List<GameObject>();
         foreach(GameObject gb in gameObjects)
         {
+            if(!is_random) return reward;
+
             if (gb.GetComponent<BuildingBase>().max_round >= GlobalManager.Instance.recordsCount)
             if (gb.GetComponent<BuildingBase>().min_round <= GlobalManager.Instance.recordsCount)
             if (gb != otherRewardCard[0])

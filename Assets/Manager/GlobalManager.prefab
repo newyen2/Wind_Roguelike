@@ -55,6 +55,22 @@ MonoBehaviour:
   - {fileID: 4752477190949869519, guid: 0924522be807ae74ea252ad585305bae, type: 3}
   - {fileID: 4752477190949869519, guid: 855b85933c5e6ab4cbe48be4a32b9b68, type: 3}
   - {fileID: 4752477190949869519, guid: a0044c215fe2a044f969c20a52567f02, type: 3}
+  windPrefabs:
+  - {fileID: 11400000, guid: e5b7c4b1926d3fd4ebf26d1909e72ac7, type: 2}
+  - {fileID: 11400000, guid: 6eacd54c389f72d4abe3d845a7b41d19, type: 2}
+  - {fileID: 11400000, guid: 2dc8bec6d0cd3294b9128356c583f63d, type: 2}
+  - {fileID: 11400000, guid: 80bd0d0a5c6189943a6b8c3d7039aac2, type: 2}
+  - {fileID: 11400000, guid: 87dfe18029aa864449357e93141a1e45, type: 2}
+  - {fileID: 11400000, guid: 1586bc5457f0161418713f5f46451801, type: 2}
+  - {fileID: 11400000, guid: 610ae6d8683f35a44ba22aaf2862d2fe, type: 2}
+  - {fileID: 11400000, guid: 4685bdddd7be9214a92e1e8fa01d0ca5, type: 2}
+  - {fileID: 11400000, guid: 1049c26a6a4a82c45ae2d9c8eb709cca, type: 2}
+  - {fileID: 11400000, guid: d6bd51639fc4db74897af34d2b42baf8, type: 2}
+  - {fileID: 11400000, guid: f4bfa52725fa6d3429a7a183ad19f2dd, type: 2}
+  - {fileID: 11400000, guid: 51f622abe47eff241919eb69e52f38b7, type: 2}
+  - {fileID: 11400000, guid: 8a6ad0874bf48cd47a2a9c40030d836f, type: 2}
+  - {fileID: 11400000, guid: b29078ce4b4e182459338cac33e81f6e, type: 2}
+  - {fileID: 11400000, guid: 51f622abe47eff241919eb69e52f38b7, type: 2}
   rewardBuild: []
   recordsCount: 0
   resultGrid: []

@@ -65,6 +65,7 @@ public class Wind
         if (!isEnable) {
             return;
         }
+        UIManager.Instance.DisplayWindParticle(x, y, direction);
         Debug.Log(StageManager.Instance.nextWindPosition);
         if (direction == Direction.E)
         {   

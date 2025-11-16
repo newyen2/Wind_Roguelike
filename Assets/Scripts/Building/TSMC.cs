@@ -10,6 +10,7 @@ public class TSMC : BuildingBase
     {
         if (StageManager.Instance.round != now_round)
         {
+            StageManager.Instance.delayDraw = 0;
             Renew(StageManager.Instance.round);
         }
 
@@ -32,7 +33,7 @@ public class TSMC : BuildingBase
                 if (go != null)
                 {
                     var bb = go.GetComponent<BuildingBase>();
-                    if (bb != null) pts += bb.total_point;
+                    pts += bb.total_point;
                 }
             }
         }
@@ -42,8 +43,9 @@ public class TSMC : BuildingBase
         AddIfValid(x, y - 1); // down
         AddIfValid(x, y + 1); // up
 
-        if(pts > 80)
+        if(pts >= 80)
         {
+            StageManager.Instance.delaycost += 1;
             total_point += 30;
             return 30;
         }

@@ -27,6 +27,7 @@ public class StageManager : MonoBehaviour
     public WindSlot[,] nextWindPosition;
 
     public int delayDraw = 0;
+    public int delaycost = 0;
 
 
     public bool is_round_going = false;
@@ -197,7 +198,9 @@ public class StageManager : MonoBehaviour
                 }
                 else if(GlobalManager.Instance.grid[i, j] != null)
                 {
-                    score += GlobalManager.Instance.grid[i, j].GetComponent<BuildingBase>().EndScore(i, j);
+                    int s = GlobalManager.Instance.grid[i, j].GetComponent<BuildingBase>().EndScore(i, j);
+                    score += s;
+                    UIManager.Instance.DisplayTextScoreParticle(i, j, s);
                 }
             }
         }
@@ -218,7 +221,7 @@ public class StageManager : MonoBehaviour
             yield break;
         }
 
-        powerPoint = maxPowerPoint;
+        powerPoint = maxPowerPoint+delaycost;
         //棄牌, 重抽, 回點
         DeckManager.Instance.DiscardAllFromHand();//棄牌
         DeckManager.Instance.DrawCards(DeckManager.Instance.startingHandSize + delayDraw);//抽牌
@@ -239,7 +242,7 @@ public class StageManager : MonoBehaviour
     {
         Debug.Log("Clear");
         GlobalManager.Instance.recordsCount += 1;
-        if (GlobalManager.Instance.recordsCount == 11) GameManager.Instance.SwitchScene("GameWin");
+        if (GlobalManager.Instance.recordsCount == 10) GameManager.Instance.SwitchScene("GameWin");
         else GameManager.Instance.SwitchScene("Result");
     }
     void Fail()

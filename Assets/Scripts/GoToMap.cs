@@ -25,4 +25,15 @@ public class GoToMap : MonoBehaviour
     {
         GameManager.Instance.SwitchScene("Stage");
     }
+    
+    public void Go2Menu()
+    {
+        GameManager.Instance.SwitchScene("Menu");
+    }
+
+    public void Go2Initial()
+    {
+        GameManager.Instance.SwitchScene("InitialReward");
+    }
+
 }

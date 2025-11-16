@@ -197,17 +197,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 295299413}
   m_CullTransparentMesh: 1
---- !u!114 &413315735 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1310322916986422065, guid: ecbf7bddd868a8b47a2d65e8891d8d5e, type: 3}
-  m_PrefabInstance: {fileID: 919849275}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b27d5c4f2c447c43ad38800b50b7f2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &449557045
 GameObject:
   m_ObjectHideFlags: 0
@@ -637,6 +626,7 @@ GameObject:
   - component: {fileID: 1004392782}
   - component: {fileID: 1004392781}
   - component: {fileID: 1004392780}
+  - component: {fileID: 1004392783}
   m_Layer: 5
   m_Name: ReturnButton
   m_TagString: Untagged
@@ -707,10 +697,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 413315735}
-        m_TargetAssemblyTypeName: Core.GameManager, Assembly-CSharp
-        m_MethodName: SwitchScene
-        m_Mode: 5
+      - m_Target: {fileID: 1004392783}
+        m_TargetAssemblyTypeName: GoToMap, Assembly-CSharp
+        m_MethodName: Go2Menu
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -757,6 +747,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1004392778}
   m_CullTransparentMesh: 1
+--- !u!114 &1004392783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1004392778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9229dbe35f88074db4bcc8a80461c94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1268117184
 GameObject:
   m_ObjectHideFlags: 0
@@ -945,8 +947,28 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4275708591596910745, guid: 3564d74a775d70d47ba0b8429fae2104, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1430865863}
   m_SourcePrefab: {fileID: 100100000, guid: 3564d74a775d70d47ba0b8429fae2104, type: 3}
+--- !u!1 &1430865862 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4275708591596910745, guid: 3564d74a775d70d47ba0b8429fae2104, type: 3}
+  m_PrefabInstance: {fileID: 1430865861}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1430865863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430865862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9229dbe35f88074db4bcc8a80461c94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1964959304
 GameObject:
   m_ObjectHideFlags: 0

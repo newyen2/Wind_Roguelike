@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 223766963}
   - component: {fileID: 223766962}
   - component: {fileID: 223766961}
+  - component: {fileID: 223766964}
   m_Layer: 5
   m_Name: PlayButton
   m_TagString: Untagged
@@ -242,10 +243,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1710981889}
-        m_TargetAssemblyTypeName: Core.GameManager, Assembly-CSharp
-        m_MethodName: SwitchScene
-        m_Mode: 5
+      - m_Target: {fileID: 223766964}
+        m_TargetAssemblyTypeName: GoToMap, Assembly-CSharp
+        m_MethodName: Go2Initial
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -254,6 +255,18 @@ MonoBehaviour:
           m_StringArgument: InitialReward
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &223766964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 223766959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9229dbe35f88074db4bcc8a80461c94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &963398948
 GameObject:
   m_ObjectHideFlags: 0
@@ -1007,17 +1020,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1710981889 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1310322916986422065, guid: ecbf7bddd868a8b47a2d65e8891d8d5e, type: 3}
-  m_PrefabInstance: {fileID: 1295961402}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b27d5c4f2c447c43ad38800b50b7f2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &1731643129 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7735476616604130151, guid: c8fc6bb0d67222a4f808c3ba4f8af1ab, type: 3}

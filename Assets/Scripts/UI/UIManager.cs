@@ -24,10 +24,12 @@ public class UIManager : MonoBehaviour
         {
             pos_to_tile[tile.tilePos.x, tile.tilePos.y] = tile.transform;
         }
-
+    }
+    
+    void Start()
+    {
         max_score_text.text = "需求 :" + StageManager.Instance.targetScore.ToString();
     }
-
     public void DisplayScoreText(int target)
     {
         StopCoroutine(ScoreText(target));

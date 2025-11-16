@@ -20,7 +20,6 @@ public class BuildWindManager : MonoBehaviour
         Tile[] tiles = FindObjectsByType<Tile>(FindObjectsSortMode.None);
         foreach(var tile in tiles)
         {
-            print(tile.transform.position);
             GameObject tmp = GlobalManager.Instance.grid[tile.tilePos.x, tile.tilePos.y];
             if(tmp != null)
             {

@@ -143,6 +143,7 @@ public class StageManager : MonoBehaviour
     void Clear()
     {
         Debug.Log("Clear");
+        GlobalManager.Instance.recordsCount += 1;
         GameManager.Instance.SwitchScene("Result");
     }
     void Fail()

@@ -8,7 +8,7 @@ public class BuildingBase : MonoBehaviour
     public string displayName;
     [TextArea] public string description;
     public int multiplier; //乘法器
-    public int adder; //
+    public int adder; //加法器
 
     public int getMultiplier()
     {

@@ -1,7 +1,7 @@
 using Core;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using System;
 public class BuildManager : MonoBehaviour
 {
     public static BuildManager Instance;
@@ -93,10 +93,42 @@ public class BuildManager : MonoBehaviour
         GlobalManager.Instance.grid[tilePos.x, tilePos.y] = selectedPrefab;
 
         Debug.Log($"建築生成於 ({tilePos.x}, {tilePos.y})");
+        //放置aya時
+        if  (selectedPrefab.GetComponent<BuildingBase>() is aya Aya)
+        {
+            WindGodGirl(tilePos);
+        }
 
         // 放好後重置選取（看需求）
         selectedPrefab = null;
     }
+    public void WindGodGirl(Vector2Int tilePos)
+    {
+        if(tilePos.x-1>=0)
+        {
+            GlobalManager.Instance.grid[tilePos.x-1, tilePos.y].GetComponent<BuildingBase>().multiplier+=2;
+        }
+        if(tilePos.y-1>=0)
+        {
+            GlobalManager.Instance.grid[tilePos.x, tilePos.y-1].GetComponent<BuildingBase>().multiplier+=2;
+        }
+        try
+        {
+            GlobalManager.Instance.grid[tilePos.x, tilePos.y+1].GetComponent<BuildingBase>().multiplier+=2;
+        }
+        catch(Exception ex)
+        {
+            
+        }
+        try
+        {
+            GlobalManager.Instance.grid[tilePos.x+1, tilePos.y-1].GetComponent<BuildingBase>().multiplier+=2;
+        }
+        catch (Exception ex)
+        {
+            
+        }
+}
 
     // 這個是測試用的，之後幫我刪掉
     public void GoToReward()

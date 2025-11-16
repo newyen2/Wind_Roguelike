@@ -878,8 +878,12 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1897492673493072934, guid: 337b10d95b19c544db4605bce3c2ac91, type: 3}
-      propertyPath: tilePos.y
+      propertyPath: tilePos.x
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1897492673493072934, guid: 337b10d95b19c544db4605bce3c2ac91, type: 3}
+      propertyPath: tilePos.y
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3323160149267254763, guid: 337b10d95b19c544db4605bce3c2ac91, type: 3}
       propertyPath: m_Pivot.x

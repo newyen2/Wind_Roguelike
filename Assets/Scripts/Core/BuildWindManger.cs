@@ -69,6 +69,8 @@ public class BuildWindManager : MonoBehaviour
             buildParentWind
         );
 
+        Debug.Log("XX");
+
         // 記錄到陣列
         StageManager.Instance.AddWind(tilePos.x, tilePos.y);
         GlobalManager.Instance.grid[tilePos.x, tilePos.y] = selectedPrefab;

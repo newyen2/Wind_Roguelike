@@ -17,5 +17,10 @@ public class testAudio : MonoBehaviour
         {
             AudioManager.Instance.Play("build");
         }
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            print("play A");
+            AudioManager.Instance.Play("get_point");
+        }
     }
 }

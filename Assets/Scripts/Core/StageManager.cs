@@ -31,6 +31,7 @@ public class StageManager : MonoBehaviour
     public int maxPowerPoint;
 
     [SerializeField] TMP_Text energy;
+    [SerializeField] TMP_Text count;
 
     public static StageManager Instance { get; private set; }
     private void Awake()
@@ -158,6 +159,7 @@ public class StageManager : MonoBehaviour
     void Update()
     {
         energy.text =""+ powerPoint;
+        count.text = "" + (roundMax-round+1);
     }
 
     [Button]

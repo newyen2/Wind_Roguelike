@@ -9,7 +9,6 @@ public class RewardCard : MonoBehaviour, IPointerClickHandler
 {
     public GameObject reward = null;
     public RewardCard[] otherRewardCard;
-    public bool is_random = true;
 
     void Start()
     {
@@ -18,8 +17,6 @@ public class RewardCard : MonoBehaviour, IPointerClickHandler
     }
     GameObject Random()
     {
-        if(!is_random) return reward;
-
         GameObject[] gameObjects = GlobalManager.Instance.buildingPrefabs;
         // collect only prefabs that are allowed by recordsCount
         List<GameObject> available = new List<GameObject>();

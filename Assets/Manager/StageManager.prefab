@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 785657580788602338}
   - component: {fileID: 8760363572874712399}
-  - component: {fileID: 7519021615199786817}
+  - component: {fileID: 3361255888414234506}
   m_Layer: 0
   m_Name: StageManager
   m_TagString: Untagged
@@ -53,7 +53,7 @@ MonoBehaviour:
   powerPoint: 0
   maxPowerPoint: 0
   abaaba: {fileID: 0}
---- !u!114 &7519021615199786817
+--- !u!114 &3361255888414234506
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

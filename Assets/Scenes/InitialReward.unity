@@ -801,8 +801,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   reward: {fileID: 4752477190949869519, guid: 445921adb1806bf4b9b7d549d8088581, type: 3}
-  otherRewardCard: []
-  is_random: 0
 --- !u!61 &1047215267
 BoxCollider2D:
   m_ObjectHideFlags: 0

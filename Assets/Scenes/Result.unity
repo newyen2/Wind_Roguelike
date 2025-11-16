@@ -628,9 +628,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   reward: {fileID: 4752477190949869519, guid: 445921adb1806bf4b9b7d549d8088581, type: 3}
-  otherRewardCard:
-  - {fileID: 1463874292}
-  - {fileID: 725890170}
 --- !u!1 &725890165
 GameObject:
   m_ObjectHideFlags: 0
@@ -769,9 +766,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   reward: {fileID: 4752477190949869519, guid: 445921adb1806bf4b9b7d549d8088581, type: 3}
-  otherRewardCard:
-  - {fileID: 607051506}
-  - {fileID: 1463874292}
 --- !u!1 &869124387
 GameObject:
   m_ObjectHideFlags: 0
@@ -958,7 +952,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   reward: {fileID: 0}
-  otherRewardCard: []
 --- !u!114 &1033556691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1264,17 +1257,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1463874292 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5613071733232783436, guid: 29d8bf77fbf40ec4895faed0449dfb8f, type: 3}
-  m_PrefabInstance: {fileID: 236188743334087939}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5071b8bf988997c4d9ca4063addadbab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1479183524
 GameObject:
   m_ObjectHideFlags: 0
@@ -2019,18 +2001,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5613071733232783436, guid: 29d8bf77fbf40ec4895faed0449dfb8f, type: 3}
-      propertyPath: otherRewardCard.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5613071733232783436, guid: 29d8bf77fbf40ec4895faed0449dfb8f, type: 3}
-      propertyPath: otherRewardCard.Array.data[0]
-      value: 
-      objectReference: {fileID: 607051506}
-    - target: {fileID: 5613071733232783436, guid: 29d8bf77fbf40ec4895faed0449dfb8f, type: 3}
-      propertyPath: otherRewardCard.Array.data[1]
-      value: 
-      objectReference: {fileID: 725890170}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

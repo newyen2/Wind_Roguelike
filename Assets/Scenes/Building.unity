@@ -447,7 +447,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a0d4954dda942488b00b99221dec24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< Updated upstream
   buildingPrefabs:
   - {fileID: 4752477190949869519, guid: 445921adb1806bf4b9b7d549d8088581, type: 3}
   - {fileID: 4752477190949869519, guid: dfac36898ad01f74688f2a46a168ce5c, type: 3}
@@ -2110,4 +2109,5 @@ SceneRoots:
   - {fileID: 352089813}
   - {fileID: 1067477528}
   - {fileID: 1595395841}
+  - {fileID: 1722482937}
   - {fileID: 528065252}

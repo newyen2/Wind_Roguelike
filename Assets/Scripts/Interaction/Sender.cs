@@ -34,10 +34,14 @@ public class Sender : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, ID
         if (hitObj != null && hitObj.TryGetComponent<Tile>(out var tile) && this.CompareTag("Building"))
         {
             Debug.Log("放在 Tile：" + tile.tilePos);
-            BuildManager.Instance.TryBuild(tile.tilePos, tile.transform);
-            is_set = true;
-            Destroy(this.gameObject);
-            return;
+            if(BuildManager.Instance.canbuild(tile.tilePos, tile.transform))
+            {
+                BuildManager.Instance.TryBuild(tile.tilePos, tile.transform);
+                is_set = true;
+                Destroy(this.gameObject);
+                return;
+
+            }
         }
 
         if (hitObj != null && hitObj.TryGetComponent<WindTile>(out var windTile) && this.CompareTag("Wind"))

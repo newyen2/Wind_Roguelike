@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5472311257150223424}
   - component: {fileID: 4453188263921553182}
   - component: {fileID: 809902291010015620}
-  - component: {fileID: 5320931796220821291}
+  - component: {fileID: 3591864457236573477}
   m_Layer: 5
   m_Name: WindTurbine
   m_TagString: Building
@@ -137,7 +137,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 100, y: 100}
   m_EdgeRadius: 0
---- !u!114 &5320931796220821291
+--- !u!114 &3591864457236573477
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -146,11 +146,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4752477190949869519}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6221406def35fd41a2766fd5237e7ad, type: 3}
+  m_Script: {fileID: 11500000, guid: 3b741c46f96675e4c927939544c18e64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 1000
+  id: 1
   displayName: "\u98A8\u529B\u767C\u96FB\u6A5F"
   description: "\u57FA\u790E\u7684\u767C\u96FB\u8A2D\u65BD"
-  multiplier: 2
-  adder: 5
+  multiplier: 10
+  adder: 0

@@ -47,7 +47,7 @@ public class DeckManager : MonoBehaviour
         // 清空手牌，抽起始手牌
         HandManager.Instance.ClearHand();
         DrawCards(startingHandSize);
-        Debug.Log($"Have {startingHandSize} cards.");
+        //Debug_DrawDummyHand();
     }
 
     /// <summary>
@@ -55,6 +55,7 @@ public class DeckManager : MonoBehaviour
     /// </summary>
     public void DrawCards(int count)
     {
+        Debug.Log($"抽牌,抽{count}張");
         for (int i = 0; i < count; i++)
         {
             // 如果抽牌堆沒牌了，試著把棄牌堆洗回來
@@ -73,9 +74,11 @@ public class DeckManager : MonoBehaviour
             drawPile.RemoveAt(0);
 
             HandManager.Instance.AddCardToHand(topCard);
-
+            //生幾個Instance來做看看
+            
             // 之後可以在這裡加：類似小丑牌的系統/遺物觸發邏輯JokerSystem.OnCardDrawn(topCard);
         }
+        
     }
 
     /// <summary>
@@ -88,6 +91,7 @@ public class DeckManager : MonoBehaviour
 
         discardPile.Add(card);
         // 之後可以在這裡掛 OnDiscard Hooks 棄牌時觸發效果
+        
     }
 
     /// <summary>
@@ -154,11 +158,19 @@ public class DeckManager : MonoBehaviour
     public void DiscardAllFromHand()
     {
         // 戰鬥規則：把現在所有手牌視為「要丟棄的牌」
+        // 棄光手牌
+        Debug.Log("棄光手牌");
         var snapshot = new List<CardInstance>(HandManager.Instance.CardsInHand);
         foreach (var card in snapshot)
         {
             DiscardFromHand(card);   // 這裡會順便叫 HandManager.RemoveCardFromHand + 丟到棄牌堆
         }
     }
-
+    
+    public void Debug_DrawDummyHand()
+    {
+        int dummyHandSizeForTest = 5;
+        HandManager.Instance.SpawnDummyCardsForUITest(dummyHandSizeForTest);
+        Debug.Log("生成DummyCard");
+    }
 }

@@ -96,5 +96,25 @@ public class HandManager : MonoBehaviour
         if (index < 0 || index >= cardViews.Count) return null;
         return cardViews[index];
     }
-    
+    #if UNITY_EDITOR
+    // 在 Inspector 上右鍵 HandManager component，會看到一個選項 "Spawn Dummy Cards"
+    [ContextMenu("Spawn Dummy Cards (UI Test)")]
+    private void SpawnDummyCardsForUITest_ContextMenu()
+    {
+        SpawnDummyCardsForUITest(5);
+    }
+    #endif
+    public void SpawnDummyCardsForUITest(int count = 5)
+    {
+        ClearHand(); // 先清掉現有的
+
+        for (int i = 0; i < count; i++)
+        {
+            // 不建立 CardInstance，純 UI 測試 → 傳 null
+            var view = Instantiate(cardViewPrefab, handRoot);
+            view.Setup(null);     // 這裡會走 CreateDummyInstance()
+            cardViews.Add(view);
+            Debug.Log("生成卡牌");
+        }
+    }
 }

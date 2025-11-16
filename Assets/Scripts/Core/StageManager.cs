@@ -30,7 +30,6 @@ public class StageManager : MonoBehaviour
     public int maxPowerPoint;
 
     public static StageManager Instance { get; private set; }
-
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -73,7 +72,44 @@ public class StageManager : MonoBehaviour
                 nextWindPosition[i, j] = new WindSlot(i, j, 100, inputDirection);
             }
         }
+        //建立牌堆並抽牌
+        DeckManager.Instance.StartBattle();
+    }
 
+    public bool TryPlayCard(CardInstance card)//打牌檢測
+    {
+        if (card == null)
+        {
+            Debug.LogWarning("TryPlayCard: card is null");
+            return false;
+        }
+
+        // 用 powerPoint 當唯一能量
+        if (card.currentCost > powerPoint)
+        {
+            Debug.Log(
+                $"能量不足，目前 {powerPoint}，需要 {card.currentCost}，無法打出 {card.data.displayName}"
+            );
+            return false;
+        }
+
+        // 扣能量
+        powerPoint -= card.currentCost;
+
+        // TODO: 在這裡接真正的卡片效果系統
+        // CardEffectSystem.Instance.Resolve(card);
+
+        // 決定丟去哪裡
+        if (card.isExhausted)
+        {
+            DeckManager.Instance.ExhaustFromHand(card);
+        }
+        else
+        {
+            DeckManager.Instance.DiscardFromHand(card);
+        }
+
+        return true;
     }
 
     // Update is called once per frame
@@ -127,6 +163,9 @@ public class StageManager : MonoBehaviour
         }
 
         powerPoint = maxPowerPoint;
+        //棄牌, 重抽, 回點
+        DeckManager.Instance.DiscardAllFromHand();//棄牌
+        DeckManager.Instance.DrawCards(DeckManager.Instance.startingHandSize);//抽牌
     }
 
     [Button]

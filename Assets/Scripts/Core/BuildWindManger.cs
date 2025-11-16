@@ -61,7 +61,7 @@ public class BuildWindManager : MonoBehaviour
         }
         return true;
     }
-    public bool TryBuild(Vector2Int tilePos, Transform tileTransform)
+    public bool TryBuild(Vector2Int tilePos, Transform tileTransform,CardView card)
     {
         if (selectedPrefab == null)
         {
@@ -86,8 +86,9 @@ public class BuildWindManager : MonoBehaviour
 
         Debug.Log(newBuilding);
 
+        CardData cardData = card.instance.data;
         // 記錄到陣列
-        StageManager.Instance.AddWind(tilePos.x, tilePos.y);
+        StageManager.Instance.AddWind(tilePos.x, tilePos.y,cardData.baseWindPower);
         GlobalManager.Instance.grid[tilePos.x, tilePos.y] = selectedPrefab;
         GlobalManager.Instance.gridobj[tilePos.x, tilePos.y] = newBuilding;
 

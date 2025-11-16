@@ -280,9 +280,9 @@ public class StageManager : MonoBehaviour
     }
 
     [Button]
-    public void AddWind(int x, int y, Direction dir = Direction.N, int power = 3, Wind wind = null)
+    public void AddWind(int x, int y, int power = 3, Wind wind = null)
     {
-        Direction direction = dir;
+        Direction direction = Direction.N;
         if (x == 0)
         {
             direction = Direction.E;

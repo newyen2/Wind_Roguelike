@@ -79,7 +79,7 @@ public class StageManager : MonoBehaviour
         DeckManager.Instance.StartBattle();
     }
 
-    public bool canPlay(CardInstance card)
+    public bool canPlay(CardInstance card, Vector2Int windTile)
     {
         if (card == null)
         {
@@ -93,6 +93,28 @@ public class StageManager : MonoBehaviour
             Debug.Log(
                 $"能量不足，目前 {powerPoint}，需要 {card.currentCost}，無法打出 {card.data.displayName}"
             );
+            return false;
+        }
+
+        CardDirection TileDirection = CardDirection.None;
+        if (windTile.y == 0)
+        {
+            TileDirection = CardDirection.Up;
+        } else if (windTile.y == GlobalManager.Instance.groundSize + 1)
+        {
+            TileDirection = CardDirection.Down;
+        }
+        else if (windTile.x == 0)
+        {
+            TileDirection = CardDirection.Right;
+        }
+        else if (windTile.x == GlobalManager.Instance.groundSize + 1)
+        {
+            TileDirection = CardDirection.Left;
+        }
+
+        if (card.direction != TileDirection) {
+            Debug.Log($"Direction Error: Card {card.direction} Tile {TileDirection}");
             return false;
         }
         return true;

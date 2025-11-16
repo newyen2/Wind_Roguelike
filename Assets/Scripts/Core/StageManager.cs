@@ -79,6 +79,25 @@ public class StageManager : MonoBehaviour
         DeckManager.Instance.StartBattle();
     }
 
+    public bool canPlay(CardInstance card)
+    {
+        if (card == null)
+        {
+            Debug.LogWarning("TryPlayCard: card is null");
+            return false;
+        }
+
+        // 用 powerPoint 當唯一能量
+        if (card.currentCost > powerPoint)
+        {
+            Debug.Log(
+                $"能量不足，目前 {powerPoint}，需要 {card.currentCost}，無法打出 {card.data.displayName}"
+            );
+            return false;
+        }
+        return true;
+    }
+
     public bool TryPlayCard(CardInstance card)//打牌檢測
     {
         if (card == null)
@@ -99,8 +118,6 @@ public class StageManager : MonoBehaviour
         // 扣能量
         powerPoint -= card.currentCost;
 
-        // TODO: 在這裡接真正的卡片效果系統
-        // CardEffectSystem.Instance.Resolve(card);
 
         // 決定丟去哪裡
         if (card.isExhausted)

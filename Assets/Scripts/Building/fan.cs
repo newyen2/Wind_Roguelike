@@ -5,7 +5,7 @@ using UnityEngine;
 public class fan  : BuildingBase
 {
     public int addddd;
-    public override int Score(int windPower, Direction windDirection, int x, int y,Wind wind)
+    public override int StartScore(int windPower, Direction windDirection, int x, int y,Wind wind)
     {
         if (StageManager.Instance.round != now_round)
         {

@@ -15,6 +15,7 @@ public class GlobalManager : MonoBehaviour
     public static BuildManager InstanceBuildManager { get; private set; }
     public int groundSize = 4;
     public GameObject[,] grid;
+    public GameObject[,] gridobj;
     public List<GameObject> rewardBuild;
 
     public List<StageRecord> records = new List<StageRecord>()
@@ -42,6 +43,7 @@ public class GlobalManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
         grid = new GameObject[groundSize + 2, groundSize + 2];
+        gridobj = new GameObject[groundSize + 2, groundSize + 2];
     }
 
     void Start()

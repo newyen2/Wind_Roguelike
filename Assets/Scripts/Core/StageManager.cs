@@ -162,8 +162,32 @@ public class StageManager : MonoBehaviour
                 windslot.Execute();
             }
             ApplyMove();
-
             yield return new WaitForSeconds(0.5f);
+        }
+
+        
+        newround();
+    }
+
+
+    [SerializeField] GameObject abaaba;
+    void newround()
+    {
+        for (int i = 0; i < GlobalManager.Instance.groundSize + 2; i++)
+        {
+            for (int j = 0; j < GlobalManager.Instance.groundSize + 2; j++)
+            {
+                if ((i == 0 || (i == GlobalManager.Instance.groundSize + 1) || j == 0 || j == GlobalManager.Instance.groundSize + 1)
+                    && GlobalManager.Instance.grid[i, j]!=null)
+                {
+                    abaaba = GlobalManager.Instance.gridobj[i, j];
+                    GlobalManager.Instance.gridobj[i, j] = null;
+                    GlobalManager.Instance.grid[i, j] = null;
+
+                    Destroy(abaaba);
+
+                }
+            }
         }
 
     }

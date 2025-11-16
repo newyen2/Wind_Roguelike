@@ -14,7 +14,7 @@ public class UIManager : MonoBehaviour
 
     // 展示分數用
     int now_score = 0;
-    public TMP_Text score_text;
+    public TMP_Text score_text, max_score_text;
 
     void Awake()
     {
@@ -24,6 +24,8 @@ public class UIManager : MonoBehaviour
         {
             pos_to_tile[tile.tilePos.x, tile.tilePos.y] = tile.transform;
         }
+
+        max_score_text.text = "需求 :" + StageManager.Instance.targetScore.ToString();
     }
 
     public void DisplayScoreText(int target)

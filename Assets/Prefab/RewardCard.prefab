@@ -138,6 +138,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   reward: {fileID: 4752477190949869519, guid: 445921adb1806bf4b9b7d549d8088581, type: 3}
+  otherRewardCard: []
+  is_random: 1
 --- !u!1 &4853974965301877897
 GameObject:
   m_ObjectHideFlags: 0
@@ -284,8 +286,8 @@ MonoBehaviour:
 
     OOOOOOO'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8bb9f4ce5f0896c4fa2a24f4e7217307, type: 2}
-  m_sharedMaterial: {fileID: 4977824707398362940, guid: 8bb9f4ce5f0896c4fa2a24f4e7217307, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 57e88667468c5e24d9ce41411b6cbfa2, type: 2}
+  m_sharedMaterial: {fileID: 2849478393931850239, guid: 57e88667468c5e24d9ce41411b6cbfa2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -418,8 +420,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: OOO
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8bb9f4ce5f0896c4fa2a24f4e7217307, type: 2}
-  m_sharedMaterial: {fileID: 4977824707398362940, guid: 8bb9f4ce5f0896c4fa2a24f4e7217307, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 57e88667468c5e24d9ce41411b6cbfa2, type: 2}
+  m_sharedMaterial: {fileID: 2849478393931850239, guid: 57e88667468c5e24d9ce41411b6cbfa2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -443,7 +445,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45.1
+  m_fontSize: 53.7
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

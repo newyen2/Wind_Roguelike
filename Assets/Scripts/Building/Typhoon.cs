@@ -6,7 +6,7 @@ public class Typhoon : BuildingBase
 {
     List<int> windRecord = new();
     int wind_dir = 1 + 10 + 100 + 1000;
-    public override int Score(int windPower, Direction windDirection, int x, int y)
+    public override int Score(int windPower, Direction windDirection, int x, int y, Wind wind)
     {
         if(StageManager.Instance.round != now_round)
         {

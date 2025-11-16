@@ -6,7 +6,7 @@ public class cirno : BuildingBase
 {
 
 
-    public override int Score(int windPower, Direction windDirection, int x, int y)
+    public override int Score(int windPower, Direction windDirection, int x, int y,Wind wind)
     {
        this.multiplier = 1;
 

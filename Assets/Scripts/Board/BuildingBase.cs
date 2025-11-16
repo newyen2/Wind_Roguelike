@@ -23,7 +23,7 @@ public class BuildingBase : MonoBehaviour
     {
         return adder;
     }
-    public virtual int Score(int windPower, Direction windDirection, int x, int y)
+    public virtual int Score(int windPower, Direction windDirection, int x, int y, Wind wind)
     {
         // 基本建築預設的計分方式
         return 0;

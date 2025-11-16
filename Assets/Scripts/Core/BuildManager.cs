@@ -94,20 +94,21 @@ public class BuildManager : MonoBehaviour
 
         Debug.Log($"建築生成於 ({tilePos.x}, {tilePos.y})");
         //放置aya時
-        if  (selectedPrefab.GetComponent<BuildingBase>().displayName == "aya")
+        print(selectedPrefab.GetComponent<BuildingBase>());
+        if  (selectedPrefab.GetComponent<BuildingBase>() is aya Aya)
         {
             Debug.Log("Is Aya!");
-            WindGodGirl(tilePos);
+            WindGodGirl(tilePos.x, tilePos.y);
         }
 
         // 放好後重置選取（看需求）
         selectedPrefab = null;
     }
-    public void WindGodGirl(Vector2Int tilePos)
+    public void WindGodGirl(int x, int y)
     {
         try
         {
-            GlobalManager.Instance.grid[tilePos.x-1, tilePos.y].GetComponent<BuildingBase>().multiplier+=2;
+            GlobalManager.Instance.grid[x-1, y].GetComponent<BuildingBase>().multiplier+=2;
             Debug.Log("Test");
         }
         catch(Exception ex)
@@ -116,7 +117,7 @@ public class BuildManager : MonoBehaviour
         }
         try
         {
-            GlobalManager.Instance.grid[tilePos.x, tilePos.y-1].GetComponent<BuildingBase>().multiplier+=2;
+            GlobalManager.Instance.grid[x, y-1].GetComponent<BuildingBase>().multiplier+=2;
             Debug.Log("Test");
         }
         catch(Exception ex)
@@ -125,7 +126,7 @@ public class BuildManager : MonoBehaviour
         }
         try
         {
-            GlobalManager.Instance.grid[tilePos.x, tilePos.y+1].GetComponent<BuildingBase>().multiplier+=2;
+            GlobalManager.Instance.grid[x, y+1].GetComponent<BuildingBase>().multiplier+=2;
             Debug.Log("Test");
         }
         catch(Exception ex)
@@ -134,7 +135,7 @@ public class BuildManager : MonoBehaviour
         }
         try
         {
-            GlobalManager.Instance.grid[tilePos.x+1, tilePos.y].GetComponent<BuildingBase>().multiplier+=2;
+            GlobalManager.Instance.grid[x+1, y].GetComponent<BuildingBase>().multiplier+=2;
             Debug.Log("Test");
         }
         catch (Exception ex)

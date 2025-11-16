@@ -44,8 +44,13 @@ public class Wind
             StageManager.Instance.score += score;
             UIManager.Instance.DisplayScoreText(StageManager.Instance.score);
             UIManager.Instance.DisplayTextScoreParticle(x, y, score);
+            Debug.Log($"Wind Execute: {x}, {y} = {score}");
         }
-        Debug.Log($"Wind Execute: {x}, {y}");
+        else 
+        { 
+            Debug.Log($"Wind Execute: {x}, {y} = 0"); 
+        }
+
     }
 
     public void Move(int x, int y)
@@ -71,7 +76,7 @@ public class Wind
                 isEnable = false;
                 return;
             }
-            Debug.Log($"Wind Move: ({x}, {y}) -> ({x - 1}, {y})");
+            Debug.Log($"Wind Move: ({x}, {y}) -> ({x-1}, {y})");
             StageManager.Instance.nextWindPosition[x - 1, y].windSlot.Add(new Wind(direction, power));
         }
         else if (direction == Direction.S)

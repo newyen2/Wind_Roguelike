@@ -1,0 +1,13 @@
+Font: Microsoft JhengHei  Style: Regular
+Point Size: 110   SP/PD Ratio: 8.2%
+
+Characters included: 89/90
+Missing characters: 1
+Excluded characters: 0
+
+Characters missing from font file:
+----------------------------------------
+ID: 9320	Hex: 2468	Char [⑨]
+
+Characters excluded from packing:
+----------------------------------------

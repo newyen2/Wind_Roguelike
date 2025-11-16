@@ -26,6 +26,9 @@ public class StageManager : MonoBehaviour
     public WindSlot[,] windPosition;
     public WindSlot[,] nextWindPosition;
 
+    public int delayDraw = 0;
+
+
     public bool is_round_going = false;
     public int powerPoint;
     public int maxPowerPoint;
@@ -218,7 +221,7 @@ public class StageManager : MonoBehaviour
         powerPoint = maxPowerPoint;
         //棄牌, 重抽, 回點
         DeckManager.Instance.DiscardAllFromHand();//棄牌
-        DeckManager.Instance.DrawCards(DeckManager.Instance.startingHandSize);//抽牌
+        DeckManager.Instance.DrawCards(DeckManager.Instance.startingHandSize + delayDraw);//抽牌
     }
 
     [Button]

@@ -39,7 +39,6 @@ public class GlobalManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-
         Instance = this;
         DontDestroyOnLoad(gameObject);
         grid = new GameObject[groundSize + 2, groundSize + 2];

@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundSize: 4
   rewardBuild: []
+  recordsCount: 0
   resultGrid: []
 --- !u!114 &6902741122583038563
 MonoBehaviour:
@@ -60,5 +61,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: beacafb5e999f3645b4da55659517fb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingDeck: []
+  startingDeck:
+  - {fileID: 11400000, guid: 610ae6d8683f35a44ba22aaf2862d2fe, type: 2}
+  - {fileID: 11400000, guid: 610ae6d8683f35a44ba22aaf2862d2fe, type: 2}
+  - {fileID: 11400000, guid: 610ae6d8683f35a44ba22aaf2862d2fe, type: 2}
+  - {fileID: 11400000, guid: 610ae6d8683f35a44ba22aaf2862d2fe, type: 2}
+  - {fileID: 11400000, guid: 610ae6d8683f35a44ba22aaf2862d2fe, type: 2}
+  - {fileID: 11400000, guid: c6a48f3fa3cd1194a9ea2839b5039a67, type: 2}
+  - {fileID: 11400000, guid: c6a48f3fa3cd1194a9ea2839b5039a67, type: 2}
+  - {fileID: 11400000, guid: c6a48f3fa3cd1194a9ea2839b5039a67, type: 2}
+  - {fileID: 11400000, guid: c6a48f3fa3cd1194a9ea2839b5039a67, type: 2}
+  - {fileID: 11400000, guid: c6a48f3fa3cd1194a9ea2839b5039a67, type: 2}
   startingHandSize: 5

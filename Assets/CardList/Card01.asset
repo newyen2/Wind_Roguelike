@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22d94b12a82c5cf4db4aa0f319d8aadb, type: 3}
   m_Name: Card01
   m_EditorClassIdentifier: 
-  id: 01
-  displayName: "\u98A8"
+  id: 1
+  displayName: "\u5FAE\u98A8"
   description: 
-  Image: {fileID: 21300000, guid: 9069212e17cb5144fb68436ea696fb38, type: 3}
+  Image: {fileID: 0}
   baseCost: 0
-  baseWindPower: 0
-  direction: 0
+  baseWindPower: 5
+  direction: 1

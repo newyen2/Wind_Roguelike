@@ -9,6 +9,7 @@ public class Sender : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, ID
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        AudioManager.Instance.Play("click");
         if(!is_set) InteractionManager.Instance.SelectSender(senderId, gameObject);
     }
 

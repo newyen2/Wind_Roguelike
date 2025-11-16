@@ -136,6 +136,11 @@ public class StageManager : MonoBehaviour
             return false;
         }
 
+        foreach (CardEffectBase c in card.data.effects)
+        {
+            c.OnPlay(card , null);
+        }
+
         // 扣能量
         powerPoint -= card.currentCost;
         

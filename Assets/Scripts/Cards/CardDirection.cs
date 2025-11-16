@@ -1,8 +1,8 @@
-public enum CardDirection
+[System.Serializable]
+public struct CardDirection
 {
-    None,
-    Up,
-    Down,
-    Left,
-    Right,
+    public bool up;
+    public bool down;
+    public bool left;
+    public bool right;
 }

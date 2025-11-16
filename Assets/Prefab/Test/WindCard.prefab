@@ -331,19 +331,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a14b7f322065d9a4281919586c31545f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  upIcon: {fileID: 0}
+  downIcon: {fileID: 0}
+  leftIcon: {fileID: 0}
+  rightIcon: {fileID: 0}
   directionImage: {fileID: 4968954761247207893}
+  ArtImage: {fileID: 3586548624169964522}
   nameText: {fileID: 7625837453769291513}
   descriptionText: {fileID: 3181176553216095583}
   costText: {fileID: 7752302318566577506}
-  directionSprites:
-  - direction: 2
-    sprite: {fileID: 21300000, guid: 31a62b165fb397c418375b4e5adaf33e, type: 3}
-  - direction: 3
-    sprite: {fileID: 21300000, guid: 1d78195770cdb844fbcf097e9c47e5c9, type: 3}
-  - direction: 4
-    sprite: {fileID: 21300000, guid: 367afe3a6db38754580184c0e0b071f4, type: 3}
-  - direction: 1
-    sprite: {fileID: 21300000, guid: c9a74431530bc3143aafcd5ad8e66abb, type: 3}
 --- !u!114 &4687869671675562957
 MonoBehaviour:
   m_ObjectHideFlags: 0

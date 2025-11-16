@@ -97,29 +97,27 @@ public class StageManager : MonoBehaviour
             return false;
         }
 
-        CardDirection TileDirection = CardDirection.None;
-        if (windTile.y == 0)
-        {
-            TileDirection = CardDirection.Up;
-        } else if (windTile.y == GlobalManager.Instance.groundSize + 1)
-        {
-            TileDirection = CardDirection.Down;
-        }
-        else if (windTile.x == 0)
-        {
-            TileDirection = CardDirection.Right;
-        }
-        else if (windTile.x == GlobalManager.Instance.groundSize + 1)
-        {
-            TileDirection = CardDirection.Left;
-        }
+        bool needUp    = windTile.y == 0;
+        bool needDown  = windTile.y == GlobalManager.Instance.groundSize + 1;
+        bool needRight = windTile.x == 0;
+        bool needLeft  = windTile.x == GlobalManager.Instance.groundSize + 1;
 
-        if (card.direction != TileDirection) {
-            Debug.Log($"Direction Error: Card {card.direction} Tile {TileDirection}");
+        // --- 用卡片的四個 bool 來比對 ---
+        bool match =
+            (needUp    && card.direction.up)    ||
+            (needDown  && card.direction.down)  ||
+            (needLeft  && card.direction.left)  ||
+            (needRight && card.direction.right);
+
+        if (!match)
+        {
+            Debug.Log($"Direction Error: Tile({windTile}) 需要方向 Up:{needUp} Down:{needDown} Left:{needLeft} Right:{needRight}，但卡不符合");
             return false;
         }
+        
         return true;
     }
+    
 
     public bool TryPlayCard(CardInstance card)//打牌檢測
     {

@@ -74,6 +74,7 @@ public class DeckManager : MonoBehaviour
             drawPile.RemoveAt(0);
 
             HandManager.Instance.AddCardToHand(topCard);
+            AudioManager.Instance.Play("card_get");
             //生幾個Instance來做看看
             
             // 之後可以在這裡加：類似小丑牌的系統/遺物觸發邏輯JokerSystem.OnCardDrawn(topCard);
@@ -127,6 +128,7 @@ public class DeckManager : MonoBehaviour
     /// </summary>
     public void Shuffle(List<CardInstance> pile)
     {
+        AudioManager.Instance.Play("card_shuffle");
         for (int i = 0; i < pile.Count; i++)
         {
             int randomIndex = Random.Range(i, pile.Count);

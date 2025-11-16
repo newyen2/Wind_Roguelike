@@ -45,7 +45,22 @@ public class BuildWindManager : MonoBehaviour
         selectedPrefab = buildingWindPrefabs[id];
         Debug.Log("選擇建築 ID = " + id);
     }
+    public bool canBuild(Vector2Int tilePos, Transform tileTransform)
+    {
+        if (selectedPrefab == null)
+        {
+            Debug.Log("尚未選擇建築");
+            return false;
+        }
 
+        // 如果該位置已經有建築
+        if (GlobalManager.Instance.grid[tilePos.x, tilePos.y] != null)
+        {
+            Debug.Log("這格已經有建築");
+            return false;
+        }
+        return true;
+    }
     public bool TryBuild(Vector2Int tilePos, Transform tileTransform)
     {
         if (selectedPrefab == null)

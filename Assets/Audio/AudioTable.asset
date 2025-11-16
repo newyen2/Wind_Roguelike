@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: AudioTable
   m_EditorClassIdentifier: 
   audioList:
-  - {fileID: 11400000, guid: 315d195b025f58b4295804716b740ef6, type: 2}
-  - {fileID: 11400000, guid: 94ee0db082c4368448fe40b850669c84, type: 2}
   - {fileID: 11400000, guid: 6c80a7a5c14eaf345b9deab2f82ea48b, type: 2}
   - {fileID: 11400000, guid: 3593e59685a4ea548b3368dc8371bd04, type: 2}
+  - {fileID: 11400000, guid: 315d195b025f58b4295804716b740ef6, type: 2}
+  - {fileID: 11400000, guid: 94ee0db082c4368448fe40b850669c84, type: 2}
+  - {fileID: 11400000, guid: 80245748b06182a45854deec18832d46, type: 2}
+  - {fileID: 11400000, guid: 7316fe4843f74424fa45755d315922d8, type: 2}
+  - {fileID: 11400000, guid: 12788be0a12fbf14faa638a1715e10ef, type: 2}
+  - {fileID: 11400000, guid: 9b8d3f14b7ed31344abbb7330ecb05f1, type: 2}

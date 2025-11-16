@@ -14,5 +14,5 @@ public class CardData : ScriptableObject
     public int baseWindPower;
     public CardDirection direction;
     // 這張卡對應的效果（重點在這裡）之後再加點新東西
-    //public CardEffectBase[] effects;
+    public CardEffectBase[] effects;
 }

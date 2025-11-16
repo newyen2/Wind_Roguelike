@@ -63,6 +63,7 @@ public class Wind
             return;
         }
         Debug.Log(StageManager.Instance.nextWindPosition);
+        UIManager.Instance.DisplayWindParticle(x, y, direction);
         if (direction == Direction.E)
         {   
             if(x >= GlobalManager.Instance.groundSize + 1)

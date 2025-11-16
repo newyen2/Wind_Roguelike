@@ -638,6 +638,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TextScoreParticle: {fileID: 5713955570475159135, guid: 364a4d9702abcea47a006f8166d16447, type: 3}
+  WindParticle: {fileID: 5713955570475159135, guid: edda75cce4875a645957c5fce725cef0, type: 3}
   Particle: {fileID: 385271491}
   score_text: {fileID: 28982034}
   max_score_text: {fileID: 1390439634}

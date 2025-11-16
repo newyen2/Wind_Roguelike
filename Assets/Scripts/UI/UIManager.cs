@@ -8,7 +8,8 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     public static UIManager Instance;
-    public GameObject TextScoreParticle;
+    public GameObject TextScoreParticle, WindParticle;
+
     public Transform Particle;
     Transform[,] pos_to_tile = new Transform[6, 6];
 
@@ -21,6 +22,12 @@ public class UIManager : MonoBehaviour
         Instance = this;
         Tile[] tiles = FindObjectsOfType<Tile>();
         foreach(var tile in tiles)
+        {
+            pos_to_tile[tile.tilePos.x, tile.tilePos.y] = tile.transform;
+        }
+
+        WindTile[] windTiles = FindObjectsOfType<WindTile>();
+        foreach(var tile in windTiles)
         {
             pos_to_tile[tile.tilePos.x, tile.tilePos.y] = tile.transform;
         }
@@ -40,6 +47,13 @@ public class UIManager : MonoBehaviour
     {
         GameObject gameObject = Instantiate(TextScoreParticle, pos_to_tile[x, y].position, Quaternion.identity, Particle);
         gameObject.GetComponent<TextScoreParticle>().setValue(score);
+    }
+
+    public void DisplayWindParticle(int x, int y, Direction dir)
+    {
+        print(WindParticle);
+        GameObject obj = Instantiate(WindParticle, pos_to_tile[x, y].position, Quaternion.identity, Particle);
+        obj.GetComponent<WindParticle>().setDir(dir);
     }
 
     IEnumerator ScoreText(int target)

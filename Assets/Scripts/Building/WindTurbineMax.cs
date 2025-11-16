@@ -11,7 +11,11 @@ public class WindTurbineMax : BuildingBase
             Renew(StageManager.Instance.round);
         }
 
-        if(windPower >= 10) return windPower * multiplier;
+        if(windPower >= 10)
+        {
+            total_point = windPower * multiplier;
+            return windPower * multiplier;
+        }
         return 0;
     }
 }

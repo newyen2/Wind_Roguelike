@@ -11,7 +11,11 @@ public class WindTurbineMin : BuildingBase
             Renew(StageManager.Instance.round);
         }
 
-        if(windPower <= 2) return windPower * multiplier;
+        if(windPower <= 2)
+        {
+            total_point = windPower * multiplier;
+            return windPower * multiplier;
+        }
         return 0;
     }
 }

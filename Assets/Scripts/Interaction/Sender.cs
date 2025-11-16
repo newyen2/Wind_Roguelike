@@ -43,7 +43,7 @@ public class Sender : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, ID
         if (hitObj != null && hitObj.TryGetComponent<WindTile>(out var windTile) && this.CompareTag("Wind"))
         {
             Debug.Log("放在 Tile：" + windTile.tilePos);
-            if(StageManager.Instance.canPlay(this.gameObject.GetComponent<CardView>().instance))
+            if(StageManager.Instance.canPlay(this.gameObject.GetComponent<CardView>().instance , windTile.tilePos))
             {
                 if(BuildWindManager.Instance.canBuild(windTile.tilePos, windTile.transform))
                 {

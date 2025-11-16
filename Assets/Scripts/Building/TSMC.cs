@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Sirenix.OdinInspector.Editor.Validation;
 using UnityEngine;
 
 public class TSMC : BuildingBase
@@ -23,7 +24,6 @@ public class TSMC : BuildingBase
         int w = grid.GetLength(0);
         int h = grid.GetLength(1);
 
-        // helper to safely add neighbor's total_point
         void AddIfValid(int ix, int iy)
         {
             if (ix >= 0 && ix < w && iy >= 0 && iy < h)

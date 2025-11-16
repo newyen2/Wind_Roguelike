@@ -45,6 +45,10 @@ public class Wind
             UIManager.Instance.DisplayScoreText(StageManager.Instance.score);
             UIManager.Instance.DisplayTextScoreParticle(x, y, score);
             Debug.Log($"Wind Execute: {x}, {y} = {score}");
+            if(score>0)
+            {
+                AudioManager.Instance.Play("get_point");
+            }
         }
         else 
         { 

@@ -138,6 +138,7 @@ public class StageManager : MonoBehaviour
 
         // 扣能量
         powerPoint -= card.currentCost;
+        
 
 
         // 決定丟去哪裡

@@ -100,18 +100,18 @@ public class StageManager : MonoBehaviour
         CardDirection TileDirection = CardDirection.None;
         if (windTile.y == 0)
         {
-            TileDirection = CardDirection.Up;
+            TileDirection = CardDirection.Down;
         } else if (windTile.y == GlobalManager.Instance.groundSize + 1)
         {
-            TileDirection = CardDirection.Down;
+            TileDirection = CardDirection.Up;
         }
         else if (windTile.x == 0)
         {
-            TileDirection = CardDirection.Right;
+            TileDirection = CardDirection.Left;
         }
         else if (windTile.x == GlobalManager.Instance.groundSize + 1)
         {
-            TileDirection = CardDirection.Left;
+            TileDirection = CardDirection.Right;
         }
 
         if (card.direction != TileDirection) {

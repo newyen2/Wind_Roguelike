@@ -71,6 +71,6 @@ public class RewardCard : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
         if(reward != null) GlobalManager.Instance.rewardBuild.Add(reward);
-        GameManager.Instance.SwitchScene("Building");
+        GameManager.Instance.SwitchScene("WindResult");
     }
 }

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22d94b12a82c5cf4db4aa0f319d8aadb, type: 3}
+  m_Name: WindUp
+  m_EditorClassIdentifier: 
+  id: 1
+  displayName: "\u5FAE\u98A8-\u4E0A"
+  description: "\u5411\u4E0A\u65B9\u5439\u4E00\u500B\u98A8\u529B\u5F37\u5EA6 5 \u7684\u98A8"
+  Image: {fileID: 21300000, guid: 9069212e17cb5144fb68436ea696fb38, type: 3}
+  baseCost: 1
+  baseWindPower: 5
+  direction: 1
+  effects: []
+  min_round: 0
+  max_round: 9
+  weight: 1

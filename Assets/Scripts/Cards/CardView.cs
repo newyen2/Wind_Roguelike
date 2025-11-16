@@ -57,8 +57,6 @@ public class CardView : MonoBehaviour
         costText.text = instance.currentCost.ToString();
 
         UpdateDirectionIcon(data.direction);
-
-
     }
 
     // 例：點擊時打出 / 丟棄

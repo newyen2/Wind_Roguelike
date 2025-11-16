@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WindTurbineHorizon : BuildingBase
 {
-    public override int Score(int windPower, Direction windDirection, int x, int y)
+    public override int Score(int windPower, Direction windDirection, int x, int y, Wind wind)
     {
         if(StageManager.Instance.round != now_round)
         {
@@ -16,12 +16,16 @@ public class WindTurbineHorizon : BuildingBase
             total_point = windPower * multiplier;
             return windPower * multiplier;
         }
-        if(windDirection == Direction.W){
+        else if(windDirection == Direction.W)
+        {
             total_point = windPower * multiplier;
             return windPower * multiplier;
         }
-
-        return 0;
+        else
+        {
+            wind.isEnable = false;
+            return -1;
+        }
     }
 }
 

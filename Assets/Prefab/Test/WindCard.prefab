@@ -331,7 +331,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a14b7f322065d9a4281919586c31545f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  artworkImage: {fileID: 4813956891989768579}
   directionImage: {fileID: 4968954761247207893}
   nameText: {fileID: 7625837453769291513}
   descriptionText: {fileID: 3181176553216095583}
@@ -492,7 +491,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.18709205, g: 0.1614168, b: 0.86415094, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

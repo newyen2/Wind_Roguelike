@@ -40,9 +40,12 @@ public class Wind
         var building = GlobalManager.Instance.grid[x, y]?.GetComponent<BuildingBase>();
         if (building != null)
         {
-            int score = building.Score(power, direction, x, y);
-            StageManager.Instance.score += score;
-            UIManager.Instance.DisplayScoreText(StageManager.Instance.score);
+            int score = building.Score(power, direction, x, y, this);
+            if(score > 0)
+            {
+                StageManager.Instance.score += score;
+                UIManager.Instance.DisplayScoreText(StageManager.Instance.score);
+            }
             UIManager.Instance.DisplayTextScoreParticle(x, y, score);
             Debug.Log($"Wind Execute: {x}, {y} = {score}");
             if(score>0)

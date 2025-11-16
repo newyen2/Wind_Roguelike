@@ -21,4 +21,6 @@ public class CardInstance
         currentWindPower = data.baseWindPower;
         direction = data.direction;
     }
+
+    public virtual void cardeffect() { }
 }

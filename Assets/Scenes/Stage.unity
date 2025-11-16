@@ -3145,6 +3145,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scoreboard
       objectReference: {fileID: 0}
+    - target: {fileID: 8826484620489474850, guid: 240c08c75cf335847b2ab1155c004193, type: 3}
+      propertyPath: m_fontSize
+      value: 39.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 8826484620489474850, guid: 240c08c75cf335847b2ab1155c004193, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 7a6ccdf836d4ae74b9e1231262c0bcc3, type: 2}
+    - target: {fileID: 8826484620489474850, guid: 240c08c75cf335847b2ab1155c004193, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2849478393931850239, guid: 7a6ccdf836d4ae74b9e1231262c0bcc3, type: 2}
+    - target: {fileID: 8826484620489474850, guid: 240c08c75cf335847b2ab1155c004193, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

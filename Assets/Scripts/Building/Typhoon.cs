@@ -20,6 +20,7 @@ public class Typhoon : BuildingBase
         windRecord.Add(windPower);
 
         if(wind_dir == 0 && windRecord.Count == 4){
+            
             if(windRecord[0] == windRecord[1] && windRecord[1] == windRecord[2] && windRecord[2] == windRecord[3])
             {
                 total_point += windPower * multiplier; 

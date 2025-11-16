@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 5472311257150223424}
   - component: {fileID: 4453188263921553182}
   - component: {fileID: 809902291010015620}
-  - component: {fileID: 3591864457236573477}
+  - component: {fileID: 4960033436355138203}
   m_Layer: 5
-  m_Name: WindTurbine
+  m_Name: WindTurbineHorizon
   m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -68,7 +68,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f40176132ccb47149a168e8f90924ef0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f629760d56c9d1a4197f1e147e82b3ae, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a15adad92b04e640986fff05753181c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  senderId: 0
+  senderId: 1
   is_set: 0
 --- !u!61 &809902291010015620
 BoxCollider2D:
@@ -137,7 +137,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 100, y: 100}
   m_EdgeRadius: 0
---- !u!114 &3591864457236573477
+--- !u!114 &4960033436355138203
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -146,13 +146,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 4752477190949869519}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b741c46f96675e4c927939544c18e64, type: 3}
+  m_Script: {fileID: 11500000, guid: 92ffcf9217e89c34895ed827fb22fcc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
-  displayName: "\u98A8\u529B\u767C\u96FB\u6A5F"
-  description: "\u63A5\u6536\u5230\u98A8\u5F8C\n\u7372\u5F97 \u98A8\u529B*3 \u7684\u5206\u6578 "
-  multiplier: 3
+  id: 1
+  displayName: "\u6C34\u5E73\u98A8\u529B\u767C\u96FB\u6A5F"
+  description: "\u63A5\u6536\u5230\u6C34\u5E73\u65B9\u5411\u7684\u98A8\u5F8C\n\u7372\u5F97
+    \u98A8\u529B*6 \u7684\u5206\u6578 "
+  multiplier: 6
   adder: 0
   total_point: 0
   now_round: 0

@@ -73,11 +73,11 @@ public class CardView : MonoBehaviour
             Setup(null);    // 自動建假卡
     #endif
     }
-    private void UpdateDirectionIcons(CardDirection direction)
+    private void UpdateDirectionIcons(CardDirection direction) //往下吹的風，應該是上面的方向量，風向定義是這樣的w
     {
-        if (upIcon    != null) upIcon.enabled    = direction.up;
-        if (downIcon  != null) downIcon.enabled  = direction.down;
-        if (leftIcon  != null) leftIcon.enabled  = direction.left;
-        if (rightIcon != null) rightIcon.enabled = direction.right;
+        if (upIcon    != null) upIcon.enabled    = direction.down;
+        if (downIcon  != null) downIcon.enabled  = direction.up;
+        if (leftIcon  != null) leftIcon.enabled  = direction.right;
+        if (rightIcon != null) rightIcon.enabled = direction.left;
     }
 }

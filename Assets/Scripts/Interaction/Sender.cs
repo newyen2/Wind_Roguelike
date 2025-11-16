@@ -45,6 +45,7 @@ public class Sender : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, ID
             Debug.Log("放在 Tile：" + windTile.tilePos);
             if(BuildWindManager.Instance.TryBuild(windTile.tilePos, windTile.transform))
             {
+                StageManager.Instance.TryPlayCard( this.gameObject.GetComponent<CardView>().instance);
                 is_set = true;
                 Destroy(this.gameObject);
                 return;

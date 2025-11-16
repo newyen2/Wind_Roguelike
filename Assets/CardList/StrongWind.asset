@@ -16,6 +16,7 @@ MonoBehaviour:
   displayName: 
   description: 
   Image: {fileID: 0}
-  baseCost: 0
+  baseCost: 2
   baseWindPower: 0
   direction: 0
+  effects: []

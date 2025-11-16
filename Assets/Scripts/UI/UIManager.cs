@@ -28,7 +28,7 @@ public class UIManager : MonoBehaviour
     
     void Start()
     {
-        max_score_text.text = "需求 :" + StageManager.Instance.targetScore.ToString();
+        StartCoroutine(ScoreText(0));
     }
     public void DisplayScoreText(int target)
     {
@@ -44,6 +44,7 @@ public class UIManager : MonoBehaviour
 
     IEnumerator ScoreText(int target)
     {
+        yield return null;
         int tmp_score = now_score;
         while(now_score < target)
         {
@@ -54,6 +55,7 @@ public class UIManager : MonoBehaviour
             yield return null;
         }
         now_score = target;
+        max_score_text.text = "需求 :" + StageManager.Instance.targetScore.ToString();
         score_text.text = now_score.ToString();
         yield return null;
     }

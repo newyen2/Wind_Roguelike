@@ -81,7 +81,6 @@ public class BuildManager : MonoBehaviour
 
         // 放好後重置選取（看需求）
         selectedPrefab = null;
-        //GameManager.Instance.SwitchScene("Map");
     }
 
     // 這個是測試用的，之後幫我刪掉

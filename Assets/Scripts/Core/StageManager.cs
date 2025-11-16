@@ -186,12 +186,17 @@ public class StageManager : MonoBehaviour
                 {
                     GlobalManager.Instance.grid[i, j] = null;
                 }
+                else if(GlobalManager.Instance.grid[i, j] != null)
+                {
+                    score += GlobalManager.Instance.grid[i, j].GetComponent<BuildingBase>().EndScore(i, j);
+                }
             }
         }
 
 
         if (score >= targetScore)
         {
+            GameManager.Instance.total_score += score;
             Clear();
             yield break;
         }

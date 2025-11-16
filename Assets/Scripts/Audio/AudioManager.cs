@@ -6,8 +6,8 @@ public class AudioManager : MonoBehaviour
 {
     // Play SFX : AudioManager.Instance.Play("key");
 
-    // AudioManager.Instance.Play(loop = true, AudioManager.Instance.Play("key")); AudioData set to loop
-    // AudioManager.Instance.Stop("key");
+    // BGM start: AudioManager.Instance.Play(("key"));
+    // BGM stop : AudioManager.Instance.Stop("key");
 
     public static AudioManager Instance { get; private set; }
 

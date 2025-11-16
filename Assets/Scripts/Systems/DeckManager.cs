@@ -78,7 +78,7 @@ public class DeckManager : MonoBehaviour
             
             // 之後可以在這裡加：類似小丑牌的系統/遺物觸發邏輯JokerSystem.OnCardDrawn(topCard);
         }
-        
+        //這裡可以改牌堆數據
     }
 
     /// <summary>

@@ -53,7 +53,7 @@ public class InteractionManager : MonoBehaviour
                     if (BuildWindManager.Instance.canBuild(windtile_tmp.tilePos, windtile_tmp.transform))
                     {
                         StageManager.Instance.TryPlayCard(lastChoiceBuild.GetComponent<CardView>().instance);
-                        BuildWindManager.Instance.TryBuild(windtile_tmp.tilePos, windtile_tmp.transform);
+                        BuildWindManager.Instance.TryBuild(windtile_tmp.tilePos, windtile_tmp.transform, lastChoiceBuild.GetComponent<CardView>());
                         Destroy(lastChoiceBuild); 
                         currentSenderId = null; // 用完清空（可依需求調整）
                     }

@@ -249,10 +249,9 @@ GameObject:
   - component: {fileID: 9048043583573969517}
   - component: {fileID: 3586548624169964522}
   - component: {fileID: 6694822880555245218}
-  - component: {fileID: 2729947328792950899}
   m_Layer: 5
   m_Name: DummyCard
-  m_TagString: Wind
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -345,21 +344,6 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 367afe3a6db38754580184c0e0b071f4, type: 3}
   - direction: 1
     sprite: {fileID: 21300000, guid: c9a74431530bc3143aafcd5ad8e66abb, type: 3}
-  instance: {fileID: 0}
---- !u!114 &2729947328792950899
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6161120977659830316}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a15adad92b04e640986fff05753181c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  senderId: 0
-  is_set: 0
 --- !u!1 &8298792523615479832
 GameObject:
   m_ObjectHideFlags: 0

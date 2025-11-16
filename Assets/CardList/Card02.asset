@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Card02
   m_EditorClassIdentifier: 
   id: 02
-  displayName: Dummy
+  displayName: "\u98A8"
   description: 
   Image: {fileID: 0}
-  baseCost: 0
-  baseWindPower: 0
-  direction: 0
+  baseCost: 1
+  baseWindPower: 5
+  directions: 00000000

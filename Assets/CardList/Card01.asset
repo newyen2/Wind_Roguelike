@@ -16,6 +16,7 @@ MonoBehaviour:
   displayName: "\u5FAE\u98A8"
   description: 
   Image: {fileID: 0}
-  baseCost: 0
+  baseCost: 1
   baseWindPower: 5
   direction: 1
+  effects: []

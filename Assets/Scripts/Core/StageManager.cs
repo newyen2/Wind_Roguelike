@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Sirenix.OdinInspector;
 using System.Drawing;
+using TMPro;
 using Core;
 
 public enum Direction
@@ -28,6 +29,8 @@ public class StageManager : MonoBehaviour
     public bool is_round_going = false;
     public int powerPoint;
     public int maxPowerPoint;
+
+    [SerializeField] TMP_Text energy;
 
     public static StageManager Instance { get; private set; }
     private void Awake()
@@ -115,7 +118,7 @@ public class StageManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        energy.text =""+ powerPoint;
     }
 
     [Button]

@@ -1,7 +1,7 @@
 public enum CardDirection
 {
     None,
-    Up,
+    W,
     Down,
     Left,
     Right,

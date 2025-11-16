@@ -26,9 +26,21 @@ namespace Core
                 Destroy(gameObject);
                 return;
             }
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
             Instance = this;
             DontDestroyOnLoad(gameObject);
+        }
+
+        private void Start()
+        {
+            AudioManager.Instance.Stop("bgm_main");
+            AudioManager.Instance.Play("bgm_cover");
         }
 
         [Button]

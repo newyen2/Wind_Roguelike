@@ -336,11 +336,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a0d4954dda942488b00b99221dec24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   buildingPrefabs:
   - {fileID: 4752477190949869519, guid: 445921adb1806bf4b9b7d549d8088581, type: 3}
   - {fileID: 7535119665598955858, guid: 9513c9af983028c4591552ac7eb31ee5, type: 3}
   - {fileID: 4752477190949869519, guid: 445921adb1806bf4b9b7d549d8088581, type: 3}
   - {fileID: 9033238249457311930, guid: 7433a4b57c32d1148b55e6593324db18, type: 3}
+=======
+>>>>>>> Stashed changes
   buildParent: {fileID: 2062851132}
   nowBuilding: {fileID: 802970824}
 --- !u!114 &528065255

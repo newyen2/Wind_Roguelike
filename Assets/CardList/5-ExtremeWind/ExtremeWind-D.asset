@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 22d94b12a82c5cf4db4aa0f319d8aadb, type: 3}
-  m_Name: Card02
+  m_Name: ExtremeWind-D
   m_EditorClassIdentifier: 
-  id: 2
-  displayName: "\u5F37\u98A8"
-  description: 
-  Image: {fileID: 0}
-  baseCost: 1
-  baseWindPower: 10
-  direction: 2
+  id: 51
+  displayName: "\u72C2\u98A8"
+  description: "\u9020\u62106\u9EDE\u98A8\u529B"
+  Image: {fileID: 21300000, guid: f4d8599c941c44344a3982e8407cc36a, type: 3}
+  baseCost: 2
+  baseWindPower: 6
+  direction: 0
   effects: []

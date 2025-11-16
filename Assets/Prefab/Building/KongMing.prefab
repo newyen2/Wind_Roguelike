@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 5472311257150223424}
   - component: {fileID: 4453188263921553182}
   - component: {fileID: 809902291010015620}
-  - component: {fileID: 2714351790231627530}
+  - component: {fileID: -1281152724998253137}
   m_Layer: 5
-  m_Name: cirno
+  m_Name: KongMing
   m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -68,7 +68,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 253c42067d830994abfaa530f1adbd66, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b9a5c83dad94cb4488f7f560f1a91b5b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a15adad92b04e640986fff05753181c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  senderId: 7
+  senderId: 10
   is_set: 0
 --- !u!61 &809902291010015620
 BoxCollider2D:
@@ -137,7 +137,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 100, y: 100}
   m_EdgeRadius: 0
---- !u!114 &2714351790231627530
+--- !u!114 &-1281152724998253137
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -146,16 +146,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 4752477190949869519}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 785168fc1c6813244abd82baf541e854, type: 3}
+  m_Script: {fileID: 11500000, guid: f62b02cb339b13140a18df7573789afa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 7
-  displayName: ( 9 )
-  description: "baka\n\n\u82E5\u98A8\u529B=9 \u7372\u5F9799\u5206"
+  id: 10
+  displayName: "\u5B54\u660E"
+  description: "\u64DA\u8AAA\u4ED6\u7576\u5E74\u501F\u6771\u98A8\u6253\u8D0F\u4E86\u8D64\u58C1\u4E4B\u6230\n\n\u963B\u64CB\u9664\u4E86\u5DE6\u5074\u4EE5\u5916\u98A8\n\u8B93\u5DE6\u5074\u7684\u98A8\u7684\u98A8\u529B
+    * 2"
   multiplier: 0
   adder: 0
   total_point: 0
   now_round: 0
   min_round: 0
   max_round: 9
-  weight: 3
+  weight: 1

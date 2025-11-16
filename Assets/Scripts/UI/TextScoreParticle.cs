@@ -17,6 +17,12 @@ public class TextScoreParticle : MonoBehaviour
     public void setValue(int value)
     {
         text.text = value.ToString();
+        if(value == -1)
+        {
+            text.text = "Blocked!";
+            text.color = Color.red;
+        }
+        if(value == 0) Destroy(this.gameObject);
     }
 
     IEnumerator FloatUp()

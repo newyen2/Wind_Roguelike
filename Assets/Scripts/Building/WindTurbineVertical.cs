@@ -4,6 +4,18 @@ using UnityEngine;
 
 public class WindTurbineVertical : BuildingBase
 {
+    public override int StartScore(int windPower, Direction windDirection, int x, int y, Wind wind)
+    {
+        if(windDirection == Direction.E)
+        {
+            return -1;
+        }
+        if(windDirection == Direction.W){
+
+            return -1;
+        }
+        return 0;
+    }
     public override int Score(int windPower, Direction windDirection, int x, int y,Wind wind)
     {
         if(StageManager.Instance.round != now_round)

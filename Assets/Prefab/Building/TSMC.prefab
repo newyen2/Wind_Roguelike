@@ -158,3 +158,6 @@ MonoBehaviour:
   adder: 0
   total_point: 0
   now_round: 0
+  min_round: 4
+  max_round: 9
+  weight: 3

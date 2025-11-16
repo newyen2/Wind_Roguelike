@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 809902291010015620}
   - component: {fileID: 3591864457236573477}
   m_Layer: 5
-  m_Name: WindTurbine
+  m_Name: WindTurbineLv1
   m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -150,9 +150,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0
-  displayName: "\u98A8\u529B\u767C\u96FB\u6A5F"
-  description: "\u63A5\u6536\u5230\u98A8\u5F8C\n\u7372\u5F97 \u98A8\u529B*3 \u7684\u5206\u6578 "
-  multiplier: 3
+  displayName: "\u98A8\u529B\u767C\u96FB\u6A5F Lv1"
+  description: "\u63A5\u6536\u5230\u98A8\u5F8C\n\u7372\u5F97 \u98A8\u529B*1 \u7684\u5206\u6578 "
+  multiplier: 1
   adder: 0
   total_point: 0
   now_round: 0
+  min_round: 0
+  max_round: 4
+  weight: 6

@@ -1894,6 +1894,22 @@ PrefabInstance:
       propertyPath: windPrefab.Array.data[3]
       value: 
       objectReference: {fileID: 11400000, guid: 610ae6d8683f35a44ba22aaf2862d2fe, type: 2}
+    - target: {fileID: 6004655354803559995, guid: 46c2b011831807b40b0eb29a4f4ce4bf, type: 3}
+      propertyPath: buildingPrefabs.Array.size
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6004655354803559995, guid: 46c2b011831807b40b0eb29a4f4ce4bf, type: 3}
+      propertyPath: buildingPrefabs.Array.data[8]
+      value: 
+      objectReference: {fileID: 4752477190949869519, guid: c0122c1a9716efe47a4b0555548ff73d, type: 3}
+    - target: {fileID: 6004655354803559995, guid: 46c2b011831807b40b0eb29a4f4ce4bf, type: 3}
+      propertyPath: buildingPrefabs.Array.data[9]
+      value: 
+      objectReference: {fileID: 4752477190949869519, guid: 3452f6be7dd323f4d896cf98aaf03788, type: 3}
+    - target: {fileID: 6004655354803559995, guid: 46c2b011831807b40b0eb29a4f4ce4bf, type: 3}
+      propertyPath: buildingPrefabs.Array.data[10]
+      value: 
+      objectReference: {fileID: 4752477190949869519, guid: c05b2c2578b64f54b93fd0a7e4e4ba1c, type: 3}
     - target: {fileID: 7804152215095033804, guid: 46c2b011831807b40b0eb29a4f4ce4bf, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.9047554

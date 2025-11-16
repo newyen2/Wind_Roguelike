@@ -27,6 +27,7 @@ public class StageManager : MonoBehaviour
     public WindSlot[,] nextWindPosition;
 
     public int delayDraw = 0;
+    public int delaycost = 0;
 
 
     public bool is_round_going = false;
@@ -220,7 +221,7 @@ public class StageManager : MonoBehaviour
             yield break;
         }
 
-        powerPoint = maxPowerPoint;
+        powerPoint = maxPowerPoint+delaycost;
         //棄牌, 重抽, 回點
         DeckManager.Instance.DiscardAllFromHand();//棄牌
         DeckManager.Instance.DrawCards(DeckManager.Instance.startingHandSize + delayDraw);//抽牌

@@ -94,8 +94,9 @@ public class BuildManager : MonoBehaviour
 
         Debug.Log($"建築生成於 ({tilePos.x}, {tilePos.y})");
         //放置aya時
-        if  (selectedPrefab.GetComponent<BuildingBase>() is aya Aya)
+        if  (selectedPrefab.GetComponent<BuildingBase>().displayName == "aya")
         {
+            Debug.Log("Is Aya!");
             WindGodGirl(tilePos);
         }
 
@@ -104,17 +105,10 @@ public class BuildManager : MonoBehaviour
     }
     public void WindGodGirl(Vector2Int tilePos)
     {
-        if(tilePos.x-1>=0)
-        {
-            GlobalManager.Instance.grid[tilePos.x-1, tilePos.y].GetComponent<BuildingBase>().multiplier+=2;
-        }
-        if(tilePos.y-1>=0)
-        {
-            GlobalManager.Instance.grid[tilePos.x, tilePos.y-1].GetComponent<BuildingBase>().multiplier+=2;
-        }
         try
         {
-            GlobalManager.Instance.grid[tilePos.x, tilePos.y+1].GetComponent<BuildingBase>().multiplier+=2;
+            GlobalManager.Instance.grid[tilePos.x-1, tilePos.y].GetComponent<BuildingBase>().multiplier+=2;
+            Debug.Log("Test");
         }
         catch(Exception ex)
         {
@@ -122,7 +116,26 @@ public class BuildManager : MonoBehaviour
         }
         try
         {
-            GlobalManager.Instance.grid[tilePos.x+1, tilePos.y-1].GetComponent<BuildingBase>().multiplier+=2;
+            GlobalManager.Instance.grid[tilePos.x, tilePos.y-1].GetComponent<BuildingBase>().multiplier+=2;
+            Debug.Log("Test");
+        }
+        catch(Exception ex)
+        {
+            
+        }
+        try
+        {
+            GlobalManager.Instance.grid[tilePos.x, tilePos.y+1].GetComponent<BuildingBase>().multiplier+=2;
+            Debug.Log("Test");
+        }
+        catch(Exception ex)
+        {
+            
+        }
+        try
+        {
+            GlobalManager.Instance.grid[tilePos.x+1, tilePos.y].GetComponent<BuildingBase>().multiplier+=2;
+            Debug.Log("Test");
         }
         catch (Exception ex)
         {

@@ -38,4 +38,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameWin.unity
     guid: 6a45a5a8dfc20e7439e6967263a80621
+  - enabled: 1
+    path: Assets/Scenes/WindResult.unity
+    guid: 8a118424a1ea9094a9c5f565d207c22e
   m_configObjects: {}

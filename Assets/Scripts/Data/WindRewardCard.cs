@@ -19,7 +19,6 @@ public class WindRewardCard : MonoBehaviour, IPointerClickHandler
 
     void Start()
     {
-        GlobalManager.Instance.rewardBuild = new();
         RenewReward(Random());
     }
     CardData Random()

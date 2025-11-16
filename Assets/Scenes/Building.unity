@@ -877,6 +877,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 12047329}
     m_Modifications:
+    - target: {fileID: 3596948842015217608, guid: c8fc6bb0d67222a4f808c3ba4f8af1ab, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 4862a01d7c289ad4f8d62256977b84a9, type: 2}
+    - target: {fileID: 3596948842015217608, guid: c8fc6bb0d67222a4f808c3ba4f8af1ab, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7735476616604130151, guid: c8fc6bb0d67222a4f808c3ba4f8af1ab, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -956,6 +964,14 @@ PrefabInstance:
     - target: {fileID: 7735476616604130151, guid: c8fc6bb0d67222a4f808c3ba4f8af1ab, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8313643664223131930, guid: c8fc6bb0d67222a4f808c3ba4f8af1ab, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 4862a01d7c289ad4f8d62256977b84a9, type: 2}
+    - target: {fileID: 8313643664223131930, guid: c8fc6bb0d67222a4f808c3ba4f8af1ab, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9099622939032467261, guid: c8fc6bb0d67222a4f808c3ba4f8af1ab, type: 3}
       propertyPath: m_Name

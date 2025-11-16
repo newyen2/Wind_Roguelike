@@ -20,6 +20,7 @@ public class BuildWindManager : MonoBehaviour
         Tile[] tiles = FindObjectsByType<Tile>(FindObjectsSortMode.None);
         foreach(var tile in tiles)
         {
+            print(tile.transform.position);
             GameObject tmp = GlobalManager.Instance.grid[tile.tilePos.x, tile.tilePos.y];
             if(tmp != null)
             {
@@ -71,7 +72,9 @@ public class BuildWindManager : MonoBehaviour
 
         // 記錄到陣列
         StageManager.Instance.AddWind(tilePos.x, tilePos.y);
-        GlobalManager.Instance.grid[tilePos.x, tilePos.y] = gameObject;
+        GlobalManager.Instance.grid[tilePos.x, tilePos.y] = selectedPrefab;
+        GlobalManager.Instance.gridobj[tilePos.x, tilePos.y] = newBuilding;
+
         buildParent.GetComponent<SortUILayer>().StartCoroutine(buildParent.GetComponent<SortUILayer>().SortChildrenByY());
 
         Debug.Log($"建築生成於 ({tilePos.x}, {tilePos.y})");

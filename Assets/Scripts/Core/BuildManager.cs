@@ -30,6 +30,7 @@ public class BuildManager : MonoBehaviour
                     buildParent
                 );
                 newBuilding.GetComponent<Sender>().is_set = true;
+                GlobalManager.Instance.gridobj[tile.tilePos.x, tile.tilePos.y] = newBuilding;
                 Debug.Log($"[{tile.tilePos.x}, {tile.tilePos.y}] has building {newBuilding.GetComponent<Sender>().senderId} at {tile.transform.position}");
             }
         }
@@ -70,6 +71,8 @@ public class BuildManager : MonoBehaviour
         );
         newBuilding.GetComponent<Sender>().is_set = true;
         buildParent.GetComponent<SortUILayer>().StartCoroutine(buildParent.GetComponent<SortUILayer>().SortChildrenByY());
+
+        print(tileTransform.position);
 
         // 記錄到陣列
         GlobalManager.Instance.grid[tilePos.x, tilePos.y] = selectedPrefab;

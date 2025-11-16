@@ -46,19 +46,19 @@ public class BuildWindManager : MonoBehaviour
         Debug.Log("選擇建築 ID = " + id);
     }
 
-    public void TryBuild(Vector2Int tilePos, Transform tileTransform)
+    public bool TryBuild(Vector2Int tilePos, Transform tileTransform)
     {
         if (selectedPrefab == null)
         {
             Debug.Log("尚未選擇建築");
-            return;
+            return false;
         }
 
         // 如果該位置已經有建築
         if (GlobalManager.Instance.grid[tilePos.x, tilePos.y] != null)
         {
             Debug.Log("這格已經有建築");
-            return;
+            return false;
         }
 
         // 在 tile 上生成建築
@@ -80,5 +80,6 @@ public class BuildWindManager : MonoBehaviour
 
         // 放好後重置選取（看需求）
         selectedPrefab = null;
+        return true;
     }
 }

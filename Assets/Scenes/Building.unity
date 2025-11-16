@@ -447,14 +447,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a0d4954dda942488b00b99221dec24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildingPrefabs:
-  - {fileID: 4752477190949869519, guid: 445921adb1806bf4b9b7d549d8088581, type: 3}
-  - {fileID: 4752477190949869519, guid: dfac36898ad01f74688f2a46a168ce5c, type: 3}
-  - {fileID: 4752477190949869519, guid: a7f0b8687e9809e4e97caebc560a5372, type: 3}
-  - {fileID: 4752477190949869519, guid: 5a203973dcf60824599526d0061c6243, type: 3}
-  - {fileID: 4752477190949869519, guid: c96598eace540dd44ba1585368649482, type: 3}
-  - {fileID: 4752477190949869519, guid: 0924522be807ae74ea252ad585305bae, type: 3}
-  - {fileID: 4752477190949869519, guid: 855b85933c5e6ab4cbe48be4a32b9b68, type: 3}
   buildParent: {fileID: 2062851132}
   nowBuilding: {fileID: 802970824}
 --- !u!114 &528065255
@@ -793,7 +785,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.77647066, g: 0.86274517, b: 0.8196079, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0

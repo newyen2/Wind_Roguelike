@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: click
   m_EditorClassIdentifier: 
   key: click
-  clip: {fileID: 8300000, guid: d69041f36e8323c46b8fb57ec3a73ce0, type: 3}
+  clip: {fileID: 8300000, guid: 580ac8a93b05a3d4a8a31936cc728c38, type: 3}
   volume: 0.512
   loop: 0

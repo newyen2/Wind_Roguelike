@@ -2,32 +2,24 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
 [System.Serializable]
-public struct DirectionSpritePair
-{
-    public CardDirection direction;
-    public Sprite sprite;
-}
 public class CardView : MonoBehaviour
 {
     [Header("UI 元件")]
+    public Image upIcon;
+    public Image downIcon;
+    public Image leftIcon;
+    public Image rightIcon;
     public Image directionImage;
+    public Image ArtImage;
     public Text nameText;
     public Text descriptionText;
     public Text costText;
-    public List<DirectionSpritePair> directionSprites;
-    private Dictionary<CardDirection, Sprite> directionMap;
-    
-    //public Text windPowerText;
 
     public CardInstance instance;
     private void Awake()
     {
-        // List → Dictionary
-        directionMap = new Dictionary<CardDirection, Sprite>();
-        foreach (var pair in directionSprites)
-        {
-            directionMap[pair.direction] = pair.sprite;
-        }
+        if (ArtImage == null)
+            ArtImage = GetComponent<Image>();
     }
     public void Setup(CardInstance instance)
     {
@@ -55,9 +47,13 @@ public class CardView : MonoBehaviour
         nameText.text = data.displayName;
         descriptionText.text = data.description;
         costText.text = instance.currentCost.ToString();
+        if (ArtImage != null && data.Image != null)
+        {
+            ArtImage.sprite = data.Image;
+        }
 
-        UpdateDirectionIcon(data.direction);
 
+        UpdateDirectionIcons(data.direction);
 
     }
 
@@ -77,18 +73,11 @@ public class CardView : MonoBehaviour
             Setup(null);    // 自動建假卡
     #endif
     }
-    private void UpdateDirectionIcon(CardDirection dir)
+    private void UpdateDirectionIcons(CardDirection direction)
     {
-        if (directionImage == null) return;
-
-        if (directionMap.TryGetValue(dir, out Sprite sprite))
-        {
-            directionImage.sprite = sprite;
-            directionImage.enabled = true;
-        }
-        else
-        {
-            directionImage.enabled = false; // 無方向就關閉
-        }
+        if (upIcon    != null) upIcon.enabled    = direction.up;
+        if (downIcon  != null) downIcon.enabled  = direction.down;
+        if (leftIcon  != null) leftIcon.enabled  = direction.left;
+        if (rightIcon != null) rightIcon.enabled = direction.right;
     }
 }

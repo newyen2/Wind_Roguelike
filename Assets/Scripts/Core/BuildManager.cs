@@ -71,8 +71,10 @@ public class BuildManager : MonoBehaviour
         newBuilding.GetComponent<Sender>().is_set = true;
         buildParent.GetComponent<SortUILayer>().StartCoroutine(buildParent.GetComponent<SortUILayer>().SortChildrenByY());
 
+        print(tileTransform.position);
+
         // 記錄到陣列
-        GlobalManager.Instance.grid[tilePos.x, tilePos.y] = selectedPrefab;
+        GlobalManager.Instance.grid[tilePos.x, tilePos.y] = newBuilding;
 
         Debug.Log($"建築生成於 ({tilePos.x}, {tilePos.y})");
 

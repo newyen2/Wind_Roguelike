@@ -56,7 +56,7 @@ namespace Core
 
         public void OpenArchiveInGame()
         {
-            Archive.Instance.OpenArchive(GlobalManager.Instance.buildingPrefabs, DeckManager.Instance.startingDeck.ToArray());
+            Archive.Instance.OpenArchive(GlobalManager.Instance.AlreadyGetBuilding.ToArray(), DeckManager.Instance.startingDeck.ToArray());
         }
     }
 }

@@ -46,6 +46,17 @@ namespace Core
         public void StartGame()
         {
             SceneManager.LoadScene("InitialReward");
+            GlobalManager.Instance.AlreadyGetBuilding = new();
+        }
+
+        public void OpenArchive()
+        {
+            Archive.Instance.OpenArchive(GlobalManager.Instance.buildingPrefabs, GlobalManager.Instance.windPrefabs);
+        }
+
+        public void OpenArchiveInGame()
+        {
+            Archive.Instance.OpenArchive(GlobalManager.Instance.buildingPrefabs, DeckManager.Instance.startingDeck.ToArray());
         }
     }
 }

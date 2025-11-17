@@ -24,14 +24,14 @@ public class GlobalManager : MonoBehaviour
         {
             new StageRecord(3, 10, 3),
             new StageRecord(3, 20, 3),
-            new StageRecord(3, 30, 3),
-            new StageRecord(3, 50, 3),
-            new StageRecord(3, 80, 3),
-            new StageRecord(3, 120, 3),
-            new StageRecord(3, 180, 3),
-            new StageRecord(3, 220, 3),
+            new StageRecord(3, 40, 3),
+            new StageRecord(3, 60, 3),
+            new StageRecord(3, 90, 3),
+            new StageRecord(3, 140, 3),
+            new StageRecord(3, 200, 3),
             new StageRecord(3, 300, 3),
-            new StageRecord(3, 500, 3),
+            new StageRecord(3, 600, 3),
+            new StageRecord(3, 800, 3),
         };
     public int recordsCount = 0;
     private void Awake()

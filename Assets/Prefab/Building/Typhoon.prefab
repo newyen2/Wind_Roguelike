@@ -153,8 +153,8 @@ MonoBehaviour:
   displayName: "\u98B1\u98A8 Lv1"
   description: "\u6211\u4E0D\u77E5\u9053\u70BA\u4EC0\u9EBC\u98B1\u98A8\u662F\u5EFA\u7BC9\n\u4F46\u662F\u4F86\u90FD\u4F86\u4E86...\n\n\u4E00\u56DE\u5408\u5167\u63A5\u6536\u5230
     2 \u500B\u76F8\u540C\u98A8\u529B\u7684\u98A8\u6642\u5019\n\u7372\u5F97\u98A8\u529B
-    *10 \u7684\u5206\u6578"
-  multiplier: 20
+    *18 \u7684\u5206\u6578"
+  multiplier: 18
   adder: 0
   total_point: 0
   now_round: 0

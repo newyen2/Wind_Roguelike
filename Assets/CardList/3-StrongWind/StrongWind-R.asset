@@ -24,3 +24,6 @@ MonoBehaviour:
     left: 0
     right: 1
   effects: []
+  min_round: 0
+  max_round: 3
+  weight: 1

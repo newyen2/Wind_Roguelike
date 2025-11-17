@@ -632,6 +632,8 @@ MonoBehaviour:
   - {fileID: 236188743334087940}
   - {fileID: 725890170}
   is_random: 1
+  drawer: {fileID: 1098734231}
+  id: 0
 --- !u!1 &725890165
 GameObject:
   m_ObjectHideFlags: 0
@@ -774,6 +776,8 @@ MonoBehaviour:
   - {fileID: 607051506}
   - {fileID: 236188743334087940}
   is_random: 1
+  drawer: {fileID: 1098734231}
+  id: 2
 --- !u!1 &869124387
 GameObject:
   m_ObjectHideFlags: 0
@@ -858,7 +862,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45.1
+  m_fontSize: 53.7
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -962,6 +966,8 @@ MonoBehaviour:
   reward: {fileID: 0}
   otherRewardCard: []
   is_random: 0
+  drawer: {fileID: 0}
+  id: 0
 --- !u!114 &1033556691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1119,6 +1125,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1078687114}
   m_CullTransparentMesh: 1
+--- !u!1 &1098734230
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1098734232}
+  - component: {fileID: 1098734231}
+  m_Layer: 0
+  m_Name: random_handle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1098734231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1098734230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71417a85739f90c418d2ba64b8037225, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rewards: []
+--- !u!4 &1098734232
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1098734230}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 873.70056, y: 522.62366, z: -1.0524353}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &1172091313 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3254895307384701306, guid: 29d8bf77fbf40ec4895faed0449dfb8f, type: 3}
@@ -1546,7 +1597,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45.1
+  m_fontSize: 53.7
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2105,6 +2156,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5613071733232783436, guid: 29d8bf77fbf40ec4895faed0449dfb8f, type: 3}
+      propertyPath: id
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5613071733232783436, guid: 29d8bf77fbf40ec4895faed0449dfb8f, type: 3}
+      propertyPath: drawer
+      value: 
+      objectReference: {fileID: 1098734231}
+    - target: {fileID: 5613071733232783436, guid: 29d8bf77fbf40ec4895faed0449dfb8f, type: 3}
+      propertyPath: waittime
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 5613071733232783436, guid: 29d8bf77fbf40ec4895faed0449dfb8f, type: 3}
       propertyPath: otherRewardCard.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -2142,3 +2205,4 @@ SceneRoots:
   - {fileID: 298792846}
   - {fileID: 1266990670}
   - {fileID: 1359477218}
+  - {fileID: 1098734232}

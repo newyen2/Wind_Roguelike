@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 41
   displayName: "\u5927\u98A8"
-  description: "\u9020\u62104\u9EDE\u98A8\u529B"
+  description: "\u9020\u62106\u9EDE\u98A8\u529B"
   Image: {fileID: 21300000, guid: f4d8599c941c44344a3982e8407cc36a, type: 3}
   baseCost: 2
   baseWindPower: 4
@@ -24,6 +24,6 @@ MonoBehaviour:
     left: 0
     right: 0
   effects: []
-  min_round: 0
-  max_round: 3
+  min_round: 3
+  max_round: 9
   weight: 1

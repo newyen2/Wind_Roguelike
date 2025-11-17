@@ -28,11 +28,10 @@ public class sanae_build :BuildingBase
                 cards.Add(new CardInstance(cData[i]));
             }
         }
-        if (windPower <= 2)
-        {
+
             int id = WeightedRandomIndex(prob);
             DeckManager.Instance.AddCardToDrawPile(cards[id],false);
-        }
+        
         total_point += multiplier * windPower;
         return multiplier * windPower;
     }

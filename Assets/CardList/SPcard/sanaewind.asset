@@ -10,20 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 22d94b12a82c5cf4db4aa0f319d8aadb, type: 3}
-  m_Name: BigWind-LR
+  m_Name: sanaewind
   m_EditorClassIdentifier: 
-  id: 40
-  displayName: "\u5927\u98A8"
-  description: "\u9020\u62106\u9EDE\u98A8\u529B"
-  Image: {fileID: 21300000, guid: f4d8599c941c44344a3982e8407cc36a, type: 3}
-  baseCost: 2
-  baseWindPower: 6
+  id: 10
+  displayName: "\u5BCC\u9952\u4E4B\u98A8"
+  description: "\u9020\u62101\u9EDE\u98A8\u529B\n\u4E0B\u56DE\u5408\u62BD3"
+  Image: {fileID: 21300000, guid: 9069212e17cb5144fb68436ea696fb38, type: 3}
+  baseCost: 1
+  baseWindPower: 1
   direction:
-    up: 0
-    down: 0
+    up: 1
+    down: 1
     left: 1
     right: 1
-  effects: []
+  effects:
+  - {fileID: 11400000, guid: 9bd77437d7a19d4409af6d4c8cae7d5b, type: 2}
   min_round: 3
   max_round: 9
   weight: 1

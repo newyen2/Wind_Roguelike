@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 public class CardEffectBase : ScriptableObject
 {
-    public virtual void OnPlay(CardInstance self, EffectContext ctx) { 
-    
+
+    public virtual void OnPlay(CardInstance self, EffectContext ctx) {
+
     }//見BuildWindManager.cs的trybuild
     public virtual void OnDraw(CardInstance self, EffectContext ctx) {
     

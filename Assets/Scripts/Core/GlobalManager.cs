@@ -23,15 +23,15 @@ public class GlobalManager : MonoBehaviour
     public List<StageRecord> records = new List<StageRecord>()
         {
             new StageRecord(3, 10, 3),
-            new StageRecord(3, 20, 3),
-            new StageRecord(3, 40, 3),
-            new StageRecord(3, 60, 3),
+            new StageRecord(3, 30, 3),
+            new StageRecord(3, 50, 3),
             new StageRecord(3, 90, 3),
-            new StageRecord(3, 140, 3),
+            new StageRecord(3, 130, 3),
             new StageRecord(3, 200, 3),
             new StageRecord(3, 300, 3),
-            new StageRecord(3, 600, 3),
-            new StageRecord(3, 800, 3),
+            new StageRecord(3, 450, 3),
+            new StageRecord(3, 700, 3),
+            new StageRecord(3, 1000, 3),
         };
     public int recordsCount = 0;
     private void Awake()

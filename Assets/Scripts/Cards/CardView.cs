@@ -59,7 +59,7 @@ public class CardView : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         nameText.text = data.displayName;
         descriptionText.text = data.description;
         costText.text = instance.currentCost.ToString();
-        GetComponent<Sender>().senderId = instance.currentCost - 1;
+        GetComponent<Sender>().senderId =Mathf.Min( Mathf.Max( instance.currentCost - 1,0),2);
         if (ArtImage != null && data.Image != null)
         {
             ArtImage.sprite = data.Image;

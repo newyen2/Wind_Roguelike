@@ -40,18 +40,21 @@ public class Archive : MonoBehaviour
         }
 
         buildRoot.SetActive(false);
+        AudioManager.Instance.Play("click");
     }
 
     public void SwitchToBuild()
     {
         buildRoot.SetActive(true);
         windRoot.SetActive(false);
+        AudioManager.Instance.Play("click");
     }
 
     public void SwitchToWind()
     {
         buildRoot.SetActive(false);
         windRoot.SetActive(true);
+        AudioManager.Instance.Play("click");
     }
 
     public void Close()

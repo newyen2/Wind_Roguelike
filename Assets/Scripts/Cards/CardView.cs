@@ -1,8 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using UnityEngine.EventSystems;
 [System.Serializable]
-public class CardView : MonoBehaviour
+public class CardView : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [Header("UI 元件")]
     public Image upIcon;
@@ -29,6 +30,17 @@ public class CardView : MonoBehaviour
         }
         Apply(instance);
     }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        CardBoardScript.Instance.ShowCard(instance, ArtImage);
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        CardBoardScript.Instance.HideCard();
+    }
+
     private CardInstance CreateDummyInstance()
     {
         CardData fake = ScriptableObject.CreateInstance<CardData>();

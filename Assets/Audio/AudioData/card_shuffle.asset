@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   key: card_shuffle
   clip: {fileID: 8300000, guid: 10d952f9e38de9d438d0f0b79495d35d, type: 3}
-  volume: 1
+  volume: 0.5
   loop: 0

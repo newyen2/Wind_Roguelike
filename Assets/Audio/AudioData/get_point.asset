@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   key: get_point
   clip: {fileID: 8300000, guid: 5ff82ea0220178c4bacb218b233a14ed, type: 3}
-  volume: 1
+  volume: 0.25
   loop: 0

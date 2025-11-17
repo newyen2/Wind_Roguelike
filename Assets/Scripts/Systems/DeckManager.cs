@@ -18,6 +18,9 @@ public class DeckManager : MonoBehaviour
     public IReadOnlyList<CardInstance> DrawPile    => drawPile;
     public IReadOnlyList<CardInstance> DiscardPile => discardPile;
     public IReadOnlyList<CardInstance> ExhaustPile => exhaustPile;
+
+    public int Exhaustcost = 0;
+    public int ExhaustDraw = 0;
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -36,6 +39,9 @@ public class DeckManager : MonoBehaviour
         drawPile.Clear();
         discardPile.Clear();
         exhaustPile.Clear();
+        Exhaustcost = 0;
+        ExhaustDraw = 0;
+
 
         // 由 ScriptableObject 建戰鬥實例
         foreach (var cardData in startingDeck)
@@ -108,7 +114,8 @@ public class DeckManager : MonoBehaviour
     {
         bool removed = HandManager.Instance.RemoveCardFromHand(card);
         if (!removed) return;
-
+        StageManager.Instance.delaycost += Exhaustcost;
+        StageManager.Instance.delayDraw += ExhaustDraw;
         card.isExhausted = true;
         exhaustPile.Add(card);
     }

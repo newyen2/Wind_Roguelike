@@ -29,7 +29,11 @@ public class TextScoreParticle : MonoBehaviour
             text.text = "Enhanced!";
             text.color = Color.blue;
         }
-        
+        if(value == -100002)
+        {
+            text.text = "Split!";
+            text.color = Color.gray;
+        }
     }
 
     IEnumerator FloatUp()

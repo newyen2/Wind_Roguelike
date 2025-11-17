@@ -62,6 +62,7 @@ MonoBehaviour:
   - {fileID: 4752477190949869519, guid: c05b2c2578b64f54b93fd0a7e4e4ba1c, type: 3}
   - {fileID: 4752477190949869519, guid: 31d782405040c964ba00bf8e6c3873fe, type: 3}
   - {fileID: 4752477190949869519, guid: 7b514093fa2599b4ba9e7d564a393e6a, type: 3}
+  - {fileID: 4752477190949869519, guid: 212259943650d2944b9308fe553be7ac, type: 3}
   windPrefabs:
   - {fileID: 11400000, guid: e5b7c4b1926d3fd4ebf26d1909e72ac7, type: 2}
   - {fileID: 11400000, guid: 6eacd54c389f72d4abe3d845a7b41d19, type: 2}

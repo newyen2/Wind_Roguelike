@@ -25,14 +25,13 @@ public class WindTurbineHorizon : BuildingBase
         
         if(windDirection == Direction.E)
         {
-            total_point = windPower * multiplier;
+            total_point += windPower * multiplier;
             return windPower * multiplier;
         }
         if(windDirection == Direction.W){
-            total_point = windPower * multiplier;
+            total_point += windPower * multiplier;
             return windPower * multiplier;
         }
-
         return 0;
     }
 }

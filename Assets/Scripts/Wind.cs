@@ -62,6 +62,7 @@ public class Wind
         if (!isEnable) {
             return;
         }
+
         Debug.Log(StageManager.Instance.nextWindPosition);
         UIManager.Instance.DisplayWindParticle(x, y, direction);
         if (direction == Direction.E)
@@ -73,7 +74,7 @@ public class Wind
             }
             int score = GlobalManager.Instance.grid[x+1, y]?.GetComponent<BuildingBase>().StartScore(power ,direction, x+1, y, this) ?? 0;
             Debug.Log($"Wind Move: ({x}, {y}) -> ({x+1}, {y})");
-            if(score != -100000)
+            if(score != -100000 && score != -100002)
             {
                 StageManager.Instance.nextWindPosition[x + 1, y].windSlot.Add(new Wind(direction, power));
             }
@@ -89,10 +90,10 @@ public class Wind
                 isEnable = false;
                 return;
             }
-            int score = GlobalManager.Instance.grid[x-1, y]?.GetComponent<BuildingBase>().StartScore(power ,direction,x-1, y, this) ?? 0;
+            int score = GlobalManager.Instance.grid[x-1, y]?.GetComponent<BuildingBase>().StartScore(power ,direction, x-1, y, this) ?? 0;
             
             Debug.Log($"Wind Move: ({x}, {y}) -> ({x-1}, {y})");
-            if(score != -100000)
+            if(score != -100000 && score != -100002)
             {
                 StageManager.Instance.nextWindPosition[x - 1, y].windSlot.Add(new Wind(direction, power));
             }
@@ -110,7 +111,7 @@ public class Wind
             }
             int score = GlobalManager.Instance.grid[x, y-1]?.GetComponent<BuildingBase>().StartScore(power ,direction,x, y-1, this) ?? 0;
             Debug.Log($"Wind Move: ({x}, {y}) -> ({x}, {y - 1})");
-            if(score != -100000)
+            if(score != -100000 && score != -100002)
             {
                 StageManager.Instance.nextWindPosition[x, y - 1].windSlot.Add(new Wind(direction, power));
             }
@@ -127,9 +128,8 @@ public class Wind
                 return;
             }
             int score = GlobalManager.Instance.grid[x, y+1]?.GetComponent<BuildingBase>().StartScore(power ,direction,x, y+1, this) ?? 0;
-            StageManager.Instance.score += score;
             Debug.Log($"Wind Move: ({x}, {y}) -> ({x}, {y + 1})");
-            if(score != -100000)
+            if(score != -100000 && score != -100002)
             {
                 StageManager.Instance.nextWindPosition[x, y + 1].windSlot.Add(new Wind(direction, power));
             }

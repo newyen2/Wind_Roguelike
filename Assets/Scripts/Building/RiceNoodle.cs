@@ -14,6 +14,7 @@ public class RiceNoodle : BuildingBase
         if (windPower <= 2)
         {
             StageManager.Instance.delayDraw += 1;
+            total_point += 10;
             return 10;
 
         }

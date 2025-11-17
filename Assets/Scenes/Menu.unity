@@ -268,17 +268,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   globalManagerPrefab: {fileID: 20071664562555424, guid: 46c2b011831807b40b0eb29a4f4ce4bf, type: 3}
---- !u!114 &670917011 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1310322916986422065, guid: ecbf7bddd868a8b47a2d65e8891d8d5e, type: 3}
-  m_PrefabInstance: {fileID: 1295961402}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b27d5c4f2c447c43ad38800b50b7f2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &941479244 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6524876225633944320, guid: e10dd6b58fa1015418e8db68b60fc688, type: 3}
@@ -707,7 +696,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 670917011}
+      - m_Target: {fileID: 1310322916986422065, guid: ecbf7bddd868a8b47a2d65e8891d8d5e, type: 3}
         m_TargetAssemblyTypeName: Core.GameManager, Assembly-CSharp
         m_MethodName: OpenArchive
         m_Mode: 1
@@ -979,12 +968,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6004655354803559995, guid: 46c2b011831807b40b0eb29a4f4ce4bf, type: 3}
       propertyPath: buildingPrefabs.Array.size
-      value: 16
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 6004655354803559995, guid: 46c2b011831807b40b0eb29a4f4ce4bf, type: 3}
       propertyPath: buildingPrefabs.Array.data[16]
       value: 
-      objectReference: {fileID: 4752477190949869519, guid: 68f2bd0dab330f04586af93586f6a058, type: 3}
+      objectReference: {fileID: 4752477190949869519, guid: 212259943650d2944b9308fe553be7ac, type: 3}
     - target: {fileID: 7804152215095033804, guid: 46c2b011831807b40b0eb29a4f4ce4bf, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.9047554
@@ -2074,6 +2063,6 @@ SceneRoots:
   - {fileID: 1620268562}
   - {fileID: 1295961402}
   - {fileID: 1043978535}
-  - {fileID: 1521058455}
   - {fileID: 1881191246}
   - {fileID: 963398951}
+  - {fileID: 1521058455}

@@ -13,7 +13,7 @@ public class WindTurbineMin : BuildingBase
 
         if(windPower <= 2)
         {
-            total_point = windPower * multiplier;
+            total_point += windPower * multiplier;
             return windPower * multiplier;
         }
         return 0;

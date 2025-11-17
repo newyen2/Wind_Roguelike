@@ -47,6 +47,7 @@ public class InteractionManager : MonoBehaviour
             }
             if (gameObject.CompareTag("WindTile") && !isBuilding)
             {
+                if (lastChoiceBuild.GetComponent<CardView>() == null || gameObject.GetComponent<WindTile>() == null) return false;
                 if (StageManager.Instance.canPlay(lastChoiceBuild.GetComponent<CardView>().instance,gameObject.GetComponent<WindTile>().tilePos))
                 {
                     WindTile windtile_tmp = gameObject.GetComponent<WindTile>();

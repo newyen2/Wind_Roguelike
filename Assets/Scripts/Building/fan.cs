@@ -13,6 +13,7 @@ public class fan  : BuildingBase
         }
         wind.power += addddd;
 
+        total_point = 0;
 
         return -100001;
     }

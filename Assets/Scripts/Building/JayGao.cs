@@ -21,6 +21,7 @@ public class JayGap : BuildingBase
 
     public override int Score(int windPower, Direction windDirection, int x, int y,Wind wind)
     {
+        total_point += windPower * multiplier;
         return windPower * multiplier;
     }
 }

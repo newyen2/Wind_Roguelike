@@ -8,9 +8,9 @@ public class WindTurbine : BuildingBase
     {
         if(StageManager.Instance.round != now_round)
         {
-            total_point = windPower * multiplier;
             Renew(StageManager.Instance.round);
         }
+            total_point += windPower * multiplier;
 
         return windPower * multiplier;
     }

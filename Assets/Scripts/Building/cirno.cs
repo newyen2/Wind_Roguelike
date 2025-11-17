@@ -20,12 +20,12 @@ public class cirno : BuildingBase
         }
         if (windPower == 9)
         {
-            this.total_point = 99;
+            this.total_point += 99;
             AudioManager.Instance.Play("baka");
             DeckManager.Instance.AddCardToDiscardPile(cirnoCardIns);
             return 99;
         }
-
+        this.total_point += 9;
         return 9;
     }
 }

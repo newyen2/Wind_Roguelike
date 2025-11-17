@@ -465,11 +465,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6420318476846602985, guid: 3564d74a775d70d47ba0b8429fae2104, type: 3}
       propertyPath: BGM_volume
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6420318476846602985, guid: 3564d74a775d70d47ba0b8429fae2104, type: 3}
       propertyPath: SFX_volume
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

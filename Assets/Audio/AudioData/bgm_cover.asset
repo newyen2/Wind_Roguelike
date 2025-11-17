@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   key: bgm_cover
   clip: {fileID: 8300000, guid: 967cebb4e5846b049a92410cd21e3a10, type: 3}
-  volume: 0.491
+  volume: 0.25
   loop: 1

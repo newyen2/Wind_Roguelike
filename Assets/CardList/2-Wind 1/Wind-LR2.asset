@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 21
   displayName: "\u98A8"
-  description: "\u9020\u62103\u9EDE\u98A8\u529B"
+  description: "\u9020\u62102\u9EDE\u98A8\u529B"
   Image: {fileID: 21300000, guid: 9069212e17cb5144fb68436ea696fb38, type: 3}
   baseCost: 1
-  baseWindPower: 3
+  baseWindPower: 2
   direction:
     up: 0
     down: 0

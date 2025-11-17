@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 62
   displayName: "\u9F8D\u6372\u98A8"
-  description: "\u9020\u62108\u9EDE\u98A8\u529B"
+  description: "\u9F8D\u6372\u98A8\u6467\u6BC0\u505C\u8ECA\u5834\uFF01\n\n\u9020\u62108\u9EDE\u98A8\u529B"
   Image: {fileID: 21300000, guid: bf509736ab590174cb877d73bd68abe4, type: 3}
   baseCost: 3
   baseWindPower: 8

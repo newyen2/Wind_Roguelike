@@ -20,7 +20,7 @@ public class ArchiveWindPrefab: MonoBehaviour
 
     public void changeData(CardData windData)
     {
-        Debug.Log(nameText);
+        Debug.Log(windData);
 
         wind = windData;
         upIcon.SetActive(windData.direction.up);

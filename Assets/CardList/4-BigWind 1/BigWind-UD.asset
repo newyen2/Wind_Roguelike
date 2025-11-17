@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BigWind-UD
   m_EditorClassIdentifier: 
   id: 41
-  displayName: "\u5927\u98A8"
+  displayName: "\u5927\u98A8+"
   description: "\u9020\u62106\u9EDE\u98A8\u529B"
   Image: {fileID: 21300000, guid: f4d8599c941c44344a3982e8407cc36a, type: 3}
   baseCost: 2

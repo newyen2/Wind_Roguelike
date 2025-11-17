@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 1
   displayName: baka
-  description: "\u4E0D\u61C2\u5566\n\u6D88\u8017\n\n\u9020\u62109\u98A8\u529B"
+  description: "1 + 2 = ?\n\n\u6D88\u8017\n\u9020\u62109\u9EDE\u98A8\u529B"
   Image: {fileID: 21300000, guid: 92ffcd5709ee3d4469caa5acaa6e5ac9, type: 3}
   baseCost: 1
   baseWindPower: 9

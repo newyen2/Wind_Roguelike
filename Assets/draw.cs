@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class draw : MonoBehaviour
 {
+    public static draw Instance { get; private set; }
+    public bool finish;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +22,13 @@ public class draw : MonoBehaviour
 
     private void Awake()
     {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+        finish = false;
         List<GameObject> rewards = new List<GameObject>();
         prepare();
     }
@@ -42,7 +51,7 @@ public class draw : MonoBehaviour
         {
             rewards.Add(available[idx]);
         }
-
+        finish = true;
     }
 
     List<int> WeightedRandomPick(int count, List<int> weights)

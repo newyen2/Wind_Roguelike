@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using Core;
 using TMPro;
 using System.Collections.Generic;
+using System.Collections;
 
 public class RewardCard : MonoBehaviour, IPointerClickHandler
 {
@@ -15,15 +16,19 @@ public class RewardCard : MonoBehaviour, IPointerClickHandler
 
     void Start()
     {
+        StartCoroutine(show());
+ 
+    }
+    IEnumerator show()
+    {
+        yield return new WaitUntil(()=>draw.Instance.finish);
         if (is_random)
         {
             reward = drawer.rewards[id];
         }
         GlobalManager.Instance.rewardBuild = new();
-        RenewReward(reward); 
- 
+        RenewReward(reward);
     }
-
 
     public void RenewReward(GameObject gameObject)
     {

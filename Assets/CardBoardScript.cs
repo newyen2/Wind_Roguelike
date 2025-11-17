@@ -39,10 +39,10 @@ public class CardBoardScript : MonoBehaviour
         fakeWind.cost.text = card.currentCost.ToString();
         cardImage.sprite = artImage.sprite;
 
-        fakeWind.upIcon.SetActive(card.data.direction.up == true);
-        fakeWind.downIcon.SetActive(card.data.direction.down == true);
-        fakeWind.leftIcon.SetActive(card.data.direction.left == true);
-        fakeWind.rightIcon.SetActive(card.data.direction.right == true);
+        fakeWind.upIcon.SetActive(card.data.direction.down == true);
+        fakeWind.downIcon.SetActive(card.data.direction.up == true);
+        fakeWind.leftIcon.SetActive(card.data.direction.right == true);
+        fakeWind.rightIcon.SetActive(card.data.direction.left == true);
     }
 
     public void HideCard()

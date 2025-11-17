@@ -10,7 +10,7 @@ public class addpower : CardEffectBase
     public int power_addi;
     public override void OnDraw(CardInstance self, EffectContext ctx)
     {
-        self.data.description = "造成" + (self.currentWindPower + 5) + " 風力\n" + "每打出一次風力+5";
+        self.data.description = "造成" + (self.currentWindPower + 5) + " 風力\n" + "每打出一次風力+5\n初始為6";
     }
     public override void OnPlay(CardInstance self, EffectContext ctx)
     {

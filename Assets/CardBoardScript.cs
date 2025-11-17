@@ -23,6 +23,12 @@ public class CardBoardScript : MonoBehaviour
         Instance = this;
     }
 
+    public void Start()
+    {
+        boardImage.enabled = false;
+        fakeWindObject.SetActive(false);
+    }
+
     public void ShowCard(CardInstance card, Image artImage)
     {
         boardImage.enabled = true;

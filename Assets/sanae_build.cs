@@ -11,6 +11,7 @@ public class sanae_build :BuildingBase
     {
         if (cards==null)
         {
+            cards = new List<CardInstance>();
             for (int i = 0; i < cData.Count; i++)
             {
                 cards.Add(new CardInstance(cData[i]));

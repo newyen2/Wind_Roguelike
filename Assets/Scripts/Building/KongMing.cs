@@ -15,10 +15,10 @@ public class KongMing : BuildingBase
         {
             AudioManager.Instance.Play("kongming");
             wind.power *= 2;
-            return 0;
+            return -100001;
         }
 
-        return -999; // 阻擋改成 -999;
+        return -100000; // 阻擋改成 -100000;
     }
 
     public override int Score(int windPower, Direction windDirection, int x, int y,Wind wind)

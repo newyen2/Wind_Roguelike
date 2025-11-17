@@ -14,6 +14,6 @@ public class fan  : BuildingBase
         wind.power += addddd;
 
 
-        return 0;
+        return -100001;
     }
 }

@@ -204,6 +204,7 @@ public class StageManager : MonoBehaviour
                 }
             }
         }
+        UIManager.Instance.DisplayScoreText(StageManager.Instance.score);
 
 
         if (score >= targetScore)

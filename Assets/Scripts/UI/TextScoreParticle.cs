@@ -17,12 +17,19 @@ public class TextScoreParticle : MonoBehaviour
     public void setValue(int value)
     {
         text.text = value.ToString();
-        if(value == -999)
+        if(value < 0) text.color = Color.red;
+        if(value == 0) Destroy(this.gameObject);
+        if(value == -100000)
         {
             text.text = "Blocked!";
+            text.color = Color.red;
         }
-        if(value == 0) Destroy(this.gameObject);
-        if(value < 0) text.color = Color.red;
+        if(value == -100001)
+        {
+            text.text = "Enhanced!";
+            text.color = Color.blue;
+        }
+        
     }
 
     IEnumerator FloatUp()

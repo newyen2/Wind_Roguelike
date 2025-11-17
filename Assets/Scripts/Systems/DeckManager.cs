@@ -72,7 +72,10 @@ public class DeckManager : MonoBehaviour
 
             var topCard = drawPile[0];
             drawPile.RemoveAt(0);
-
+            foreach (CardEffectBase c in topCard.data.effects)
+            {
+                c.OnDraw(topCard, null);
+            }
             HandManager.Instance.AddCardToHand(topCard);
             AudioManager.Instance.Play("card_get");
             //生幾個Instance來做看看

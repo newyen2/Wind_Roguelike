@@ -17,4 +17,15 @@ public class CardData : ScriptableObject
     public CardEffectBase[] effects;
     [Header("UI 元件")]
     public int min_round = 0, max_round = 9, weight = 1;
+
+    public void changeDir(bool[] dir)
+    {
+        direction.up = dir[0];
+        direction.right = dir[1];
+        direction.down = dir[2];
+        direction.left = dir[3];
+
+    }
+
+
 }

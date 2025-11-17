@@ -20,10 +20,18 @@ public class sanae_build :BuildingBase
     }
     public override int Score(int windPower, Direction windDirection, int x, int y, Wind wind)
     {
+        if (cards == null)
+        {
+            cards = new List<CardInstance>();
+            for (int i = 0; i < cData.Count; i++)
+            {
+                cards.Add(new CardInstance(cData[i]));
+            }
+        }
         if (windPower <= 2)
         {
             int id = WeightedRandomIndex(prob);
-            DeckManager.Instance.AddCardToDrawPile(cards[id],true);
+            DeckManager.Instance.AddCardToDrawPile(cards[id],false);
         }
         total_point += multiplier * windPower;
         return multiplier * windPower;

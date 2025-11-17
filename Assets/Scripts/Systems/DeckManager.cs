@@ -156,7 +156,7 @@ public class DeckManager : MonoBehaviour
     /// </summary>
     public void AddCardToDrawPile(CardInstance card, bool shuffleAfterAdd = false)
     {
-        drawPile.Add(card);
+        drawPile.Insert(0, card);
         if (shuffleAfterAdd)
         {
             Shuffle(drawPile);

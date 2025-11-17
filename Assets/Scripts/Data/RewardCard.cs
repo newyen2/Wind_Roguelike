@@ -16,18 +16,26 @@ public class RewardCard : MonoBehaviour, IPointerClickHandler
 
     void Start()
     {
-        StartCoroutine(show());
- 
+        if (is_random)
+        {
+            StartCoroutine(show());
+        }
+        else
+        {
+            GlobalManager.Instance.rewardBuild = new();
+        RenewReward(reward);
+
+        }
     }
     IEnumerator show()
     {
         yield return new WaitUntil(()=>draw.Instance.finish);
-        if (is_random)
-        {
+
             reward = drawer.rewards[id];
-        }
         GlobalManager.Instance.rewardBuild = new();
-        RenewReward(reward);
+            RenewReward(reward);
+        
+
     }
 
     public void RenewReward(GameObject gameObject)

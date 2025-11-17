@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 22d94b12a82c5cf4db4aa0f319d8aadb, type: 3}
-  m_Name: BigWind-LR
+  m_Name: StrongWind+-R
   m_EditorClassIdentifier: 
-  id: 40
-  displayName: "\u5927\u98A8+"
-  description: "\u9020\u62106\u9EDE\u98A8\u529B"
-  Image: {fileID: 21300000, guid: f4d8599c941c44344a3982e8407cc36a, type: 3}
-  baseCost: 2
-  baseWindPower: 6
+  id: 33
+  displayName: "\u5F37\u98A8+"
+  description: "\u9020\u62104\u9EDE\u98A8\u529B"
+  Image: {fileID: 21300000, guid: 9069212e17cb5144fb68436ea696fb38, type: 3}
+  baseCost: 1
+  baseWindPower: 4
   direction:
     up: 0
     down: 0
-    left: 1
+    left: 0
     right: 1
   effects: []
   min_round: 3

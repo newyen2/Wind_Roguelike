@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 22d94b12a82c5cf4db4aa0f319d8aadb, type: 3}
-  m_Name: SmallWind 1
+  m_Name: BigWind+-LR
   m_EditorClassIdentifier: 
-  id: 10
-  displayName: "\u5FAE\u98A8+"
-  description: "\u9020\u62101\u9EDE\u98A8\u529B"
-  Image: {fileID: 21300000, guid: 506a355800c6e7341a846e476a549c93, type: 3}
-  baseCost: 0
-  baseWindPower: 1
+  id: 40
+  displayName: "\u5927\u98A8+"
+  description: "\u9020\u62106\u9EDE\u98A8\u529B"
+  Image: {fileID: 21300000, guid: f4d8599c941c44344a3982e8407cc36a, type: 3}
+  baseCost: 2
+  baseWindPower: 6
   direction:
-    up: 1
-    down: 1
+    up: 0
+    down: 0
     left: 1
     right: 1
   effects: []

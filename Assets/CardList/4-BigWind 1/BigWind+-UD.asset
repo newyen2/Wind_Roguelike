@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 22d94b12a82c5cf4db4aa0f319d8aadb, type: 3}
-  m_Name: Wind-LR2
+  m_Name: BigWind+-UD
   m_EditorClassIdentifier: 
-  id: 21
-  displayName: "\u98A8"
-  description: "\u9020\u62102\u9EDE\u98A8\u529B"
-  Image: {fileID: 21300000, guid: 9069212e17cb5144fb68436ea696fb38, type: 3}
-  baseCost: 1
-  baseWindPower: 2
+  id: 41
+  displayName: "\u5927\u98A8+"
+  description: "\u9020\u62106\u9EDE\u98A8\u529B"
+  Image: {fileID: 21300000, guid: f4d8599c941c44344a3982e8407cc36a, type: 3}
+  baseCost: 2
+  baseWindPower: 6
   direction:
-    up: 0
-    down: 0
-    left: 1
-    right: 1
+    up: 1
+    down: 1
+    left: 0
+    right: 0
   effects: []
   min_round: 3
   max_round: 9

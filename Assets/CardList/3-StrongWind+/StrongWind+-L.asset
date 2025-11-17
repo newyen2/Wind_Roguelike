@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 22d94b12a82c5cf4db4aa0f319d8aadb, type: 3}
-  m_Name: Wind-UD
+  m_Name: StrongWind+-L
   m_EditorClassIdentifier: 
-  id: 20
-  displayName: "\u98A8"
-  description: "\u9020\u62102\u9EDE\u98A8\u529B"
+  id: 32
+  displayName: "\u5F37\u98A8+"
+  description: "\u9020\u62104\u9EDE\u98A8\u529B"
   Image: {fileID: 21300000, guid: 9069212e17cb5144fb68436ea696fb38, type: 3}
   baseCost: 1
-  baseWindPower: 2
+  baseWindPower: 4
   direction:
-    up: 1
-    down: 1
-    left: 0
+    up: 0
+    down: 0
+    left: 1
     right: 0
   effects: []
   min_round: 3

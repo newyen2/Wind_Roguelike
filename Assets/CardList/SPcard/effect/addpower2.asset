@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e49e940f0236f840bf1d70f1f25417d, type: 3}
   m_Name: addpower2
   m_EditorClassIdentifier: 
-  power_addi: 0
+  power_addi: 6

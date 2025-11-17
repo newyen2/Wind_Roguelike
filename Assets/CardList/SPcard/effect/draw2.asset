@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4751e574ffc429f4993a39a69b62a108, type: 3}
   m_Name: draw2
   m_EditorClassIdentifier: 
-  draw: 3
+  draw: 2

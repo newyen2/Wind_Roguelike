@@ -96,6 +96,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8b52382f1d42dd745a5dc3e26117d7c9, type: 2}
   - {fileID: 11400000, guid: 8508c4b339314e74dabfe3b2964f9ba0, type: 2}
   rewardBuild: []
+  AlreadyGetBuilding: []
   recordsCount: 0
   resultGrid: []
 --- !u!114 &6902741122583038563

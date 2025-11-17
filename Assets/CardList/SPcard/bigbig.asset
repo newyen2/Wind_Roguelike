@@ -12,18 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22d94b12a82c5cf4db4aa0f319d8aadb, type: 3}
   m_Name: bigbig
   m_EditorClassIdentifier: 
-  id: 
-  displayName: 
-  description: 
-  Image: {fileID: 0}
-  baseCost: 0
-  baseWindPower: 0
+  id: 12
+  displayName: "\u7206\u8D70"
+  description: "\u9020\u621011 \u98A8\u529B\n\u6BCF\u6253\u51FA\u4E00\u6B21\u98A8\u529B+5\n\u521D\u59CB\u70BA6"
+  Image: {fileID: 21300000, guid: bf509736ab590174cb877d73bd68abe4, type: 3}
+  baseCost: 1
+  baseWindPower: 1
   direction:
     up: 0
-    down: 0
+    down: 1
     left: 0
     right: 0
-  effects: []
+  effects:
+  - {fileID: 11400000, guid: 52bd7087a878b7e40a7738bae4f2a1b9, type: 2}
+  - {fileID: 11400000, guid: bc4130c1bdc780448b20a792d8533c32, type: 2}
   min_round: 0
   max_round: 9
   weight: 1

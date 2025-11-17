@@ -11,7 +11,7 @@ public class KongMing : BuildingBase
             Renew(StageManager.Instance.round);
         }
         
-        if(windDirection == Direction.E)
+        if(windDirection == Direction.W)
         {
             AudioManager.Instance.Play("kongming");
             wind.power *= 2;

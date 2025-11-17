@@ -12,18 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22d94b12a82c5cf4db4aa0f319d8aadb, type: 3}
   m_Name: cirno
   m_EditorClassIdentifier: 
-  id: 
-  displayName: 
-  description: 
-  Image: {fileID: 0}
-  baseCost: 0
-  baseWindPower: 0
+  id: 1
+  displayName: baka
+  description: "\u4E0D\u61C2\u5566\n\u6D88\u8017\n\n\u9020\u62109\u98A8\u529B"
+  Image: {fileID: 21300000, guid: 92ffcd5709ee3d4469caa5acaa6e5ac9, type: 3}
+  baseCost: 1
+  baseWindPower: 9
   direction:
     up: 0
     down: 0
     left: 0
     right: 0
-  effects: []
+  effects:
+  - {fileID: 11400000, guid: c7fcf990ab8180542ad7ff1c490a5633, type: 2}
   min_round: 0
-  max_round: 9
-  weight: 1
+  max_round: 0
+  weight: 0

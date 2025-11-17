@@ -53,6 +53,7 @@ public class DeckManager : MonoBehaviour
     /// <summary>
     /// 抽 n 張牌進手牌
     /// </summary>
+    [Button]
     public void DrawCards(int count)
     {
         Debug.Log($"抽牌,抽{count}張");

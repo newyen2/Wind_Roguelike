@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Sirenix.OdinInspector;
+
 //管理：牌堆 / 棄牌堆 / 消耗堆, 提供：抽牌 / 丟牌 / 消耗 / 洗牌等 API
 public class DeckManager : MonoBehaviour
 {

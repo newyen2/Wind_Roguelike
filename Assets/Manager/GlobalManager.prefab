@@ -123,7 +123,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 51f622abe47eff241919eb69e52f38b7, type: 2}
   - {fileID: 11400000, guid: e5b7c4b1926d3fd4ebf26d1909e72ac7, type: 2}
   - {fileID: 11400000, guid: 6eacd54c389f72d4abe3d845a7b41d19, type: 2}
-  - {fileID: 11400000, guid: 8508c4b339314e74dabfe3b2964f9ba0, type: 2}
+  - {fileID: 11400000, guid: 52533ad8a1783d8418fd4fbd3ab2d6c5, type: 2}
+  - {fileID: 11400000, guid: 74ef70ff564c4384889da3c53a0ee8a8, type: 2}
+  - {fileID: 11400000, guid: 9ee14d51f668e494cb6090d6b2dd7b5a, type: 2}
+  - {fileID: 11400000, guid: 1c9f2e6dbd153084f84a64a7b49b6d7d, type: 2}
+  - {fileID: 11400000, guid: 81e1029c86822e045b160822a7a0381c, type: 2}
   startingHandSize: 5
   Exhaustcost: 0
   ExhaustDraw: 0

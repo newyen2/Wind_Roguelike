@@ -10,23 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 22d94b12a82c5cf4db4aa0f319d8aadb, type: 3}
-  m_Name: cirno
+  m_Name: sanaeN
   m_EditorClassIdentifier: 
-  id: 1
-  displayName: baka
-  description: "1 + 2 = ?\n\n\u6D88\u8017\n\u9020\u62109\u9EDE\u98A8\u529B"
-  Image: {fileID: 21300000, guid: 92ffcd5709ee3d4469caa5acaa6e5ac9, type: 3}
-  baseCost: 1
-  baseWindPower: 9
+  id: 123
+  displayName: "\u5E73"
+  description: "\u9020\u62103\u98A8\u529B"
+  Image: {fileID: 21300000, guid: 506a355800c6e7341a846e476a549c93, type: 3}
+  baseCost: 0
+  baseWindPower: 3
   direction:
-    up: 0
+    up: 1
     down: 1
-    left: 0
-    right: 0
-  isExhust: 0
-  effects:
-  - {fileID: 11400000, guid: c7fcf990ab8180542ad7ff1c490a5633, type: 2}
-  - {fileID: 11400000, guid: bc4130c1bdc780448b20a792d8533c32, type: 2}
+    left: 1
+    right: 1
+  isExhust: 1
+  effects: []
   min_round: 0
   max_round: 0
   weight: 0

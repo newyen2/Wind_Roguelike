@@ -100,6 +100,12 @@ public class StageManager : MonoBehaviour
         
     }
 
+    public void addScore(int s)
+    {
+        score += s;
+        UIManager.Instance.DisplayScoreText(StageManager.Instance.score);
+    }
+
     public bool canPlay(CardInstance card, Vector2Int windTile)
     {
         if (card == null)

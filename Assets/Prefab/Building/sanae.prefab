@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 5472311257150223424}
   - component: {fileID: 4453188263921553182}
   - component: {fileID: 809902291010015620}
-  - component: {fileID: -6394423387992404013}
+  - component: {fileID: 9182832645643701385}
   m_Layer: 5
-  m_Name: Ikun
+  m_Name: sanae
   m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -68,7 +68,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7d955ef09e68ecc47afae0acf4db9c3a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bb5b7e8dcd06c0b4d9f5003630152c16, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a15adad92b04e640986fff05753181c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  senderId: 16
+  senderId: 17
   is_set: 0
 --- !u!61 &809902291010015620
 BoxCollider2D:
@@ -137,7 +137,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 100, y: 100}
   m_EdgeRadius: 0
---- !u!114 &-6394423387992404013
+--- !u!114 &9182832645643701385
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -146,18 +146,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 4752477190949869519}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d35bb36d53d89b3418e58a55489998db, type: 3}
+  m_Script: {fileID: 11500000, guid: f7bab4b7e95f49a4ea0b339c735ecf90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 16
-  displayName: "\u771F\u611B\u5764"
-  description: "\u5DD4\u5CF0\u7522\u751F\u865B\u507D\u7684\u64C1\u8B77\n\u9EC3\u660F\u898B\u8B49\u771F\u6B63\u7684\u4FE1\u5F92\r\n\n\u4F7F\u7528\u5E25\u6C23\u7684\u4E2D\u5206\u982D\u5C07\n\u98A8\u4E00\u5206\u70BA\u4E8C(
-    \u98A8\u529B\u6E1B\u70BA 2/3 )"
+  id: 0
+  displayName: 
+  description: 
   multiplier: 0
   adder: 0
   total_point: 0
-  now_round: 0
-  min_round: 3
+  now_round: -1
+  min_round: 0
   max_round: 9
-  weight: 2
-  cirnoCard: {fileID: 0}
+  weight: 1
+  prob: 

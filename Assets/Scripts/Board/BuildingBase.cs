@@ -29,6 +29,11 @@ public class BuildingBase : MonoBehaviour
         return 0;
     }
 
+    public virtual int WhenStart(int x, int y)
+    {
+        return 0;
+    }
+
     public virtual int EndScore(int x, int y)
     {
         // 基本建築預設的計分方式

@@ -82,6 +82,20 @@ public class StageManager : MonoBehaviour
         }
         //建立牌堆並抽牌
         DeckManager.Instance.StartBattle();
+
+        for (int i = 0; i < GlobalManager.Instance.grid.GetLength(0); i++)
+        {
+            for (int j = 0; j < GlobalManager.Instance.grid.GetLength(1); j++)
+            {
+                 if (GlobalManager.Instance.grid[i, j] != null)
+                {
+                    int s = GlobalManager.Instance.grid[i, j].GetComponent<BuildingBase>().WhenStart(i, j);
+                    score += s;
+                    UIManager.Instance.DisplayTextScoreParticle(i, j, s);
+                }
+            }
+        }
+        UIManager.Instance.DisplayScoreText(StageManager.Instance.score);
     }
 
     public bool canPlay(CardInstance card, Vector2Int windTile)
@@ -221,11 +235,15 @@ public class StageManager : MonoBehaviour
             Fail();
             yield break;
         }
+        
 
         powerPoint = maxPowerPoint+delaycost;
         //棄牌, 重抽, 回點
         DeckManager.Instance.DiscardAllFromHand();//棄牌
         DeckManager.Instance.DrawCards(DeckManager.Instance.startingHandSize + delayDraw);//抽牌
+
+        delaycost = 0;
+        delayDraw = 0;
     }
 
     [Button]

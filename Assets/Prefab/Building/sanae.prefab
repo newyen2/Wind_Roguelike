@@ -151,12 +151,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0
   displayName: 
-  description: 
-  multiplier: 0
+  description: "\u82D7"
+  multiplier: -10
   adder: 0
   total_point: 0
   now_round: -1
-  min_round: 0
+  min_round: 2
   max_round: 9
   weight: 1
-  prob: 
+  prob: 0a000000140000001e000000140000000a000000
+  cData:
+  - {fileID: 11400000, guid: 1c9f2e6dbd153084f84a64a7b49b6d7d, type: 2}
+  - {fileID: 11400000, guid: 9ee14d51f668e494cb6090d6b2dd7b5a, type: 2}
+  - {fileID: 11400000, guid: 81e1029c86822e045b160822a7a0381c, type: 2}
+  - {fileID: 11400000, guid: 74ef70ff564c4384889da3c53a0ee8a8, type: 2}
+  - {fileID: 11400000, guid: 52533ad8a1783d8418fd4fbd3ab2d6c5, type: 2}

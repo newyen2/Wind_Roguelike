@@ -69,9 +69,9 @@ public class WindRewardCard : MonoBehaviour, IPointerClickHandler
         if(this.name == "IgnoreButton") return;
         print( transform.GetComponent<Image>());
         transform.GetComponent<Image>().sprite = reward.Image;
-        transform.GetChild(1).GetComponent<Text>().text = reward.displayName;
-        transform.GetChild(2).GetComponent<Text>().text = reward.description;
-        transform.GetChild(3).GetComponent<Text>().text = reward.baseCost.ToString();
+        transform.GetChild(1).GetComponent<TMP_Text>().text = reward.displayName;
+        transform.GetChild(2).GetComponent<TMP_Text>().text = reward.description;
+        transform.GetChild(3).GetComponent<TMP_Text>().text = reward.baseCost.ToString();
         UpdateDirectionIcons(gameObject.direction);
     }
 

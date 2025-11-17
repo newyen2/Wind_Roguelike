@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   key: kongming
   clip: {fileID: 8300000, guid: 085aa7893a51f0b4883bb494975b241e, type: 3}
-  volume: 0.5
+  volume: 0.25
   loop: 0

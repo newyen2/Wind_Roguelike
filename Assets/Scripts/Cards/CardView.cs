@@ -2,6 +2,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using UnityEngine.EventSystems;
+using TMPro;
+
 [System.Serializable]
 public class CardView : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
@@ -12,9 +14,9 @@ public class CardView : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     public Image rightIcon;
     
     public Image ArtImage;
-    public Text nameText;
-    public Text descriptionText;
-    public Text costText;
+    public TMP_Text nameText;
+    public TMP_Text descriptionText;
+    public TMP_Text costText;
 
     public CardInstance instance;
     private void Awake()

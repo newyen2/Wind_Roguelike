@@ -12,8 +12,8 @@ public class FakeWind: MonoBehaviour
     public GameObject downIcon;
     public GameObject leftIcon;
     public GameObject rightIcon;
-    public Text nameText;
-    public Text description;
-    public Text cost;
+    public TMP_Text nameText;
+    public TMP_Text description;
+    public TMP_Text cost;
 
 }

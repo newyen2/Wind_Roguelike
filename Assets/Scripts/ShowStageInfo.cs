@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class ShowStageInfo : MonoBehaviour
 {
 
-    public Text myText;
+    public TMP_Text myText;
     // Start is called before the first frame update
     void Start()
     {

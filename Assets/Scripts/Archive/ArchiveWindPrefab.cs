@@ -12,14 +12,16 @@ public class ArchiveWindPrefab: MonoBehaviour
     public GameObject downIcon;
     public GameObject leftIcon;
     public GameObject rightIcon;
-    public Text nameText;
-    public Text description;
-    public Text cost;
+    public TMP_Text nameText;
+    public TMP_Text description;
+    public TMP_Text cost;
 
     public CardData wind;
 
     public void changeData(CardData windData)
     {
+        Debug.Log(nameText);
+
         wind = windData;
         upIcon.SetActive(windData.direction.up);
         downIcon.SetActive(windData.direction.down);

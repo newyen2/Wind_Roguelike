@@ -151,7 +151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 8
   displayName: "\u6247\u5B50"
-  description: "aya\u7684\u6247\u5B50\n\n\u901A\u904E\u7684\u98A8\u529B+6"
+  description: "Aya\u7684\u6247\u5B50\n\n\u901A\u904E\u7684\u98A8\u529B + 6"
   multiplier: 0
   adder: 6
   total_point: 0

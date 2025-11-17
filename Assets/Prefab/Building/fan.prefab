@@ -151,11 +151,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 8
   displayName: "\u6247\u5B50"
-  description: "aya\u7684\u6247\u5B50(\u5047)\n\n\u901A\u904E\u7684\u98A8\u529B+3"
+  description: "Aya\u7684\u6247\u5B50(\u5047)\n\n\u901A\u904E\u7684\u98A8\u529B +
+    3"
   multiplier: 0
   adder: 3
   total_point: 0
-  now_round: 1
+  now_round: 2
   min_round: 3
   max_round: 9
   weight: 3

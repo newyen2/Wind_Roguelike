@@ -151,7 +151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 8
   displayName: "\u98A8\u529B\u767C\u96FB\u6A5F Lv2"
-  description: "\u63A5\u6536\u5230\u98A8\u5F8C\n\u7372\u5F97 \u98A8\u529B*3 \u7684\u5206\u6578 "
+  description: "\u7372\u5F97\u98A8\u529B * 3\u7684\u5206\u6578 "
   multiplier: 3
   adder: 0
   total_point: 0

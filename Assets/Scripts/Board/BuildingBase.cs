@@ -10,7 +10,7 @@ public class BuildingBase : MonoBehaviour
     public int multiplier; //乘法器
     public int adder; //加法器
     public int total_point = 0;
-    public int now_round = 0;
+    public int now_round = -1;
 
     [Header("UI 元件")]
     public int min_round = 0, max_round = 9, weight = 1;

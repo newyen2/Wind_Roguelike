@@ -25,11 +25,11 @@ public class WindTurbineVertical : BuildingBase
 
         if(windDirection == Direction.N)
         {
-            total_point = windPower * multiplier;
+            total_point += windPower * multiplier;
             return windPower * multiplier;
         }
         if(windDirection == Direction.S){
-            total_point = windPower * multiplier;
+            total_point += windPower * multiplier;
             return windPower * multiplier;
         }
 

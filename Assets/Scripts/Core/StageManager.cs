@@ -82,7 +82,7 @@ public class StageManager : MonoBehaviour
         }
         //建立牌堆並抽牌
         DeckManager.Instance.StartBattle();
-
+        renewBuild();
         for (int i = 0; i < GlobalManager.Instance.grid.GetLength(0); i++)
         {
             for (int j = 0; j < GlobalManager.Instance.grid.GetLength(1); j++)
@@ -95,7 +95,9 @@ public class StageManager : MonoBehaviour
                 }
             }
         }
+        
         UIManager.Instance.DisplayScoreText(StageManager.Instance.score);
+        
     }
 
     public bool canPlay(CardInstance card, Vector2Int windTile)
@@ -244,6 +246,27 @@ public class StageManager : MonoBehaviour
 
         delaycost = 0;
         delayDraw = 0;
+        renewBuild();
+
+        
+    }
+
+    void renewBuild()
+    {
+        for (int i = 0; i < GlobalManager.Instance.grid.GetLength(0); i++)
+        {
+            for (int j = 0; j < GlobalManager.Instance.grid.GetLength(1); j++)
+            {
+                if (i == 0 || i == GlobalManager.Instance.grid.GetLength(0) - 1 || j == 0 || j == GlobalManager.Instance.grid.GetLength(1) - 1)
+                {
+                    GlobalManager.Instance.grid[i, j] = null;
+                }
+                else if (GlobalManager.Instance.grid[i, j] != null)
+                {
+                    GlobalManager.Instance.grid[i, j].GetComponent<BuildingBase>().Renew(round);
+                }
+            }
+        }
     }
 
     [Button]

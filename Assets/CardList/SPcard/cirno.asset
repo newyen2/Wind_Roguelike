@@ -20,11 +20,12 @@ MonoBehaviour:
   baseWindPower: 9
   direction:
     up: 0
-    down: 0
+    down: 1
     left: 0
     right: 0
   effects:
   - {fileID: 11400000, guid: c7fcf990ab8180542ad7ff1c490a5633, type: 2}
+  - {fileID: 11400000, guid: bc4130c1bdc780448b20a792d8533c32, type: 2}
   min_round: 0
   max_round: 0
   weight: 0

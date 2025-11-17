@@ -60,6 +60,7 @@ public class CardView : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         descriptionText.text = data.description;
         costText.text = instance.currentCost.ToString();
         GetComponent<Sender>().senderId =Mathf.Min( Mathf.Max( instance.currentCost - 1,0),2);
+        if (instance.data.displayName == "baka") GetComponent<Sender>().senderId = 3;//cirno sp
         if (ArtImage != null && data.Image != null)
         {
             ArtImage.sprite = data.Image;

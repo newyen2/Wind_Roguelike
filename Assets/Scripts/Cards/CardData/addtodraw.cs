@@ -14,8 +14,6 @@ public class addpower : CardEffectBase
     }
     public override void OnPlay(CardInstance self, EffectContext ctx)
     {
-        thiscard = self;
-        thiscard.currentWindPower += power_addi;
-
+        self.currentWindPower += power_addi;
     }
 }

@@ -12,18 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22d94b12a82c5cf4db4aa0f319d8aadb, type: 3}
   m_Name: badwind
   m_EditorClassIdentifier: 
-  id: 
-  displayName: 
-  description: 
-  Image: {fileID: 0}
+  id: 12123
+  displayName: "\u9748\u5922"
+  description: "\u9020\u6210-10\u98A8\u529B\n\u4E0B\u56DE\u5408+1\u8CBB\uFF0C+2\u62BD"
+  Image: {fileID: 21300000, guid: 9069212e17cb5144fb68436ea696fb38, type: 3}
   baseCost: 0
-  baseWindPower: 0
+  baseWindPower: -10
   direction:
     up: 0
     down: 0
     left: 0
-    right: 0
-  effects: []
+    right: 1
+  effects:
+  - {fileID: 11400000, guid: fca307b06a215294ca1dafd5cf4f1abf, type: 2}
+  - {fileID: 11400000, guid: 05f67c918d40a4e498088c756689e423, type: 2}
   min_round: 0
   max_round: 9
   weight: 1

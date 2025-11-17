@@ -127,7 +127,6 @@ public class Wind
                 return;
             }
             int score = GlobalManager.Instance.grid[x, y+1]?.GetComponent<BuildingBase>().StartScore(power ,direction,x, y+1, this) ?? 0;
-            StageManager.Instance.score += score;
             Debug.Log($"Wind Move: ({x}, {y}) -> ({x}, {y + 1})");
             if(score != -100000)
             {

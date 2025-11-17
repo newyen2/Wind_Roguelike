@@ -13,6 +13,7 @@ public class CardData : ScriptableObject
     public int baseCost;
     public int baseWindPower;
     public CardDirection direction;
+    public bool isExhust = false;
     // 這張卡對應的效果（重點在這裡）之後再加點新東西
     public CardEffectBase[] effects;
     [Header("UI 元件")]

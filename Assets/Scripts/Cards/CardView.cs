@@ -57,6 +57,7 @@ public class CardView : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         this.instance = instance;
         var data = instance.data;
+        this.instance.isExhausted = this.instance.data.isExhust;
 
         nameText.text = data.displayName;
         descriptionText.text = data.description;

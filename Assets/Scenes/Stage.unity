@@ -622,13 +622,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScaleChange:
-  - {fileID: 1805317402}
+  - {fileID: 1083644941}
   - {fileID: 141524562}
   - {fileID: 381036452}
   - {fileID: 708323922}
   - {fileID: 2102217939}
   - {fileID: 2140732556}
   - {fileID: 872027302}
+  - {fileID: 1600809267}
 --- !u!114 &385271493
 MonoBehaviour:
   m_ObjectHideFlags: 0

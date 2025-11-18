@@ -152,12 +152,11 @@ MonoBehaviour:
   id: 0
   displayName: "\u7C73\u7C89\u5EE0"
   description: "\u65B0\u7AF9\u300C\u5728\u5730\u300D\u7F8E\u98DF\r\n\n\u7576\u98A8\u529B
-    > 2\u6642\u7C73\u7C89\u6703\u5439\u5230\u5730\u4E0A\r\n\u6BCF\u6B21\u7C73\u7C89\u6C92\u88AB\u5439\u6389+10\u5206\uFF0C\u4E0B\u56DE\u5408\u591A\u62BD
-    1 \u5F35"
+    > 2\u6642\u7C73\u7C89\u6703\u5439\u5230\u5730\u4E0A\r\n\u6BCF\u6B21\u7C73\u7C89\u6C92\u88AB\u5439\u6389+10\u5206\u6578\n\u4E26\u4F7F\u4E0B\u56DE\u5408\u62BD\u724C+1"
   multiplier: 0
   adder: 0
   total_point: 0
-  now_round: 2
+  now_round: 5
   min_round: 0
   max_round: 9
   weight: 1

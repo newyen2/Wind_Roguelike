@@ -151,12 +151,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 21
   displayName: "\u98A8\u5411\u6A19 Lv.2"
-  description: "\u7576\u6709\u98A8\u5439\u904E\u7684\u6642\u5019\n\u7372\u5F97\u98A8\u529B
-    * 3 \u7684\u5206\u6578\n\u4E26\u6D17\u5165 3 \u5F35\u81E8\u6642\u5FAE\u98A8+\u5230\u5361\u7D44\u4E2D"
-  multiplier: 3
-  adder: 3
+  description: "\u63A5\u6536\u5230\u98A8\u529B\u6642\u7372\u5F97\u98A8\u529B * 3\u7684\u5206\u6578\n\u4E26\u6D17\u51652\u5F35\u5FAE\u98A8+\u5230\u5361\u7D44\u4E2D"
+  multiplier: 1
+  adder: 2
   total_point: 0
-  now_round: 0
+  now_round: 5
   min_round: 5
   max_round: 9
   weight: 2

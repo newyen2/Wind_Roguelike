@@ -14,20 +14,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 123
   displayName: "\u5927\u51F6"
-  description: "\u9020\u62103\u98A8\u529B\n-200\u5206\n\u52A0\u4E00\u56DE\u5408"
+  description: "\u5F9E\u5B88\u77E2\u795E\u793E\u62BD\u5230\u7684\u795E\u7C64\n\n[\u6D88\u8017]\n\u9020\u62103\u9EDE\u98A8\u529B\n\u6253\u51FA\u6642-200\u5206\u6578\n\u5269\u9918\u56DE\u5408\u6578+1"
   Image: {fileID: 21300000, guid: cb9bbee55ecda1b43bcbc4745e403486, type: 3}
   baseCost: 1
   baseWindPower: -20
   direction:
     up: 0
     down: 0
-    left: 0
+    left: 1
     right: 0
   isExhust: 1
   effects:
   - {fileID: 11400000, guid: bc4130c1bdc780448b20a792d8533c32, type: 2}
   - {fileID: 11400000, guid: 183069ffb85de614ebe6d30f65f6aecf, type: 2}
   - {fileID: 11400000, guid: ab4a98bbb830b7c49bf11020333c322c, type: 2}
+  windEffects: []
   min_round: 0
   max_round: 0
   weight: 0

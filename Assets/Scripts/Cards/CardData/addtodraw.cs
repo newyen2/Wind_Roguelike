@@ -13,7 +13,7 @@ public class addpower : CardEffectBase
     {
         if (flag) self.currentWindPower += power_addi;
         flag = false;
-        self.data.description = "造成" + (self.currentWindPower) + " 風力\n 隨機方向\n" + "每打出一次風力+"+ (power_addi);
+        self.data.description = "【隨機方向】\n\n造成" + (self.currentWindPower) + "點風力\n" + "每打出一次風力+"+ (power_addi);
     }
 
     public override void OnPlay(CardInstance self, EffectContext ctx)

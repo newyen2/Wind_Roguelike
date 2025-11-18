@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 123
   displayName: "\u51F6"
-  description: "\u9020\u62103\u98A8\u529B\n-100\u5206\n\u7ACB\u5373\u62BD1\u5F35\u724C\u52A01\u8CBB"
+  description: "\u5F9E\u5B88\u77E2\u795E\u793E\u62BD\u5230\u7684\u795E\u7C64\n\n[\u6D88\u8017]\n\u9020\u62103\u9EDE\u98A8\u529B\n\u6253\u51FA\u6642-100\u5206\u6578\n\u7ACB\u5373\u62BD1\u5F35\u724C\uFF0C\u8CBB\u7528+1"
   Image: {fileID: 21300000, guid: cb9bbee55ecda1b43bcbc4745e403486, type: 3}
   baseCost: 0
   baseWindPower: 3
@@ -28,6 +28,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f7f0935a36564ac459e59d6d638044f8, type: 2}
   - {fileID: 11400000, guid: e7918369345eb9b48acf3b5627a897e7, type: 2}
   - {fileID: 11400000, guid: 6f3ce3710f1c62d4c9d2e5f7815364be, type: 2}
+  windEffects: []
   min_round: 0
   max_round: 0
   weight: 0

@@ -151,7 +151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 4
   displayName: "\u5C0F\u578B\u98A8\u529B\u767C\u96FB\u6A5F"
-  description: "\u53EA\u80FD\u63A5\u6536\u98A8\u529B \u2264 2\u7684\u98A8\n\u7372\u5F97\u98A8\u529B
+  description: "\u53EA\u80FD\u63A5\u6536\u98A8\u529B \u2264 2\n\u7372\u5F97\u98A8\u529B
     * 20\u7684\u5206\u6578"
   multiplier: 20
   adder: 0

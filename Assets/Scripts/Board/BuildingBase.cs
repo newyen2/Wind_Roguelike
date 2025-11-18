@@ -46,6 +46,7 @@ public class BuildingBase : MonoBehaviour
         return 0;
     }
 
+    public virtual int roundStart(int round) { Renew(round); return 0; }
     public virtual void Renew(int round)
     {
         now_round = round;

@@ -44,11 +44,10 @@ public class Wind
             Debug.Log($"Wind Execute: {x}, {y} = {score}");
             if(score > -100000)
             {
-                StageManager.Instance.score += score;
+                StageManager.Instance.addScore(score);
                 AudioManager.Instance.Play("get_point");
             }
             UIManager.Instance.DisplayTextScoreParticle(x, y, score);
-            UIManager.Instance.DisplayScoreText(StageManager.Instance.score);
         }
         else 
         { 
@@ -79,7 +78,7 @@ public class Wind
                 StageManager.Instance.nextWindPosition[x + 1, y].windSlot.Add(new Wind(direction, power));
             }
             if(score > -100000){
-                StageManager.Instance.score += score;
+                StageManager.Instance.addScore(score);
             }
             UIManager.Instance.DisplayTextScoreParticle(x+1, y, score);
         }
@@ -98,7 +97,7 @@ public class Wind
                 StageManager.Instance.nextWindPosition[x - 1, y].windSlot.Add(new Wind(direction, power));
             }
             if(score > -100000){
-                StageManager.Instance.score += score;
+                StageManager.Instance.addScore(score);
             }
             UIManager.Instance.DisplayTextScoreParticle(x-1, y, score);
         }
@@ -116,7 +115,7 @@ public class Wind
                 StageManager.Instance.nextWindPosition[x, y - 1].windSlot.Add(new Wind(direction, power));
             }
             if(score > -100000){
-                StageManager.Instance.score += score;
+                StageManager.Instance.addScore(score);
             }
             UIManager.Instance.DisplayTextScoreParticle(x, y-1, score);
         }
@@ -134,7 +133,7 @@ public class Wind
                 StageManager.Instance.nextWindPosition[x, y + 1].windSlot.Add(new Wind(direction, power));
             }
             if(score > -100000){
-                StageManager.Instance.score += score;
+                StageManager.Instance.addScore(score);
             }
             UIManager.Instance.DisplayTextScoreParticle(x, y+1, score);
         }

@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using Unity.VisualScripting.Antlr3.Runtime;
@@ -55,6 +55,10 @@ public class StageManager : MonoBehaviour
     void Start()
     {
         int stage = GlobalManager.Instance.recordsCount;
+        if(GlobalManager.Instance.is_inf && stage >= 10)
+        {
+            GlobalManager.Instance.records.Add(new StageRecord(3+stage/10,(int) (GlobalManager.Instance.records[stage-1].targetScore*1.5), 3+stage/10));
+        }
         LoadStage(GlobalManager.Instance.records[stage].roundMax, GlobalManager.Instance.records[stage].targetScore, GlobalManager.Instance.records[stage].maxPowerPoint);
         windPosition = new WindSlot[GlobalManager.Instance.groundSize + 2, GlobalManager.Instance.groundSize + 2];
         nextWindPosition = new WindSlot[GlobalManager.Instance.groundSize + 2, GlobalManager.Instance.groundSize + 2];
@@ -297,7 +301,7 @@ public class StageManager : MonoBehaviour
         DeckManager.Instance.ResetDeck();
         Debug.Log("Clear");
         GlobalManager.Instance.recordsCount += 1;
-        if (GlobalManager.Instance.recordsCount == 10) GameManager.Instance.SwitchScene("GameWin");
+        if (GlobalManager.Instance.recordsCount == 10 && !GlobalManager.Instance.is_inf) GameManager.Instance.SwitchScene("GameWin");
         else GameManager.Instance.SwitchScene("Result");
     }
     void Fail()

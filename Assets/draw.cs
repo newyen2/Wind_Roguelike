@@ -1,4 +1,4 @@
-using System.Collections;
+Ôªøusing System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -40,9 +40,13 @@ public class draw : MonoBehaviour
         List<GameObject> available = new List<GameObject>();
         List<int> weights = new List<int>();
         foreach (GameObject gb in gameObjects)
-        { 
-            if (gb.GetComponent<BuildingBase>().max_round < GlobalManager.Instance.recordsCount) continue;
-            if (gb.GetComponent<BuildingBase>().min_round > GlobalManager.Instance.recordsCount) continue;
+        {
+            if (!GlobalManager.Instance.is_inf ||  GlobalManager.Instance.recordsCount < GlobalManager.Instance.maxStage)
+            {
+                if (gb.GetComponent<BuildingBase>().max_round < GlobalManager.Instance.recordsCount) continue;
+                if (gb.GetComponent<BuildingBase>().min_round > GlobalManager.Instance.recordsCount) continue;
+
+            }
             available.Add(gb);
             weights.Add(gb.GetComponent<BuildingBase>().weight);
         }
@@ -59,21 +63,21 @@ public class draw : MonoBehaviour
         List<int> results = new List<int>();
         List<int> pool = new List<int>();
 
-        // ™Ï©l pool°G0,1,2,3...
+        // ÂàùÂßã poolÔºö0,1,2,3...
         for (int i = 0; i < weights.Count; i++)
             pool.Add(i);
 
         for (int k = 0; k < count; k++)
         {
-            // ≠p∫‚ pool ∏Ã≥—§U™∫¡`≈v≠´
+            // Ë®àÁÆó pool Ë£°Ââ©‰∏ãÁöÑÁ∏ΩÊ¨äÈáç
             float total = 0;
             foreach (int idx in pool)
                 total += weights[idx];
 
-            // ¿Hæ˜§@≠”Ωd≥Ú
+            // Èö®Ê©ü‰∏ÄÂÄãÁØÑÂúç
             float r = UnityEngine.Random.value * total;
 
-            // ß‰®Ï∏”≈v≠´πÔ¿≥™∫ index
+            // ÊâæÂà∞Ë©≤Ê¨äÈáçÂ∞çÊáâÁöÑ index
             float sum = 0;
             int chosen = -1;
 
@@ -88,7 +92,7 @@ public class draw : MonoBehaviour
             }
 
             results.Add(chosen);
-            pool.Remove(chosen); // §£≠´Ω∆ °˜ ±q pool ≤æ∞£
+            pool.Remove(chosen); // ‰∏çÈáçË§á ‚Üí Âæû pool ÁßªÈô§
         }
 
         return results;

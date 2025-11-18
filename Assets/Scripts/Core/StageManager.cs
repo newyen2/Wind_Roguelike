@@ -21,7 +21,7 @@ public class StageManager : MonoBehaviour
 {
     public int round;
     public int roundMax;
-    public int score;
+    [SerializeField] private int score;
     public int targetScore;
     public WindSlot[,] windPosition;
     public WindSlot[,] nextWindPosition;
@@ -34,6 +34,8 @@ public class StageManager : MonoBehaviour
     public bool is_round_going = false;
     public int powerPoint;
     public int maxPowerPoint;
+
+    public int finalMut;
 
     [SerializeField] TMP_Text energy;
     [SerializeField] TMP_Text count;
@@ -83,6 +85,7 @@ public class StageManager : MonoBehaviour
         }
         //建立牌堆並抽牌
         DeckManager.Instance.StartBattle();
+        finalMut = 1;
         renewBuild();
         for (int i = 0; i < GlobalManager.Instance.grid.GetLength(0); i++)
         {
@@ -103,7 +106,7 @@ public class StageManager : MonoBehaviour
 
     public void addScore(int s)
     {
-        score += s;
+        score +=(int) (s*finalMut);
         UIManager.Instance.DisplayScoreText(StageManager.Instance.score);
     }
 
@@ -253,6 +256,7 @@ public class StageManager : MonoBehaviour
 
         delaycost = 0;
         delayDraw = 0;
+        finalMut = 1;
         renewBuild();
 
         
@@ -270,7 +274,8 @@ public class StageManager : MonoBehaviour
                 }
                 else if (GlobalManager.Instance.grid[i, j] != null)
                 {
-                    GlobalManager.Instance.grid[i, j].GetComponent<BuildingBase>().Renew(round);
+                    GlobalManager.Instance.grid[i, j].GetComponent<BuildingBase>().roundStart(round);
+
                 }
             }
         }

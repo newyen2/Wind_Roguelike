@@ -18,6 +18,7 @@ namespace Core
         public static GameManager Instance { get; private set; }
 
         public int total_score = 0; // 這個是結算頁面顯示的分數
+        public bool is_full_screen = true;
 
         private void Awake()
         {

@@ -159,7 +159,7 @@ MonoBehaviour:
   now_round: 5
   min_round: 2
   max_round: 9
-  weight: 1
+  weight: 2
   prob: 0a000000140000001e000000140000000a000000
   cData:
   - {fileID: 11400000, guid: 1c9f2e6dbd153084f84a64a7b49b6d7d, type: 2}

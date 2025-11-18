@@ -159,4 +159,4 @@ MonoBehaviour:
   now_round: 2
   min_round: 4
   max_round: 9
-  weight: 4
+  weight: 2

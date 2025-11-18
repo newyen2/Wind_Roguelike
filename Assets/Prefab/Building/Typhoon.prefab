@@ -158,5 +158,5 @@ MonoBehaviour:
   total_point: 0
   now_round: 0
   min_round: 2
-  max_round: 9
-  weight: 4
+  max_round: 6
+  weight: 3

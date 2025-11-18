@@ -155,8 +155,8 @@ MonoBehaviour:
   multiplier: 1
   adder: 1
   total_point: 0
-  now_round: -1
+  now_round: 1
   min_round: 0
   max_round: 5
-  weight: 3
+  weight: 2
   cirnoCard: {fileID: 11400000, guid: 8326745dc9ed08342b8c701c3e8613ff, type: 2}

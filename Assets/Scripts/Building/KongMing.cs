@@ -1,7 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 public class KongMing : BuildingBase
 {
     public override int StartScore(int windPower, Direction windDirection, int x, int y, Wind wind)

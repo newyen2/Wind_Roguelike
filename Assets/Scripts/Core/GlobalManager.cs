@@ -1,4 +1,4 @@
-using Core;
+﻿using Core;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -20,6 +20,12 @@ public class GlobalManager : MonoBehaviour
     public CardData[] windPrefabs;
     public List<GameObject> rewardBuild;
     public List<GameObject> AlreadyGetBuilding;
+    public bool is_inf = false;
+    public int maxStage = 10;
+    public void changeinf(bool val)
+    {
+        is_inf = val;
+    }
 
     public List<StageRecord> records = new List<StageRecord>()
         {

@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using Core;
@@ -29,9 +29,12 @@ public class WindRewardCard : MonoBehaviour, IPointerClickHandler
         foreach(CardData gb in gameObjects)
         {
             if(!is_random) return reward;
+            if (!GlobalManager.Instance.is_inf || GlobalManager.Instance.recordsCount < GlobalManager.Instance.maxStage)
+            {
+                if (gb.max_round < GlobalManager.Instance.recordsCount) continue;
+                if (gb.min_round > GlobalManager.Instance.recordsCount) continue;
 
-            if (gb.max_round >= GlobalManager.Instance.recordsCount)
-            if (gb.min_round <= GlobalManager.Instance.recordsCount)
+            }
             if (gb != otherRewardCard[0])
             if (gb != otherRewardCard[1])
             {

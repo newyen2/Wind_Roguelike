@@ -88,7 +88,7 @@ public class BuildWindManager : MonoBehaviour
 
         CardData cardData = card.instance.data;
         // 記錄到陣列
-        StageManager.Instance.AddWind(tilePos.x, tilePos.y,card.instance.currentWindPower);
+        StageManager.Instance.AddWind(tilePos.x, tilePos.y, card.instance.data.windEffects, card.instance.currentWindPower);
         GlobalManager.Instance.grid[tilePos.x, tilePos.y] = selectedPrefab;
         GlobalManager.Instance.gridobj[tilePos.x, tilePos.y] = newBuilding;
 

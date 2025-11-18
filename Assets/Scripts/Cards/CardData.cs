@@ -16,6 +16,7 @@ public class CardData : ScriptableObject
     public bool isExhust = false;
     // 這張卡對應的效果（重點在這裡）之後再加點新東西
     public CardEffectBase[] effects;
+    public WindEffectBase[] windEffects;
     [Header("UI 元件")]
     public int min_round = 0, max_round = 9, weight = 1;
 

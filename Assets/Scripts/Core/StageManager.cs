@@ -25,6 +25,7 @@ public class StageManager : MonoBehaviour
     public int targetScore;
     public WindSlot[,] windPosition;
     public WindSlot[,] nextWindPosition;
+    public int step;
 
     public int delayDraw = 0;
     public int delaycost = 0;
@@ -303,7 +304,9 @@ public class StageManager : MonoBehaviour
     IEnumerator CalcScore()
     {
         bool able_wind = false;
-        for (int i = 0; i < 10; i++)
+
+        step = 0;
+        for (; step < 10; step++)
         {
             able_wind = false;
             foreach (WindSlot windslot in windPosition)
@@ -357,7 +360,7 @@ public class StageManager : MonoBehaviour
     }
 
     [Button]
-    public void AddWind(int x, int y, int power = 3, Wind wind = null)
+    public void AddWind(int x, int y, WindEffectBase[] windEffects, int power = 3, Wind wind = null)
     {
         Direction direction = Direction.N;
         if (x == 0)
@@ -377,6 +380,8 @@ public class StageManager : MonoBehaviour
             direction = Direction.S;
         }
         wind = new Wind(direction, power);
+
+        wind.effects = windEffects;
         windPosition[x, y].windSlot.Add(wind);
         Debug.Log($"Add Wind at ({x}, {y}) Direction: {direction}");
     }

@@ -8,6 +8,7 @@ public class Wind
     public Direction direction; // Changed type from int to Direction  
     public int power;
     public bool isEnable;
+    public WindEffectBase[] effects = { };
 
     public Wind(Direction direction, int power)
     {
@@ -30,11 +31,18 @@ public class Wind
 
     }
 
+ 
+
     public void Execute(int x, int y)
     {
         if (!isEnable)
         {
             return;
+        }
+
+        foreach (WindEffectBase w in effects)
+        {
+            w.OnBeforeExecute(this);
         }
 
         var building = GlobalManager.Instance.grid[x, y]?.GetComponent<BuildingBase>();
@@ -53,6 +61,11 @@ public class Wind
         else 
         { 
             Debug.Log($"Wind Execute: {x}, {y} = 0"); 
+        }
+
+        foreach (WindEffectBase w in effects)
+        {
+            w.OnAfterExecute(this);
         }
 
     }
@@ -137,6 +150,11 @@ public class Wind
                 StageManager.Instance.score += score;
             }
             UIManager.Instance.DisplayTextScoreParticle(x, y+1, score);
+        }
+
+        foreach (WindEffectBase w in effects)
+        {
+            w.OnAfterMove(this);
         }
     }
 

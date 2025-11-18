@@ -26,6 +26,7 @@ public class WindSlot
 
     public void Execute()
     {
+
         foreach (Wind wind in windSlot)
         {
             wind.Execute(x, y);

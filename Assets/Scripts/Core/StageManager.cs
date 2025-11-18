@@ -294,6 +294,7 @@ public class StageManager : MonoBehaviour
 
     void Clear()
     {
+        DeckManager.Instance.ResetDeck();
         Debug.Log("Clear");
         GlobalManager.Instance.recordsCount += 1;
         if (GlobalManager.Instance.recordsCount == 10) GameManager.Instance.SwitchScene("GameWin");
@@ -301,6 +302,7 @@ public class StageManager : MonoBehaviour
     }
     void Fail()
     {
+        DeckManager.Instance.ResetDeck();
         Debug.Log("Fail");
         GameManager.Instance.SwitchScene("GameOver");
 

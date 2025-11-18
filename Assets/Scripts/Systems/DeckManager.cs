@@ -103,8 +103,38 @@ public class DeckManager : MonoBehaviour
         if (!removed) return;
 
         discardPile.Add(card);
+        foreach (CardEffectBase c in card.data.effects)
+        {
+            c.OnDiscard(card, null);
+        }
+
         // 之後可以在這裡掛 OnDiscard Hooks 棄牌時觸發效果
-        
+
+    }
+    
+    public void ResetDeck()
+    {
+        foreach (var card in DrawPile)
+        {
+            foreach (CardEffectBase c in card.data.effects)
+            {
+                c.OnReset(card, null);
+            }
+        }
+        foreach (var card in DiscardPile)
+        {
+            foreach (CardEffectBase c in card.data.effects)
+            {
+                c.OnReset(card, null);
+            }
+        }
+        foreach (var card in ExhaustPile)
+        {
+            foreach (CardEffectBase c in card.data.effects)
+            {
+                c.OnReset(card, null);
+            }
+        }
     }
 
     /// <summary>

@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using Unity.VisualScripting.FullSerializer;
@@ -8,12 +8,28 @@ public class addpower : CardEffectBase
 {
     CardInstance thiscard;
     public int power_addi;
+    bool flag;
     public override void OnDraw(CardInstance self, EffectContext ctx)
     {
-        self.data.description = "³y¦¨" + (self.currentWindPower + 5) + " ­·¤O\n" + "¨C¥´¥X¤@¦¸­·¤O+5\nªì©l¬°6";
+        if (flag) self.currentWindPower += power_addi;
+        flag = false;
+        self.data.description = "é€ æˆ" + (self.currentWindPower) + " é¢¨åŠ›\n éš¨æ©Ÿæ–¹å‘\n" + "æ¯æ‰“å‡ºä¸€æ¬¡é¢¨åŠ›+"+ (power_addi);
     }
+
     public override void OnPlay(CardInstance self, EffectContext ctx)
     {
-        self.currentWindPower += power_addi;
+        flag = true;
     }
+    public override void OnDiscard(CardInstance self, EffectContext ctx)
+    {
+        //if(flag)self.currentWindPower += power_addi;
+        //flag = false;
+    }
+    public override void OnReset(CardInstance self, EffectContext ctx)
+    {
+        flag = false;
+        self.currentWindPower = self.data.baseWindPower;
+        self.data.description = "é€ æˆ" + (self.currentWindPower) + " é¢¨åŠ›\n éš¨æ©Ÿæ–¹å‘\n" + "æ¯æ‰“å‡ºä¸€æ¬¡é¢¨åŠ›+" + (power_addi);
+    }
+
 }

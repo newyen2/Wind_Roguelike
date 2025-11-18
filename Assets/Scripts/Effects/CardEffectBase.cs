@@ -18,4 +18,6 @@ public class CardEffectBase : ScriptableObject
     
     }//見DeckManager.cs的DiscardFromHand
 
+    public virtual void OnReset(CardInstance self, EffectContext ctx) { }
+
 }

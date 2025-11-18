@@ -280,18 +280,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GlobalManager
       objectReference: {fileID: 0}
-    - target: {fileID: 6902741122583038563, guid: 46c2b011831807b40b0eb29a4f4ce4bf, type: 3}
-      propertyPath: startingDeck.Array.size
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 6902741122583038563, guid: 46c2b011831807b40b0eb29a4f4ce4bf, type: 3}
-      propertyPath: startingDeck.Array.data[10]
-      value: 
-      objectReference: {fileID: 11400000, guid: c769d54ebdd3d954a999aa920f8426a4, type: 2}
-    - target: {fileID: 6902741122583038563, guid: 46c2b011831807b40b0eb29a4f4ce4bf, type: 3}
-      propertyPath: startingDeck.Array.data[11]
-      value: 
-      objectReference: {fileID: 11400000, guid: 2a87a00d7572dc248b36b460169a838f, type: 2}
     - target: {fileID: 7804152215095033804, guid: 46c2b011831807b40b0eb29a4f4ce4bf, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.9047554

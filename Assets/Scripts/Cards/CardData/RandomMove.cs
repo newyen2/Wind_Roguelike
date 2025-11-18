@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "RandomMove", menuName = "Card/windEffect")]
+[CreateAssetMenu(fileName = "RandomMove", menuName = "Card/windEffect/RandomMove")]
 public class RandomMove : WindEffectBase
 {
     public override void OnAfterMove(Wind w)

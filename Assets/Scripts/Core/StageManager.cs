@@ -306,7 +306,7 @@ public class StageManager : MonoBehaviour
         bool able_wind = false;
 
         step = 0;
-        for (; step < 10; step++)
+        while(step < 10)
         {
             able_wind = false;
             foreach (WindSlot windslot in windPosition)
@@ -315,6 +315,7 @@ public class StageManager : MonoBehaviour
             }
             ApplyMove();
             yield return new WaitForSeconds(0.5f);
+            step++;
 
             // 當沒有 wind 可以跑的時候提早結束 CalcScore
             foreach (WindSlot windslot in windPosition)
@@ -382,6 +383,7 @@ public class StageManager : MonoBehaviour
         wind = new Wind(direction, power);
 
         wind.effects = windEffects;
+        Debug.Log($"新增牌效:{wind.effects}");
         windPosition[x, y].windSlot.Add(wind);
         Debug.Log($"Add Wind at ({x}, {y}) Direction: {direction}");
     }

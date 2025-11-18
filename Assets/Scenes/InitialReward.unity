@@ -191,6 +191,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: GlobalManager
       objectReference: {fileID: 0}
+    - target: {fileID: 6902741122583038563, guid: 46c2b011831807b40b0eb29a4f4ce4bf, type: 3}
+      propertyPath: startingDeck.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902741122583038563, guid: 46c2b011831807b40b0eb29a4f4ce4bf, type: 3}
+      propertyPath: startingDeck.Array.data[10]
+      value: 
+      objectReference: {fileID: 11400000, guid: 2a87a00d7572dc248b36b460169a838f, type: 2}
+    - target: {fileID: 6902741122583038563, guid: 46c2b011831807b40b0eb29a4f4ce4bf, type: 3}
+      propertyPath: startingDeck.Array.data[11]
+      value: 
+      objectReference: {fileID: 11400000, guid: c769d54ebdd3d954a999aa920f8426a4, type: 2}
     - target: {fileID: 7804152215095033804, guid: 46c2b011831807b40b0eb29a4f4ce4bf, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.9047554
@@ -709,7 +721,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45.1
+  m_fontSize: 53.7
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -816,6 +828,8 @@ MonoBehaviour:
   reward: {fileID: 4752477190949869519, guid: d8a29d7121318d34ba981a755582a9f3, type: 3}
   otherRewardCard: []
   is_random: 0
+  drawer: {fileID: 0}
+  id: 0
 --- !u!61 &1047215267
 BoxCollider2D:
   m_ObjectHideFlags: 0

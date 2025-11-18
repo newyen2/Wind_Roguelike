@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 
 
@@ -89,7 +90,7 @@ public class Wind
             Debug.Log($"Wind Move: ({x}, {y}) -> ({x+1}, {y})");
             if(score != -100000 && score != -100002)
             {
-                StageManager.Instance.nextWindPosition[x + 1, y].windSlot.Add(new Wind(direction, power));
+                StageManager.Instance.nextWindPosition[x + 1, y].windSlot.Add(this);
             }
             if(score > -100000){
                 StageManager.Instance.score += score;
@@ -108,7 +109,7 @@ public class Wind
             Debug.Log($"Wind Move: ({x}, {y}) -> ({x-1}, {y})");
             if(score != -100000 && score != -100002)
             {
-                StageManager.Instance.nextWindPosition[x - 1, y].windSlot.Add(new Wind(direction, power));
+                StageManager.Instance.nextWindPosition[x - 1, y].windSlot.Add(this);
             }
             if(score > -100000){
                 StageManager.Instance.score += score;
@@ -126,7 +127,7 @@ public class Wind
             Debug.Log($"Wind Move: ({x}, {y}) -> ({x}, {y - 1})");
             if(score != -100000 && score != -100002)
             {
-                StageManager.Instance.nextWindPosition[x, y - 1].windSlot.Add(new Wind(direction, power));
+                StageManager.Instance.nextWindPosition[x, y - 1].windSlot.Add(this);
             }
             if(score > -100000){
                 StageManager.Instance.score += score;
@@ -144,7 +145,7 @@ public class Wind
             Debug.Log($"Wind Move: ({x}, {y}) -> ({x}, {y + 1})");
             if(score != -100000 && score != -100002)
             {
-                StageManager.Instance.nextWindPosition[x, y + 1].windSlot.Add(new Wind(direction, power));
+                StageManager.Instance.nextWindPosition[x, y + 1].windSlot.Add(this);
             }
             if(score > -100000){
                 StageManager.Instance.score += score;
@@ -154,6 +155,7 @@ public class Wind
 
         foreach (WindEffectBase w in effects)
         {
+            Debug.Log(w);
             w.OnAfterMove(this);
         }
     }

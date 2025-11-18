@@ -6,13 +6,11 @@ public class TyphoonLv2 : BuildingBase
 {
     List<int> windRecord = new();
     int wind_dir = 4;
+
+    
     public override int Score(int windPower, Direction windDirection, int x, int y, Wind wind)
     {
-        if(StageManager.Instance.round != now_round)
-        {
-            wind_dir = 4;
-            Renew(StageManager.Instance.round);
-        }
+
         wind_dir -= 1;
         windRecord.Add(windPower);
 
@@ -24,6 +22,14 @@ public class TyphoonLv2 : BuildingBase
                 return windPower * multiplier;
             }
         }
+        if (wind_dir < 0)
+        {
+            if(windPower == windRecord[0])
+            {
+                total_point += windPower * multiplier;
+                return windPower * multiplier / 2;
+            }
+        }
         return 0;
     }
 
@@ -31,8 +37,9 @@ public class TyphoonLv2 : BuildingBase
     {
         now_round = round;
         total_point = 0;
-        wind_dir = 3;
+        wind_dir = 4;
         windRecord = new();
+        base.Renew(round);
     }
 }
 

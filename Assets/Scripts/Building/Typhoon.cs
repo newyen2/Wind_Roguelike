@@ -25,6 +25,11 @@ public class Typhoon : BuildingBase
                 return windPower * multiplier;
             }
         }
+        if (wind_dir < 0 && windRecord[0] == windPower)
+        {
+            total_point += windPower * multiplier/2;
+            return windPower * multiplier/2;
+        }
         return 0;
     }
 

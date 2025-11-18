@@ -59,5 +59,10 @@ namespace Core
         {
             Archive.Instance.OpenArchive(GlobalManager.Instance.AlreadyGetBuilding.ToArray(), DeckManager.Instance.startingDeck.ToArray());
         }
+
+        public void OpenGuild()
+        {
+            Guild.Instance.ShowGuild();
+        }
     }
 }

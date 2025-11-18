@@ -28,6 +28,4 @@ public class CardData : ScriptableObject
         direction.left = dir[3];
 
     }
-
-
 }

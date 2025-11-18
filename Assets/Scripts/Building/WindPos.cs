@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class cirno : BuildingBase
+public class WindPos : BuildingBase
 {
     public CardData cirnoCard;
     CardInstance cirnoCardIns;
@@ -18,15 +18,8 @@ public class cirno : BuildingBase
         {
             Renew(StageManager.Instance.round);
         }
-        if (windPower == 9)
-        {
-            this.total_point += 99;
-            AudioManager.Instance.Play("baka");
-            DeckManager.Instance.AddCardToDiscardPile(cirnoCardIns);
-            return 99;
-        }
-        this.total_point += 99;
-        return 9;
+        for(int i = 0; i < adder; i++) DeckManager.Instance.AddCardToDiscardPile(cirnoCardIns);
+        return windPower * multiplier;
     }
 }
 

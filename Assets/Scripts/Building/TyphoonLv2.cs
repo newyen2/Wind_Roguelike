@@ -10,13 +10,10 @@ public class TyphoonLv2 : BuildingBase
     {
         if(StageManager.Instance.round != now_round)
         {
+            wind_dir = 4;
             Renew(StageManager.Instance.round);
         }
-
-        if(windDirection == Direction.N) wind_dir -= 1;
-        if(windDirection == Direction.S) wind_dir -= 1;
-        if(windDirection == Direction.E) wind_dir -= 1;
-        if(windDirection == Direction.W) wind_dir -= 1;
+        wind_dir -= 1;
         windRecord.Add(windPower);
 
         if(wind_dir == 0){

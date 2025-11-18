@@ -9,7 +9,6 @@ public class RiceNoodle : BuildingBase
         if(StageManager.Instance.round != now_round)
         {
             Renew(StageManager.Instance.round);
-            StageManager.Instance.delayDraw = 0;
         }
         if (windPower <= 2)
         {

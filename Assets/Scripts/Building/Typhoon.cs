@@ -4,6 +4,7 @@ public class Typhoon : BuildingBase
 {
     List<int> windRecord = new();
     int wind_dir = 2;
+    bool flag;
     public override int Score(int windPower, Direction windDirection, int x, int y, Wind wind)
     {
         if(StageManager.Instance.round != now_round)
@@ -21,11 +22,12 @@ public class Typhoon : BuildingBase
             
             if(windRecord[0] == windRecord[1])
             {
-                total_point += windPower * multiplier; 
+                total_point += windPower * multiplier;
+                flag = true;
                 return windPower * multiplier;
             }
         }
-        if (wind_dir < 0 && windRecord[0] == windPower)
+        if (wind_dir < 0 && windRecord[0] == windPower && flag)
         {
             total_point += windPower * multiplier/2;
             return windPower * multiplier/2;
@@ -35,6 +37,7 @@ public class Typhoon : BuildingBase
 
     public override void Renew(int round)
     {
+        flag = false;
         now_round = round;
         total_point = 0;
         wind_dir = 2;
